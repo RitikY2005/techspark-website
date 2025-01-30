@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'cyber-blue': '#00f3ff',
+        'cyber-blue': '#8fbfda',
         'cyber-purple': '#8000ff',
         'cyber-pink': '#ff00ff',
         'cyber-dark-blue': '#000033',
