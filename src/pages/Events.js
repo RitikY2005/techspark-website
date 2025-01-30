@@ -5,25 +5,6 @@ import {events} from '../constants/events.constants.js';
 
 
 
-const eventRules = {
-  "Warrior's Wrath Warfare (Mortal Kombat)": {
-    rules: [
-      "Players must use their own mobile devices for competition.",
-      "The use of any external devices like controllers, keyboards, or mouse is strictly prohibited.",
-      "Players must be connected to the provided tournament WiFi network.",
-      "Game version: All players must install the latest version of the game."
-    ]
-  },
-  "Techspark Hackathon": {
-    rules: [
-      "Players must use their own mobile devices for competition.",
-      "The use of any external devices like controllers, keyboards, or mouse is strictly prohibited.",
-      "Players must be connected to the provided tournament WiFi network.",
-      "Game version: All players must install the latest version of the game."
-    ]
-  }
-};
-
 function Events() {
   const [expandedEvent, setExpandedEvent] = useState(null); // Track the currently expanded event
   const [selectedRules, setSelectedRules] = useState(null); // For displaying event rules modal
