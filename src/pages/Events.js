@@ -129,7 +129,7 @@ function Events() {
       <div className="min-h-screen px-3 sm:px-6 lg:px-8 py-16 sm:py-20">
         <div className="max-w-6xl mx-auto">
           <motion.h1
-            className="text-3xl sm:text-5xl md:text-6xl text-center mb-8 sm:mb-12 font-bold text-[#2a3135]"
+            className="text-3xl sm:text-5xl md:text-6xl text-center mb-8 sm:mb-12 font-bold text-gunmetal"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -177,16 +177,16 @@ function Events() {
                                  transition-colors duration-700 cursor-pointer"
                       onClick={() => handleToggleEventDetails(index)} // Toggle the event section
                     >
-                      <div className="space-y-8">
+                      <div className="space-y-8 text-cyber-blue">
                         {event.title}
-                        <div className="text-base sm:text-lg text-slate-400 leading-relaxed mt-6">
+                        <div className="text-base sm:text-lg text-white leading-relaxed mt-6">
                           <p>{event.description}</p>
                             <div className="flex flex-wrap justify-center md:justify-start gap-6 sm:gap-8 text-slate-400 mt-6">
-                              <div className="flex items-center gap-3">
+                              <div className="flex items-center text-white gap-3">
                                 <span className="text-cyber-blue">📍</span>
                                 {event.location}
                               </div>
-                              <div className="flex items-center gap-2">
+                              <div className="flex items-center text-white gap-2">
                                 <span className="text-cyber-blue">⏰</span>
                                 {event.time}
                               </div>
@@ -225,7 +225,7 @@ function Events() {
                                     {subEvent.status}
                                   </span>
                                 </div>
-                                <p className="text-sm sm:text-base text-slate-400 leading-relaxed mb-4">
+                                <p className="text-sm sm:text-base text-white leading-relaxed mb-4">
                                   {subEvent.description}
                                 </p>
                                 <div className='flex gap-4'>

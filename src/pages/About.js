@@ -245,7 +245,7 @@ function About() {
               >
                 <div className="text-3xl sm:text-4xl mb-4">{feature.icon}</div>
                 <h3 className="text-lg sm:text-xl font-bold mb-3 text-cyber-blue">{feature.title}</h3>
-                <p className="text-sm sm:text-base text-gray-300">{feature.description}</p>
+                <p className="text-sm sm:text-base text-white">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -263,12 +263,12 @@ function About() {
                 <div className="bg-black/80 backdrop-blur-sm px-6 sm:px-8 py-4 sm:py-6 rounded-xl 
                               border border-cyber-blue/30 shadow-[0_0_15px_rgba(0,243,255,0.2)]">
                   <span className="font-bold text-cyber-blue">Dates:</span>
-                  <span className="text-gray-300 ml-2">24th - 25th February 2025</span>
+                  <span className="text-white ml-2">24th - 25th February 2025</span>
                 </div>
                 <div className="bg-black/80 backdrop-blur-sm px-6 sm:px-8 py-4 sm:py-6 rounded-xl 
                               border border-cyber-blue/30 shadow-[0_0_15px_rgba(0,243,255,0.2)]">
                   <span className="font-bold text-cyber-blue">Venue:</span>
-                  <span className="text-gray-300 ml-2">Mithibai College Campus</span>
+                  <span className="text-white ml-2">Mithibai College Campus</span>
                 </div>
               </div>
             </motion.div>

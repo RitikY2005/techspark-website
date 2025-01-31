@@ -90,7 +90,7 @@ function Home() {
           <Link to="/events">
             <motion.button
               className="w-full sm:w-auto mt-4 sm:mt-8 px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg 
-                        bg-black text-white font-extrabold rounded-full 
+                        bg-cyber-blue text-gunmetal font-extrabold rounded-full 
                         hover:-translate-y-1 transition-transform duration-200 shadow-lg
                         border border-cyber-blue/30 hover:border-white
                         hover:shadow-[0_0_15px_rgba(0,243,255,0.3)] text-[#cdcfdb]"
@@ -142,7 +142,7 @@ function Home() {
               {/* <div className="text-3xl sm:text-4xl mb-4">{feature.icon}</div> */}
               <div className="flex items-center justify-center text-3xl sm:text-4xl mb-4">{feature.icon}</div>
               <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-cyber-blue">{feature.title}</h3>
-              <p className="text-sm sm:text-base text-slate-400">{feature.description}</p>
+              <p className="text-sm sm:text-base text-white">{feature.description}</p>
             </motion.div>
           ))}
         </div>

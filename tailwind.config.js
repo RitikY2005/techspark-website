@@ -7,9 +7,10 @@ module.exports = {
     extend: {
       colors: {
         'cyber-blue': '#8fbfda',
-        'cyber-purple': '#8000ff',
-        'cyber-pink': '#ff00ff',
+        'cyber-purple': '#8fbfda',
+        'cyber-pink': '#cdcfdb',
         'cyber-dark-blue': '#000033',
+        'gunmetal' : '#2a3135'
       },
       backgroundImage: {
         'cyber-grid': `radial-gradient(circle, rgba(0, 243, 255, 0.1) 1px, transparent 1px),

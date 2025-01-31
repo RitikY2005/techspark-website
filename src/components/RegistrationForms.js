@@ -59,11 +59,11 @@ function QuadApp() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-gray-100 shadow-md rounded-lg">
-      <h2 className="text-2xl font-semibold text-center mb-4">Registration</h2>
+    <div className="max-w-2xl mx-auto p-6 bg-gunmetal shadow-md rounded-lg">
+      <h2 className="text-2xl font-semibold text-cyber-blue text-center mb-4">Registration</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Captain Details */}
-        <div className="p-4 bg-white rounded-lg shadow-md">
+        <div className="p-4 bg-gunmetal text-cyber-blue rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Captain</h3>
           <div className="w-full">
             <div className="flex items-center justify-center gap-2">
@@ -73,7 +73,7 @@ function QuadApp() {
                 value={userInput.name1}
                 onChange={handleChange}
                 placeholder="Captain Name"
-                className="w-1/2 p-2 border rounded mb-2"
+                className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
                 required
               />
               <input
@@ -82,7 +82,7 @@ function QuadApp() {
                 value={userInput.phone1}
                 onChange={handleChange}
                 placeholder="Captain Phone"
-                className="w-1/2 p-2 border rounded mb-2"
+                className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
                 required
               />
             </div>
@@ -95,7 +95,7 @@ function QuadApp() {
                 value={userInput.email}
                 onChange={handleChange}
                 placeholder="Email"
-                className="w-full p-2 border rounded"
+                className="w-full p-2 border bg-gunmetal rounded"
               />
               <input
                 type="file"
@@ -117,7 +117,7 @@ function QuadApp() {
         </div>
 
         {/* Player 1 */}
-        <div className="p-4 bg-white rounded-lg shadow-md">
+        <div className="p-4 bg-gunmetal text-cyber-blue rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Player 1</h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
@@ -126,7 +126,7 @@ function QuadApp() {
               value={userInput.name2}
               onChange={handleChange}
               placeholder="Player 1 Name"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
             <input
@@ -135,7 +135,7 @@ function QuadApp() {
               value={userInput.phone2}
               onChange={handleChange}
               placeholder="Player 1 Phone"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
           </div>
@@ -155,7 +155,7 @@ function QuadApp() {
         </div>
 
         {/* Player 2 */}
-        <div className="p-4 bg-white rounded-lg shadow-md">
+        <div className="p-4 bg-gunmetal text-cyber-blue rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Player 2</h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
@@ -164,7 +164,7 @@ function QuadApp() {
               value={userInput.name3}
               onChange={handleChange}
               placeholder="Player 2 Name"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
             />
             <input
               type="tel"
@@ -172,7 +172,7 @@ function QuadApp() {
               value={userInput.phone3}
               onChange={handleChange}
               placeholder="Player 2 Phone"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
             />
           </div>
           <input
@@ -191,8 +191,8 @@ function QuadApp() {
         </div>
 
         {/* Player 3 (Optional) */}
-        <div className="p-4 bg-white rounded-lg shadow-md">
-          <h3 className="text-lg font-medium mb-2">Player 3 (Optional)</h3>
+        <div className="p-4 bg-gunmetal text-cyber-blue rounded-lg shadow-md">
+          <h3 className="text-lg font-medium mb-2">Player 3 </h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
               type="text"
@@ -200,7 +200,7 @@ function QuadApp() {
               value={userInput.name4}
               onChange={handleChange}
               placeholder="Player 3 Name"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
             />
             <input
               type="tel"
@@ -208,7 +208,7 @@ function QuadApp() {
               value={userInput.phone4}
               onChange={handleChange}
               placeholder="Player 3 Phone"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
             />
           </div>
           <input
@@ -229,7 +229,7 @@ function QuadApp() {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800"
+          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-gray-800"
         >
           Register Team
         </button>
@@ -272,13 +272,13 @@ function DualApp(eventId, eventName) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { name1, phone1, IdImage1, name2, phone2, name3, phone3 } = userInput;
+    const { name1, phone1, IdImage1, name2, phone2} = userInput;
 
     if (!name1 || !phone1 || !IdImage1) {
       alert("Captain's details are required!");
       return;
     }
-    if (!name2 || !phone2 || (!name3 && !phone3)) {
+    if (!name2 || !phone2 ) {
       alert("At least one more player is required!");
       return;
     }
@@ -287,11 +287,11 @@ function DualApp(eventId, eventName) {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-gray-100 shadow-md rounded-lg">
+    <div className="max-w-2xl mx-auto p-6 bg-gunmetal text-cyber-blue shadow-md rounded-lg">
       <h2 className="text-2xl font-semibold text-center mb-4">Registration</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Player 1 */}
-        <div className="p-4 bg-white rounded-lg shadow-md">
+        <div className="p-4 rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Player 1</h3>
           <div className="w-full">
             <div className="flex items-center justify-center gap-2">
@@ -301,7 +301,7 @@ function DualApp(eventId, eventName) {
                 value={userInput.name1}
                 onChange={handleChange}
                 placeholder="Player 1 Name"
-                className="w-1/2 p-2 border rounded mb-2"
+                className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
                 required
               />
               <input
@@ -310,7 +310,7 @@ function DualApp(eventId, eventName) {
                 value={userInput.phone1}
                 onChange={handleChange}
                 placeholder="Player 1 Phone"
-                className="w-1/2 p-2 border rounded mb-2"
+                className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
                 required
               />
             </div>
@@ -323,7 +323,7 @@ function DualApp(eventId, eventName) {
                 value={userInput.email}
                 onChange={handleChange}
                 placeholder="Email"
-                className="w-full p-2 border rounded"
+                className="w-full p-2 bg-gunmetal border rounded"
               />
               <input
                 type="file"
@@ -345,7 +345,7 @@ function DualApp(eventId, eventName) {
         </div>
 
         {/* Player 2 */}
-        <div className="p-4 bg-white rounded-lg shadow-md">
+        <div className="p-4 bg-gunmetal text-cyber-blue rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Player 2</h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
@@ -354,7 +354,7 @@ function DualApp(eventId, eventName) {
               value={userInput.name2}
               onChange={handleChange}
               placeholder="Player 2 Name"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
             <input
@@ -363,7 +363,7 @@ function DualApp(eventId, eventName) {
               value={userInput.phone2}
               onChange={handleChange}
               placeholder="Player 2 Phone"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
           </div>
@@ -385,7 +385,7 @@ function DualApp(eventId, eventName) {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800"
+          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-gray-800"
         >
           Register Team
         </button>
@@ -449,11 +449,11 @@ function TrioApp(eventId, eventName) {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-gray-100 shadow-md rounded-lg">
+    <div className="max-w-2xl mx-auto p-6 bg-gunmetal text-cyber-blue shadow-md rounded-lg">
       <h2 className="text-2xl font-semibold text-center mb-4">Registration</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Player 1 Details */}
-        <div className="p-4 bg-white rounded-lg shadow-md">
+        <div className="p-4 bg-gunmetal rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Player 1</h3>
           <div className="w-full">
             <div className="flex items-center justify-center gap-2">
@@ -463,7 +463,7 @@ function TrioApp(eventId, eventName) {
                 value={userInput.name1}
                 onChange={handleChange}
                 placeholder="Player 1 Name"
-                className="w-1/2 p-2 border rounded mb-2"
+                className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
                 required
               />
               <input
@@ -472,7 +472,7 @@ function TrioApp(eventId, eventName) {
                 value={userInput.phone1}
                 onChange={handleChange}
                 placeholder="Player 2 Phone"
-                className="w-1/2 p-2 border rounded mb-2"
+                className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
                 required
               />
             </div>
@@ -485,7 +485,7 @@ function TrioApp(eventId, eventName) {
                 value={userInput.email}
                 onChange={handleChange}
                 placeholder="Email"
-                className="w-full p-2 border rounded"
+                className="w-full p-2 border bg-gunmetal rounded"
               />
               <input
                 type="file"
@@ -507,7 +507,7 @@ function TrioApp(eventId, eventName) {
         </div>
 
         {/* Player 2 */}
-        <div className="p-4 bg-white rounded-lg shadow-md">
+        <div className="p-4 bg-gunmetal text-cyber-blue rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Player 2</h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
@@ -516,7 +516,7 @@ function TrioApp(eventId, eventName) {
               value={userInput.name2}
               onChange={handleChange}
               placeholder="Player 2 Name"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
             <input
@@ -525,7 +525,7 @@ function TrioApp(eventId, eventName) {
               value={userInput.phone2}
               onChange={handleChange}
               placeholder="Player 2 Phone"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
           </div>
@@ -533,7 +533,7 @@ function TrioApp(eventId, eventName) {
             type="file"
             name="IdImage2"
             onChange={handleImageChange}
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border bg-gunmetal rounded"
           />
           {imagePreviews.IdImage2 && (
             <img
@@ -545,7 +545,7 @@ function TrioApp(eventId, eventName) {
         </div>
 
         {/* Player 3 */}
-        <div className="p-4 bg-white rounded-lg shadow-md">
+        <div className="p-4 bg-gunmetal text-cyber-blue rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Player 3</h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
@@ -554,7 +554,7 @@ function TrioApp(eventId, eventName) {
               value={userInput.name3}
               onChange={handleChange}
               placeholder="Player 3 Name"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
             />
             <input
               type="tel"
@@ -562,14 +562,14 @@ function TrioApp(eventId, eventName) {
               value={userInput.phone3}
               onChange={handleChange}
               placeholder="Player 3 Phone"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
             />
           </div>
           <input
             type="file"
             name="IdImage3"
             onChange={handleImageChange}
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border bg-gunmetal rounded"
           />
           {imagePreviews.IdImage3 && (
             <img
@@ -582,7 +582,7 @@ function TrioApp(eventId, eventName) {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800"
+          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-gray-800"
         >
           Register Team
         </button>

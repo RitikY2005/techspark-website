@@ -20,10 +20,11 @@
         status: "STAY TUNED",
         registrationForm:QuadApp,
         eventRules:[
-      "Players must use their own mobile devices for competition.",
-      "The use of any external devices like controllers, keyboards, or mouse is strictly prohibited.",
-      "Players must be connected to the provided tournament WiFi network.",
-      "Game version: All players must install the latest version of the game."
+      "The team can have a min 3 participants & a maximum of 4 participants.",
+      "Participants are required to bring their own hardware devices for the development of their projects.",
+      "The participating teams have the liberty to choose any language or software for their projects.",
+      "Participants are allowed & will be provided with internet access for the duration of the Hackathon.",
+      "Projects must be developed during the hackathon. Any pre-existing projects or code will not be accepted."
     ]
       },
       {
@@ -31,7 +32,8 @@
         description: "Code - a - Replica is an engaging coding event designed to test participants coding skills and problem-solving abilities. In this event participants will be provided with the output of a piece of code. The challenge is to reverse-engineer or construct the exact code that produces the specific output.",
         status: "STAY TUNED",
         registrationForm:DualApp,
-        eventRules:["Each team must consist of 2 members only",
+        eventRules:[
+         "Each team must consist of 2 members only",
          "The participants are not allowed to discuss with other teams during the coding round",
          "The utilization of artificial intelligence, personal hardware, and mobile phones is not permitted during the event. ",
          "The participants are also not allowed to open any new tabs or window in any browser or any files without the permission"
@@ -42,10 +44,11 @@
         description: "Your computer lab has been taken over by a rogue AI, and it’s on the verge of unleashing corrupted code across the internet. As computer science students, you are humanity’s last line of defense. Your mission: solve a series of intricate puzzles to uncover a five-digit code that will shut down the AI before it’s too late.",
         status: "STAY TUNED",
         registrationForm:TrioApp,
-        eventRules:["No use of mobile phones or web resources are allowed unless required",
-        "Registration of events will be entertained on first come first preference basis",
-        "Disruptive behavior may result in disqualification and fines for damages if necessary",
-        "Participants should report half an hour before the event.NO late entry"]
+        eventRules:[
+         "No use of mobile phones or web resources (including AI tools such as ChatGPT) is allowed unless required for a specific task.",
+         "Disruptive behavior may result in disqualification and fines for damages if necessary",
+         "Participants should report at least half an hour before the event. No late entries will be allowed."
+        ]
 
 
       }
@@ -74,14 +77,15 @@
       }, 
       {
         title: "Debate",
-        description: "Unleash the power of words and ideas. This engaging event brings together sharp minds to discuss, argue, and explore diverse perspectives on pressing topics. Participants will showcase their critical thinking, persuasive skills, and mastery of rhetoric in an intense yet enriching battle of wits.",
+        description: "Get ready for a war of words and a battle of wits! Our debate event is the ultimate platform for you to showcase your skills, challenge your peers, test your arguments, and emerge victorious. This year's event promises to be bigger and better than ever, with exciting topics, esteemed judges, and prizes to be won. Gather your team, prepare your arguments, and take on the best to emerge as the champion of logic and rhetoric.",
         status: "STAY TUNED",
         registrationForm:SoloApp,
         eventRules:[
-          "All arguments must be supported by credible sources.",
           "No-interruptions during a speaker’s turn, unless it’s during the cross-fire round",
-          "The time limit must be strictly followed. Penalties will be given for exceeding the allotted time.",
-          "Use of mobile phones or any digital means is strictly prohibited",
+          "The time limit must be strictly followed. Speakers will be penalized for exceeding the allotted time.",
+          "The question will be repeated for a maximum of 3 times.",
+          "No participant is allowed to reprimand the host or organizers regarding the topic given on the spot. Any form of disrespect, offensive language, or personal attacks will result in disqualification.",
+          "All arguments must be supported by credible sources. (Facts, statistics, and expert quotes are encouraged, but opinions should be minimized.)"
         ]
       },
       {
@@ -90,11 +94,11 @@
         status: "STAY TUNED",
         registrationForm:DualApp,
         eventRules:[
-          "Questions will be asked sequentially,teams will buzz in to answer and will be given 30 seconds to respond",
-          "Correct Answer: +5 points.Incorrect Answer -2 Failure to Answer: -1 points ",
-          "use of electronic devices is strictly prohibited during the event",
-          "Speaking out of turn or during another team’s turn"
-
+          "Each team must have 2 participants",
+          "Questions will be asked sequentially, and teams will buzz in to answer",
+          "After buzzing, teams will have 30 seconds to respond.",
+          "The use of electronic devices, smartwatches, and laptops, is strictly prohibited during the event.",
+          "Mobile phones may be used exclusively for operating the buzzer. AI tools or any external assistance are not allowed."
         ]
       }
     ]
