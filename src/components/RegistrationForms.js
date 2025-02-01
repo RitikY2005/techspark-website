@@ -157,7 +157,7 @@ function QuadApp() {
           /> */}
      
      <div class="flex items-center space-x-2">
-  <label for="file_upload2" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+  <label for="file_upload2" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
    
     <span class="material-icons mr-2">cloud_upload</span>
     Upload your ID image
@@ -203,7 +203,7 @@ function QuadApp() {
           /> */}
 
 <div class="flex items-center space-x-2">
-  <label for="file_upload3" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+  <label for="file_upload3" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
    
     <span class="material-icons mr-2">cloud_upload</span>
     Upload your ID image
@@ -249,7 +249,7 @@ function QuadApp() {
 
 
           <div class="flex items-center space-x-2">
-  <label for="file_upload4" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+  <label for="file_upload4" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
    
     <span class="material-icons mr-2">cloud_upload</span>
     Upload your ID image
@@ -362,7 +362,7 @@ function DualApp(eventId, eventName) {
                 value={userInput.email}
                 onChange={handleChange}
                 placeholder="Email"
-                className="w-full p-2 bg-gunmetal border rounded"
+                className="w-1/2 p-2 bg-gunmetal border rounded mb-2"
               />
               {/* <input
                 type="file"
@@ -372,8 +372,8 @@ function DualApp(eventId, eventName) {
                 required
               /> */}
 
-<div class="flex items-center space-x-2">
-  <label for="file_upload1" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+<div class="w-1/2 flex items-center space-x-2">
+  <label for="file_upload1" class="flex justify-center items-center cursor-pointer w-full px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
    
     <span class="material-icons mr-2">cloud_upload</span>
     Upload your ID image
@@ -423,7 +423,7 @@ function DualApp(eventId, eventName) {
           /> */}
 
 <div class="flex items-center space-x-2">
-  <label for="file_upload2" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+  <label for="file_upload2" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
    
     <span class="material-icons mr-2">cloud_upload</span>
     Upload your ID image
@@ -528,13 +528,13 @@ function TrioApp(eventId, eventName) {
                 name="phone1"
                 value={userInput.phone1}
                 onChange={handleChange}
-                placeholder="Player 2 Phone"
+                placeholder="Player 1 Phone"
                 className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
                 required
               />
             </div>
 
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex items-center space-x-2">
               {/* Email */}
               <input
                 type="email"
@@ -542,7 +542,7 @@ function TrioApp(eventId, eventName) {
                 value={userInput.email}
                 onChange={handleChange}
                 placeholder="Email"
-                className="w-full p-2 border bg-gunmetal rounded"
+                className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               />
               {/* <input
                 type="file"
@@ -552,8 +552,8 @@ function TrioApp(eventId, eventName) {
                 required
               /> */}
 
-<div class="flex items-center space-x-2">
-  <label for="file_upload3" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+<div class="w-1/2 flex items-center space-x-2">
+  <label for="file_upload3" class="w-full flex justify-center items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
    
     <span class="material-icons mr-2">cloud_upload</span>
     Upload your ID image
@@ -603,7 +603,7 @@ function TrioApp(eventId, eventName) {
           /> */}
 
 <div class="flex items-center space-x-2">
-  <label for="file_upload4" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+  <label for="file_upload4" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
    
     <span class="material-icons mr-2">cloud_upload</span>
     Upload your ID image
@@ -647,7 +647,7 @@ function TrioApp(eventId, eventName) {
             className="w-full p-2 border bg-gunmetal rounded"
           /> */}
           <div class="flex items-center space-x-2">
-  <label for="file_upload5" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+  <label for="file_upload5" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
    
     <span class="material-icons mr-2">cloud_upload</span>
     Upload your ID image
@@ -744,7 +744,7 @@ function SoloApp(eventId, eventName) {
               />
             </div>
 
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex items-center space-x-2">
               {/* Email */}
               <input
                 type="email"
@@ -752,7 +752,7 @@ function SoloApp(eventId, eventName) {
                 value={userInput.email}
                 onChange={handleChange}
                 placeholder="Player Email"
-                className="w-full p-2 border bg-gunmetal rounded"
+                className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               />
               {/* <input
                 type="file"
@@ -761,8 +761,8 @@ function SoloApp(eventId, eventName) {
                 className="w-full p-2 border rounded"
                 required
               /> */}
-              <div class="flex items-center space-x-2">
-  <label for="file_upload1" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+              <div class="w-1/2 flex items-center space-x-2">
+  <label for="file_upload1" class="flex jsutify-center items-center cursor-pointer w-full px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
    
     <span class="material-icons mr-2">cloud_upload</span>
     Upload your ID image
@@ -776,7 +776,7 @@ function SoloApp(eventId, eventName) {
             <img
               src={imagePreviews.IdImage1}
               alt="ID Preview"
-              className="mt-2 w-32 h-32 object-cover rounded"
+              className="mt-2 w-full h-full object-cover rounded"
             />
           )}
         </div>
@@ -918,7 +918,7 @@ function FootballApp() {
                 value={userInput.email}
                 onChange={handleChange}
                 placeholder="Email"
-                className="w-full p-2 border bg-gunmetal rounded"
+                className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               />
               {/* <input
                 type="file"
@@ -927,8 +927,8 @@ function FootballApp() {
                 className="w-full p-2 border rounded"
                 required
               /> */}
-              <div class="flex items-center space-x-2">
-  <label for="file_upload1" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+              <div class="w-1/2 flex items-center space-x-2">
+  <label for="file_upload1" class="flex justify-center items-center cursor-pointer w-full px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
    
     <span class="material-icons mr-2">cloud_upload</span>
     Upload your ID image
@@ -977,7 +977,7 @@ function FootballApp() {
             className="w-full p-2 border rounded"
           /> */}
           <div class="flex items-center space-x-2">
-  <label for="file_upload2" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+  <label for="file_upload2" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
    
     <span class="material-icons mr-2">cloud_upload</span>
     Upload your ID image
@@ -1022,7 +1022,7 @@ function FootballApp() {
           /> */}
 
 <div class="flex items-center space-x-2">
-  <label for="file_upload3" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+  <label for="file_upload3" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
    
     <span class="material-icons mr-2">cloud_upload</span>
     Upload your ID image
@@ -1067,7 +1067,7 @@ function FootballApp() {
           /> */}
 
 <div class="flex items-center space-x-2">
-  <label for="file_upload4" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+  <label for="file_upload4" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
    
     <span class="material-icons mr-2">cloud_upload</span>
     Upload your ID image
@@ -1113,7 +1113,7 @@ function FootballApp() {
             className="w-full p-2 border rounded"
           /> */}
           <div class="flex items-center space-x-2">
-  <label for="file_upload5" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+  <label for="file_upload5" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
    
     <span class="material-icons mr-2">cloud_upload</span>
     Upload your ID image
@@ -1160,7 +1160,7 @@ function FootballApp() {
           /> */}
 
 <div class="flex items-center space-x-2">
-  <label for="file_upload6" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+  <label for="file_upload6" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
    
     <span class="material-icons mr-2">cloud_upload</span>
     Upload your ID image
@@ -1207,7 +1207,7 @@ function FootballApp() {
           /> */}
 
           <div class="flex items-center space-x-2">
-  <label for="file_upload7" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+  <label for="file_upload7" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
    
     <span class="material-icons mr-2">cloud_upload</span>
     Upload your ID image
@@ -1254,7 +1254,7 @@ function FootballApp() {
           /> */}
 
 <div class="flex items-center space-x-2">
-  <label for="file_upload8" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+  <label for="file_upload8" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
    
     <span class="material-icons mr-2">cloud_upload</span>
     Upload your ID image
