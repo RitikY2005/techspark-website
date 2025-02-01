@@ -228,9 +228,10 @@ function Events() {
                                 <p className="text-sm sm:text-base text-white leading-relaxed mb-4">
                                   {subEvent.description}
                                 </p>
+                                
                                 <div className='flex gap-4'>
                                   <motion.button
-                                    className="w-full sm:w-auto px-4 py-2 text-sm bg-black text-cyber-blue font-bold rounded-lg
+                                    className="w-full sm:w-auto px-6 py-3 text-sm bg-black text-cyber-blue font-bold rounded-lg
                                              border border-cyber-blue/30 hover:border-white
                                              hover:shadow-[0,0,15px,rgba(0,243,255,0.3)]
                                              transition-all duration-300"
@@ -243,7 +244,7 @@ function Events() {
 
                                   {/* Register Button */}
                                   <motion.button
-                                    className="w-full sm:w-auto px-4 py-2 text-sm bg-cyber-blue text-black font-bold rounded-lg
+                                    className="w-full sm:w-auto px-6 py-3 text-sm bg-cyber-blue text-black font-bold rounded-lg
                                     border border-cyber-blue/30 hover:border-white
                                     hover:shadow-[0,0,15px,rgba(0,243,255,0.3)]
                                     transition-all duration-300"

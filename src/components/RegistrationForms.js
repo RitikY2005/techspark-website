@@ -268,7 +268,7 @@ function QuadApp() {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-gray-800"
+          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-cyber-pink"
         >
           Register Team
         </button>
@@ -442,7 +442,7 @@ function DualApp(eventId, eventName) {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-gray-800"
+          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-cyber-pink"
         >
           Register Team
         </button>
@@ -665,7 +665,7 @@ function TrioApp(eventId, eventName) {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-gray-800"
+          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-cyber-pink"
         >
           Register Team
         </button>
@@ -716,21 +716,30 @@ function SoloApp(eventId, eventName) {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-gray-100 shadow-md rounded-lg">
+<div className="max-w-2xl mx-auto p-6 bg-gunmetal text-cyber-blue shadow-md rounded-lg">
       <h2 className="text-2xl font-semibold text-center mb-4">Registration</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Player  Details */}
-        <div className="p-4 bg-white rounded-lg shadow-md">
+        {/* Captain Details */}
+        <div className="p-4 bg-gunmetal rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Player</h3>
           <div className="w-full">
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex items-center bg-gunmetal justify-center gap-2">
               <input
                 type="text"
                 name="name1"
                 value={userInput.name1}
                 onChange={handleChange}
                 placeholder="Player Name"
-                className="w-1/2 p-2 border rounded mb-2"
+                className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
+                required
+              />
+              <input
+                type="tel"
+                name="phone1"
+                value={userInput.phone1}
+                onChange={handleChange}
+                placeholder="Player Phone"
+                className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
                 required
               />
             </div>
@@ -742,8 +751,8 @@ function SoloApp(eventId, eventName) {
                 name="email"
                 value={userInput.email}
                 onChange={handleChange}
-                placeholder="Email"
-                className="w-full p-2 border rounded"
+                placeholder="Player Email"
+                className="w-full p-2 border bg-gunmetal rounded"
               />
               {/* <input
                 type="file"
@@ -752,8 +761,7 @@ function SoloApp(eventId, eventName) {
                 className="w-full p-2 border rounded"
                 required
               /> */}
-
-<div class="flex items-center space-x-2">
+              <div class="flex items-center space-x-2">
   <label for="file_upload1" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
    
     <span class="material-icons mr-2">cloud_upload</span>
@@ -773,15 +781,16 @@ function SoloApp(eventId, eventName) {
           )}
         </div>
 
-        {/* Submit Button */}
-        <button
-          type="submit"
-          className="w-full bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800"
-        >
-          Register Team
-        </button>
-      </form>
-    </div>
+    {/* Submit Button */}
+    <button
+      type="submit"
+      className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-cyber-pink"
+    >
+      Register Team
+    </button>
+  </form>
+</div>
+
   );
 }
 
@@ -873,21 +882,21 @@ function FootballApp() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-gray-100 shadow-md rounded-lg">
+    <div className="max-w-2xl mx-auto p-6 bg-gunmetal text-cyber-blue shadow-md rounded-lg">
       <h2 className="text-2xl font-semibold text-center mb-4">Registration</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Captain Details */}
-        <div className="p-4 bg-white rounded-lg shadow-md">
+        <div className="p-4 bg-gunmetal rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Captain</h3>
           <div className="w-full">
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex items-center bg-gunmetal justify-center gap-2">
               <input
                 type="text"
                 name="name1"
                 value={userInput.name1}
                 onChange={handleChange}
                 placeholder="Captain Name"
-                className="w-1/2 p-2 border rounded mb-2"
+                className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
                 required
               />
               <input
@@ -896,7 +905,7 @@ function FootballApp() {
                 value={userInput.phone1}
                 onChange={handleChange}
                 placeholder="Captain Phone"
-                className="w-1/2 p-2 border rounded mb-2"
+                className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
                 required
               />
             </div>
@@ -909,7 +918,7 @@ function FootballApp() {
                 value={userInput.email}
                 onChange={handleChange}
                 placeholder="Email"
-                className="w-full p-2 border rounded"
+                className="w-full p-2 border bg-gunmetal rounded"
               />
               {/* <input
                 type="file"
@@ -939,7 +948,7 @@ function FootballApp() {
         </div>
 
         {/* Player 1 */}
-        <div className="p-4 bg-white rounded-lg shadow-md">
+        <div className="p-4 bg-gunmetal text-cyber-blue rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Player 1</h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
@@ -948,7 +957,7 @@ function FootballApp() {
               value={userInput.name2}
               onChange={handleChange}
               placeholder="Player 1 Name"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
             <input
@@ -957,7 +966,7 @@ function FootballApp() {
               value={userInput.phone2}
               onChange={handleChange}
               placeholder="Player 1 Phone"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
           </div>
@@ -985,7 +994,7 @@ function FootballApp() {
         </div>
 
         {/* Player 2 */}
-        <div className="p-4 bg-white rounded-lg shadow-md">
+        <div className="p-4 bg-gunmetal text-cyber-blue rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Player 2</h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
@@ -994,7 +1003,7 @@ function FootballApp() {
               value={userInput.name3}
               onChange={handleChange}
               placeholder="Player 2 Name"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
             />
             <input
               type="tel"
@@ -1002,7 +1011,7 @@ function FootballApp() {
               value={userInput.phone3}
               onChange={handleChange}
               placeholder="Player 2 Phone"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
             />
           </div>
           {/* <input
@@ -1030,8 +1039,8 @@ function FootballApp() {
         </div>
 
         {/* Player 3  */}
-        <div className="p-4 bg-white rounded-lg shadow-md">
-          <h3 className="text-lg font-medium mb-2">Player 3 (Optional)</h3>
+        <div className="p-4 bg-gunmetal text-cyber-blue rounded-lg shadow-md">
+          <h3 className="text-lg font-medium mb-2">Player 3 </h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
               type="text"
@@ -1039,7 +1048,7 @@ function FootballApp() {
               value={userInput.name4}
               onChange={handleChange}
               placeholder="Player 3 Name"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
             />
             <input
               type="tel"
@@ -1047,7 +1056,7 @@ function FootballApp() {
               value={userInput.phone4}
               onChange={handleChange}
               placeholder="Player 3 Phone"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
             />
           </div>
           {/* <input
@@ -1075,8 +1084,8 @@ function FootballApp() {
         </div>
 
         {/* Player 4 */}
-        <div className="p-4 bg-white rounded-lg shadow-md">
-          <h3 className="text-lg font-medium mb-2">Player </h3>
+        <div className="p-4 bg-gunmetal text-cyber-blue rounded-lg shadow-md">
+          <h3 className="text-lg font-medium mb-2">Player 4</h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
               type="text"
@@ -1084,7 +1093,7 @@ function FootballApp() {
               value={userInput.name2}
               onChange={handleChange}
               placeholder="Player 4 Name"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
             <input
@@ -1093,7 +1102,7 @@ function FootballApp() {
               value={userInput.phone2}
               onChange={handleChange}
               placeholder="Player 4 Phone"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
           </div>
@@ -1121,7 +1130,7 @@ function FootballApp() {
         </div>
 
         {/* Player 5 */}
-        <div className="p-4 bg-white rounded-lg shadow-md">
+        <div className="p-4 bg-gunmetal text-cyber-blue rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Player 5</h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
@@ -1130,7 +1139,7 @@ function FootballApp() {
               value={userInput.name2}
               onChange={handleChange}
               placeholder="Player 5 Name"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
             <input
@@ -1139,7 +1148,7 @@ function FootballApp() {
               value={userInput.phone2}
               onChange={handleChange}
               placeholder="Player 5 Phone"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
           </div>
@@ -1168,7 +1177,7 @@ function FootballApp() {
         </div>
 
         {/* Player 6 */}
-        <div className="p-4 bg-white rounded-lg shadow-md">
+        <div className="p-4 bg-gunmetal rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Player 6 (Optional)</h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
@@ -1177,7 +1186,7 @@ function FootballApp() {
               value={userInput.name2}
               onChange={handleChange}
               placeholder="Player 6 Name"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
             <input
@@ -1186,7 +1195,7 @@ function FootballApp() {
               value={userInput.phone2}
               onChange={handleChange}
               placeholder="Player 6 Phone"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
           </div>
@@ -1215,7 +1224,7 @@ function FootballApp() {
         </div>
 
         {/* Player 7 */}
-        <div className="p-4 bg-white rounded-lg shadow-md">
+        <div className="p-4 bg-gunmetal text-cyber-blue rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Player 7 (optional)</h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
@@ -1224,7 +1233,7 @@ function FootballApp() {
               value={userInput.name2}
               onChange={handleChange}
               placeholder="Player 7 Name"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
             <input
@@ -1233,7 +1242,7 @@ function FootballApp() {
               value={userInput.phone2}
               onChange={handleChange}
               placeholder="Player 7 Phone"
-              className="w-1/2 p-2 border rounded mb-2"
+              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
           </div>
@@ -1264,7 +1273,7 @@ function FootballApp() {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800"
+          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-cyber-pink"
         >
           Register Team
         </button>

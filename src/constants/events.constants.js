@@ -117,14 +117,23 @@
         description: "Gear up for an intense battle in the BGMI Tournament! In this fast-paced event, players will need to show off their shooting skills, strategic thinking, and teamwork to outlast their opponents. This event is a battle royale, where strategy and teamwork are key to victory.",
         status: "STAY TUNED",
         registrationForm:QuadApp,
-        eventRules:["No malpractices allowed"]
+        eventRules:[
+         "All players must have the latest version of the game installed before the tournament starts.",
+         "In-game voice chat is allowed; external communication is strictly prohibited.",
+         "The winner will be decided by the team with the highest total points across all four matches, based on placement and performance."
+        ]
       },
       {
         title: "Ultimate Goal Gala (FC24)",
         description: "Get ready for an intense, head-to-head football battle in the FC24 Tournament! This is your chance to showcase your skills, quick thinking, and competitive edge as you go toe-to-toe with other top players. Whether you're a strategic mastermind or a reflex-based powerhouse, this tournament will test your limits. Only the strongest will rise to the top, with the best of the best advancing to the final. It’s time to prove you're the ultimate FC24 champion!",
         status: "STAY TUNED",
         registrationForm:SoloApp,
-        eventRules:["No malpractices allowed"]
+        eventRules:[
+                    "Game Speed: Normal",
+                    "Ball Settings: Default settings",
+                    "Team Selection: No duplicate teams are allowed. If both players select the same team, a coin flip will determine who keeps their selection.",
+                    "Game Mode: Live mode enabled for fairness."
+                   ]
       }
     ]
   },
@@ -142,14 +151,26 @@
         description: "Gear up for an electrifying football tournament where passion meets glory on the field! Experience the thrill as teams clash, showcasing skill, speed, and sportsmanship in a battle for supremacy. “The beautiful game” awaits—filled with unforgettable moments. “A game of two halves” where comebacks and last-minute thrillers keep you on the edge of your seat.",
         status: "STAY TUNED",
         registrationForm:FootballApp,
-        eventRules:["No malpractices allowed"]
+        eventRules:[
+        "The squad size is 7 players - 5 on the field + 2 subs.",
+        "Spikes and Studs are not allowed.",
+        "ONLY CAPTAINS are allowed to speak to the referee. In case of any unnecessary arguments, if needed the captain can be shown a red card, even if a player causes the trouble. In more severe cases, the match can get suspended giving the opponent a 3-0 win.",
+        "Substitutions can only be made when the ball is not in play or in case of major injury.",
+        "A player who is shown a yellow card will be sent off for 1 minute and a player who is shown a red card will be sent off for the entire match.",
+        "The decision made by the organizing committee will be final and enforceable by everyone.",
+        "In case of a tie, the match will directly go to the penalties."
+      ]
       },
       {
         title: "Queen's Gambit (Chess Tournament)",
         description: "Join us for an exciting chess tournament celebrating strategy, skill, and sportsmanship! This event promises thrilling matches and a competitive yet friendly atmosphere. Showcase your strategic brilliance, challenge fellow chess enthusiasts, and make lasting memories in this grand celebration of intellect and competition.",
         status: "STAY TUNED",
         registrationForm:SoloApp,
-        eventRules:["No malpractices allowed"]
+        eventRules:[
+        "Time control - 5 minutes rapid.",
+        "The game ends in checkmate, stalemate, resignation or draw(several conditions apply).",
+        "Everyone should have a chess clock app prior to the game."
+        ]
       }
     ]
   }
