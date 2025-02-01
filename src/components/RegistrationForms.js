@@ -39,6 +39,8 @@ function QuadApp() {
         ...prev,
         [name]: URL.createObjectURL(file),
       }));
+    } else {
+      e.target.value = null;
     }
   };
 
@@ -95,15 +97,23 @@ function QuadApp() {
                 value={userInput.email}
                 onChange={handleChange}
                 placeholder="Email"
-                className="w-full p-2 border bg-gunmetal rounded"
+                className="w-1/2 p-2 border bg-gunmetal rounded"
               />
-              <input
+              {/* <input
                 type="file"
                 name="IdImage1"
                 onChange={handleImageChange}
                 className="w-full p-2 border rounded"
                 required
-              />
+              /> */}
+              <div class="w-1/2 flex items-center space-x-2">
+  <label for="file_upload1" class="w-full flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+   
+    <span class="material-icons mr-2">cloud_upload</span>
+    Upload your ID image
+  </label>
+  <input id="file_upload1" name="IdImage1" type="file" class="hidden" required onChange={handleImageChange} />
+</div>
             </div>
           </div>
 
@@ -139,12 +149,21 @@ function QuadApp() {
               required
             />
           </div>
-          <input
+          {/* <input
             type="file"
             name="IdImage2"
             onChange={handleImageChange}
             className="w-full p-2 border rounded"
-          />
+          /> */}
+     
+     <div class="flex items-center space-x-2">
+  <label for="file_upload2" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+   
+    <span class="material-icons mr-2">cloud_upload</span>
+    Upload your ID image
+  </label>
+  <input id="file_upload2" name="IdImage2" type="file" class="hidden"  onChange={handleImageChange} />
+</div>
           {imagePreviews.IdImage2 && (
             <img
               src={imagePreviews.IdImage2}
@@ -175,12 +194,22 @@ function QuadApp() {
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
             />
           </div>
-          <input
+          {/* <input
             type="file"
             name="IdImage3"
+            id="file_image"
             onChange={handleImageChange}
-            className="w-full p-2 border rounded"
-          />
+            className="w-full p-2 border rounded hidden"
+          /> */}
+
+<div class="flex items-center space-x-2">
+  <label for="file_upload3" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+   
+    <span class="material-icons mr-2">cloud_upload</span>
+    Upload your ID image
+  </label>
+  <input id="file_upload3" name="IdImage3" type="file" class="hidden"  onChange={handleImageChange} />
+</div>
           {imagePreviews.IdImage3 && (
             <img
               src={imagePreviews.IdImage3}
@@ -211,12 +240,22 @@ function QuadApp() {
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
             />
           </div>
-          <input
+          {/* <input
             type="file"
             name="IdImage4"
             onChange={handleImageChange}
             className="w-full p-2 border rounded"
-          />
+          /> */}
+
+
+          <div class="flex items-center space-x-2">
+  <label for="file_upload4" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+   
+    <span class="material-icons mr-2">cloud_upload</span>
+    Upload your ID image
+  </label>
+  <input id="file_upload4" name="IdImage4" type="file" class="hidden"  onChange={handleImageChange} />
+</div>
           {imagePreviews.IdImage4 && (
             <img
               src={imagePreviews.IdImage4}
@@ -325,13 +364,22 @@ function DualApp(eventId, eventName) {
                 placeholder="Email"
                 className="w-full p-2 bg-gunmetal border rounded"
               />
-              <input
+              {/* <input
                 type="file"
                 name="IdImage1"
                 onChange={handleImageChange}
                 className="w-full p-2 border rounded"
                 required
-              />
+              /> */}
+
+<div class="flex items-center space-x-2">
+  <label for="file_upload1" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+   
+    <span class="material-icons mr-2">cloud_upload</span>
+    Upload your ID image
+  </label>
+  <input id="file_upload1" name="IdImage1" type="file" class="hidden" required onChange={handleImageChange} />
+</div>
             </div>
           </div>
 
@@ -367,12 +415,21 @@ function DualApp(eventId, eventName) {
               required
             />
           </div>
-          <input
+          {/* <input
             type="file"
             name="IdImage2"
             onChange={handleImageChange}
             className="w-full p-2 border rounded"
-          />
+          /> */}
+
+<div class="flex items-center space-x-2">
+  <label for="file_upload2" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+   
+    <span class="material-icons mr-2">cloud_upload</span>
+    Upload your ID image
+  </label>
+  <input id="file_upload2" name="IdImage2" type="file" class="hidden"  onChange={handleImageChange} />
+</div>
           {imagePreviews.IdImage2 && (
             <img
               src={imagePreviews.IdImage2}
@@ -487,13 +544,22 @@ function TrioApp(eventId, eventName) {
                 placeholder="Email"
                 className="w-full p-2 border bg-gunmetal rounded"
               />
-              <input
+              {/* <input
                 type="file"
                 name="IdImage1"
                 onChange={handleImageChange}
                 className="w-full p-2 border rounded"
                 required
-              />
+              /> */}
+
+<div class="flex items-center space-x-2">
+  <label for="file_upload3" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+   
+    <span class="material-icons mr-2">cloud_upload</span>
+    Upload your ID image
+  </label>
+  <input id="file_upload3" name="IdImage1" type="file" class="hidden" required onChange={handleImageChange} />
+</div>
             </div>
           </div>
 
@@ -529,12 +595,21 @@ function TrioApp(eventId, eventName) {
               required
             />
           </div>
-          <input
+          {/* <input
             type="file"
             name="IdImage2"
             onChange={handleImageChange}
             className="w-full p-2 border bg-gunmetal rounded"
-          />
+          /> */}
+
+<div class="flex items-center space-x-2">
+  <label for="file_upload4" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+   
+    <span class="material-icons mr-2">cloud_upload</span>
+    Upload your ID image
+  </label>
+  <input id="file_upload4" name="IdImage2" type="file" class="hidden"  onChange={handleImageChange} />
+</div>
           {imagePreviews.IdImage2 && (
             <img
               src={imagePreviews.IdImage2}
@@ -565,12 +640,20 @@ function TrioApp(eventId, eventName) {
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
             />
           </div>
-          <input
+          {/* <input
             type="file"
             name="IdImage3"
             onChange={handleImageChange}
             className="w-full p-2 border bg-gunmetal rounded"
-          />
+          /> */}
+          <div class="flex items-center space-x-2">
+  <label for="file_upload5" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+   
+    <span class="material-icons mr-2">cloud_upload</span>
+    Upload your ID image
+  </label>
+  <input id="file_upload5" name="IdImage3" type="file" class="hidden"  onChange={handleImageChange} />
+</div>
           {imagePreviews.IdImage3 && (
             <img
               src={imagePreviews.IdImage3}
@@ -662,13 +745,22 @@ function SoloApp(eventId, eventName) {
                 placeholder="Email"
                 className="w-full p-2 border rounded"
               />
-              <input
+              {/* <input
                 type="file"
                 name="IdImage1"
                 onChange={handleImageChange}
                 className="w-full p-2 border rounded"
                 required
-              />
+              /> */}
+
+<div class="flex items-center space-x-2">
+  <label for="file_upload1" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+   
+    <span class="material-icons mr-2">cloud_upload</span>
+    Upload your ID image
+  </label>
+  <input id="file_upload1" name="IdImage1" type="file" class="hidden" required onChange={handleImageChange} />
+</div>
             </div>
           </div>
 
@@ -819,13 +911,21 @@ function FootballApp() {
                 placeholder="Email"
                 className="w-full p-2 border rounded"
               />
-              <input
+              {/* <input
                 type="file"
                 name="IdImage1"
                 onChange={handleImageChange}
                 className="w-full p-2 border rounded"
                 required
-              />
+              /> */}
+              <div class="flex items-center space-x-2">
+  <label for="file_upload1" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+   
+    <span class="material-icons mr-2">cloud_upload</span>
+    Upload your ID image
+  </label>
+  <input id="file_upload1" name="IdImage1" type="file" class="hidden" required onChange={handleImageChange} />
+</div>
             </div>
           </div>
 
@@ -861,12 +961,20 @@ function FootballApp() {
               required
             />
           </div>
-          <input
+          {/* <input
             type="file"
             name="IdImage2"
             onChange={handleImageChange}
             className="w-full p-2 border rounded"
-          />
+          /> */}
+          <div class="flex items-center space-x-2">
+  <label for="file_upload2" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+   
+    <span class="material-icons mr-2">cloud_upload</span>
+    Upload your ID image
+  </label>
+  <input id="file_upload2" name="IdImage2" type="file" class="hidden"  onChange={handleImageChange} />
+</div>
           {imagePreviews.IdImage2 && (
             <img
               src={imagePreviews.IdImage2}
@@ -897,12 +1005,21 @@ function FootballApp() {
               className="w-1/2 p-2 border rounded mb-2"
             />
           </div>
-          <input
+          {/* <input
             type="file"
             name="IdImage3"
             onChange={handleImageChange}
             className="w-full p-2 border rounded"
-          />
+          /> */}
+
+<div class="flex items-center space-x-2">
+  <label for="file_upload3" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+   
+    <span class="material-icons mr-2">cloud_upload</span>
+    Upload your ID image
+  </label>
+  <input id="file_upload3" name="IdImage3" type="file" class="hidden"  onChange={handleImageChange} />
+</div>
           {imagePreviews.IdImage3 && (
             <img
               src={imagePreviews.IdImage3}
@@ -933,12 +1050,21 @@ function FootballApp() {
               className="w-1/2 p-2 border rounded mb-2"
             />
           </div>
-          <input
+          {/* <input
             type="file"
             name="IdImage4"
             onChange={handleImageChange}
             className="w-full p-2 border rounded"
-          />
+          /> */}
+
+<div class="flex items-center space-x-2">
+  <label for="file_upload4" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+   
+    <span class="material-icons mr-2">cloud_upload</span>
+    Upload your ID image
+  </label>
+  <input id="file_upload4" name="IdImage4" type="file" class="hidden"  onChange={handleImageChange} />
+</div>
           {imagePreviews.IdImage4 && (
             <img
               src={imagePreviews.IdImage4}
@@ -971,12 +1097,20 @@ function FootballApp() {
               required
             />
           </div>
-          <input
+          {/* <input
             type="file"
             name="IdImage2"
             onChange={handleImageChange}
             className="w-full p-2 border rounded"
-          />
+          /> */}
+          <div class="flex items-center space-x-2">
+  <label for="file_upload5" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+   
+    <span class="material-icons mr-2">cloud_upload</span>
+    Upload your ID image
+  </label>
+  <input id="file_upload5" name="IdImage2" type="file" class="hidden"  onChange={handleImageChange} />
+</div>
           {imagePreviews.IdImage2 && (
             <img
               src={imagePreviews.IdImage2}
@@ -1009,12 +1143,21 @@ function FootballApp() {
               required
             />
           </div>
-          <input
+          {/* <input
             type="file"
             name="IdImage2"
             onChange={handleImageChange}
             className="w-full p-2 border rounded"
-          />
+          /> */}
+
+<div class="flex items-center space-x-2">
+  <label for="file_upload6" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+   
+    <span class="material-icons mr-2">cloud_upload</span>
+    Upload your ID image
+  </label>
+  <input id="file_upload6" name="IdImage2" type="file" class="hidden"  onChange={handleImageChange} />
+</div>
           {imagePreviews.IdImage2 && (
             <img
               src={imagePreviews.IdImage2}
@@ -1047,12 +1190,21 @@ function FootballApp() {
               required
             />
           </div>
-          <input
+          {/* <input
             type="file"
             name="IdImage2"
             onChange={handleImageChange}
             className="w-full p-2 border rounded"
-          />
+          /> */}
+
+          <div class="flex items-center space-x-2">
+  <label for="file_upload7" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+   
+    <span class="material-icons mr-2">cloud_upload</span>
+    Upload your ID image
+  </label>
+  <input id="file_upload7" name="IdImage2" type="file" class="hidden"  onChange={handleImageChange} />
+</div>
           {imagePreviews.IdImage2 && (
             <img
               src={imagePreviews.IdImage2}
@@ -1085,12 +1237,21 @@ function FootballApp() {
               required
             />
           </div>
-          <input
+          {/* <input
             type="file"
             name="IdImage2"
             onChange={handleImageChange}
             className="w-full p-2 border rounded"
-          />
+          /> */}
+
+<div class="flex items-center space-x-2">
+  <label for="file_upload8" class="flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+   
+    <span class="material-icons mr-2">cloud_upload</span>
+    Upload your ID image
+  </label>
+  <input id="file_upload8" name="IdImage2" type="file" class="hidden"  onChange={handleImageChange} />
+</div>
           {imagePreviews.IdImage2 && (
             <img
               src={imagePreviews.IdImage2}
