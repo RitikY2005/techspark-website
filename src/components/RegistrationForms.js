@@ -887,7 +887,7 @@ function SoloApp(eventId, eventName) {
             <img
               src={imagePreviews.IdImage1}
               alt="ID Preview"
-              className="mt-2 w-full h-full object-cover rounded"
+              className="mt-2 w-32 h-32 object-cover rounded"
             />
           )}
         </div>
