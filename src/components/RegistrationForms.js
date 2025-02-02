@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 function QuadApp() {
-  
   const [userInput, setUserInput] = useState({
     name1: "",
     phone1: "",
@@ -62,7 +61,9 @@ function QuadApp() {
 
   return (
     <div className="max-w-2xl mx-auto p-6 bg-gunmetal shadow-md rounded-lg">
-      <h2 className="text-2xl font-semibold text-cyber-blue text-center mb-4">Registration</h2>
+      <h2 className="text-2xl font-semibold text-cyber-blue text-center mb-4">
+        Registration
+      </h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Captain Details */}
         <div className="p-4 bg-gunmetal text-cyber-blue rounded-lg shadow-md">
@@ -107,13 +108,22 @@ function QuadApp() {
                 required
               /> */}
               <div class="w-1/2 flex items-center space-x-2">
-  <label for="file_upload1" class="w-full flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
-   
-    <span class="material-icons mr-2">cloud_upload</span>
-    Upload your ID image
-  </label>
-  <input id="file_upload1" name="IdImage1" type="file" class="hidden" required onChange={handleImageChange} />
-</div>
+                <label
+                  for="file_upload1"
+                  class="w-full flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
+                >
+                  <span class="material-icons mr-2">cloud_upload</span>
+                  Upload your ID image
+                </label>
+                <input
+                  id="file_upload1"
+                  name="IdImage1"
+                  type="file"
+                  class="hidden"
+                  required
+                  onChange={handleImageChange}
+                />
+              </div>
             </div>
           </div>
 
@@ -155,15 +165,23 @@ function QuadApp() {
             onChange={handleImageChange}
             className="w-full p-2 border rounded"
           /> */}
-     
-     <div class="flex items-center space-x-2">
-  <label for="file_upload2" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
-   
-    <span class="material-icons mr-2">cloud_upload</span>
-    Upload your ID image
-  </label>
-  <input id="file_upload2" name="IdImage2" type="file" class="hidden"  onChange={handleImageChange} />
-</div>
+
+          <div class="flex items-center space-x-2">
+            <label
+              for="file_upload2"
+              class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full"
+            >
+              <span class="material-icons mr-2">cloud_upload</span>
+              Upload your ID image
+            </label>
+            <input
+              id="file_upload2"
+              name="IdImage2"
+              type="file"
+              class="hidden"
+              onChange={handleImageChange}
+            />
+          </div>
           {imagePreviews.IdImage2 && (
             <img
               src={imagePreviews.IdImage2}
@@ -202,14 +220,22 @@ function QuadApp() {
             className="w-full p-2 border rounded hidden"
           /> */}
 
-<div class="flex items-center space-x-2">
-  <label for="file_upload3" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
-   
-    <span class="material-icons mr-2">cloud_upload</span>
-    Upload your ID image
-  </label>
-  <input id="file_upload3" name="IdImage3" type="file" class="hidden"  onChange={handleImageChange} />
-</div>
+          <div class="flex items-center space-x-2">
+            <label
+              for="file_upload3"
+              class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full"
+            >
+              <span class="material-icons mr-2">cloud_upload</span>
+              Upload your ID image
+            </label>
+            <input
+              id="file_upload3"
+              name="IdImage3"
+              type="file"
+              class="hidden"
+              onChange={handleImageChange}
+            />
+          </div>
           {imagePreviews.IdImage3 && (
             <img
               src={imagePreviews.IdImage3}
@@ -247,15 +273,22 @@ function QuadApp() {
             className="w-full p-2 border rounded"
           /> */}
 
-
           <div class="flex items-center space-x-2">
-  <label for="file_upload4" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
-   
-    <span class="material-icons mr-2">cloud_upload</span>
-    Upload your ID image
-  </label>
-  <input id="file_upload4" name="IdImage4" type="file" class="hidden"  onChange={handleImageChange} />
-</div>
+            <label
+              for="file_upload4"
+              class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full"
+            >
+              <span class="material-icons mr-2">cloud_upload</span>
+              Upload your ID image
+            </label>
+            <input
+              id="file_upload4"
+              name="IdImage4"
+              type="file"
+              class="hidden"
+              onChange={handleImageChange}
+            />
+          </div>
           {imagePreviews.IdImage4 && (
             <img
               src={imagePreviews.IdImage4}
@@ -311,13 +344,13 @@ function DualApp(eventId, eventName) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { name1, phone1, IdImage1, name2, phone2} = userInput;
+    const { name1, phone1, IdImage1, name2, phone2 } = userInput;
 
     if (!name1 || !phone1 || !IdImage1) {
       alert("Captain's details are required!");
       return;
     }
-    if (!name2 || !phone2 ) {
+    if (!name2 || !phone2) {
       alert("At least one more player is required!");
       return;
     }
@@ -372,14 +405,23 @@ function DualApp(eventId, eventName) {
                 required
               /> */}
 
-<div class="w-1/2 flex items-center space-x-2">
-  <label for="file_upload1" class="flex justify-center items-center cursor-pointer w-full px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
-   
-    <span class="material-icons mr-2">cloud_upload</span>
-    Upload your ID image
-  </label>
-  <input id="file_upload1" name="IdImage1" type="file" class="hidden" required onChange={handleImageChange} />
-</div>
+              <div class="w-1/2 flex items-center space-x-2">
+                <label
+                  for="file_upload1"
+                  class="flex justify-center items-center cursor-pointer w-full px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full"
+                >
+                  <span class="material-icons mr-2">cloud_upload</span>
+                  Upload your ID image
+                </label>
+                <input
+                  id="file_upload1"
+                  name="IdImage1"
+                  type="file"
+                  class="hidden"
+                  required
+                  onChange={handleImageChange}
+                />
+              </div>
             </div>
           </div>
 
@@ -422,14 +464,22 @@ function DualApp(eventId, eventName) {
             className="w-full p-2 border rounded"
           /> */}
 
-<div class="flex items-center space-x-2">
-  <label for="file_upload2" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
-   
-    <span class="material-icons mr-2">cloud_upload</span>
-    Upload your ID image
-  </label>
-  <input id="file_upload2" name="IdImage2" type="file" class="hidden"  onChange={handleImageChange} />
-</div>
+          <div class="flex items-center space-x-2">
+            <label
+              for="file_upload2"
+              class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full"
+            >
+              <span class="material-icons mr-2">cloud_upload</span>
+              Upload your ID image
+            </label>
+            <input
+              id="file_upload2"
+              name="IdImage2"
+              type="file"
+              class="hidden"
+              onChange={handleImageChange}
+            />
+          </div>
           {imagePreviews.IdImage2 && (
             <img
               src={imagePreviews.IdImage2}
@@ -552,14 +602,23 @@ function TrioApp(eventId, eventName) {
                 required
               /> */}
 
-<div class="w-1/2 flex items-center space-x-2">
-  <label for="file_upload3" class="w-full flex justify-center items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
-   
-    <span class="material-icons mr-2">cloud_upload</span>
-    Upload your ID image
-  </label>
-  <input id="file_upload3" name="IdImage1" type="file" class="hidden" required onChange={handleImageChange} />
-</div>
+              <div class="w-1/2 flex items-center space-x-2">
+                <label
+                  for="file_upload3"
+                  class="w-full flex justify-center items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
+                >
+                  <span class="material-icons mr-2">cloud_upload</span>
+                  Upload your ID image
+                </label>
+                <input
+                  id="file_upload3"
+                  name="IdImage1"
+                  type="file"
+                  class="hidden"
+                  required
+                  onChange={handleImageChange}
+                />
+              </div>
             </div>
           </div>
 
@@ -602,14 +661,22 @@ function TrioApp(eventId, eventName) {
             className="w-full p-2 border bg-gunmetal rounded"
           /> */}
 
-<div class="flex items-center space-x-2">
-  <label for="file_upload4" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
-   
-    <span class="material-icons mr-2">cloud_upload</span>
-    Upload your ID image
-  </label>
-  <input id="file_upload4" name="IdImage2" type="file" class="hidden"  onChange={handleImageChange} />
-</div>
+          <div class="flex items-center space-x-2">
+            <label
+              for="file_upload4"
+              class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full"
+            >
+              <span class="material-icons mr-2">cloud_upload</span>
+              Upload your ID image
+            </label>
+            <input
+              id="file_upload4"
+              name="IdImage2"
+              type="file"
+              class="hidden"
+              onChange={handleImageChange}
+            />
+          </div>
           {imagePreviews.IdImage2 && (
             <img
               src={imagePreviews.IdImage2}
@@ -647,13 +714,21 @@ function TrioApp(eventId, eventName) {
             className="w-full p-2 border bg-gunmetal rounded"
           /> */}
           <div class="flex items-center space-x-2">
-  <label for="file_upload5" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
-   
-    <span class="material-icons mr-2">cloud_upload</span>
-    Upload your ID image
-  </label>
-  <input id="file_upload5" name="IdImage3" type="file" class="hidden"  onChange={handleImageChange} />
-</div>
+            <label
+              for="file_upload5"
+              class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full"
+            >
+              <span class="material-icons mr-2">cloud_upload</span>
+              Upload your ID image
+            </label>
+            <input
+              id="file_upload5"
+              name="IdImage3"
+              type="file"
+              class="hidden"
+              onChange={handleImageChange}
+            />
+          </div>
           {imagePreviews.IdImage3 && (
             <img
               src={imagePreviews.IdImage3}
@@ -716,7 +791,7 @@ function SoloApp(eventId, eventName) {
   };
 
   return (
-<div className="max-w-2xl mx-auto p-6 bg-gunmetal text-cyber-blue shadow-md rounded-lg">
+    <div className="max-w-2xl mx-auto p-6 bg-gunmetal text-cyber-blue shadow-md rounded-lg">
       <h2 className="text-2xl font-semibold text-center mb-4">Registration</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Captain Details */}
@@ -762,13 +837,22 @@ function SoloApp(eventId, eventName) {
                 required
               /> */}
               <div class="w-1/2 flex items-center space-x-2">
-  <label for="file_upload1" class="flex jsutify-center items-center cursor-pointer w-full px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
-   
-    <span class="material-icons mr-2">cloud_upload</span>
-    Upload your ID image
-  </label>
-  <input id="file_upload1" name="IdImage1" type="file" class="hidden" required onChange={handleImageChange} />
-</div>
+                <label
+                  for="file_upload1"
+                  class="flex jsutify-center items-center cursor-pointer w-full px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
+                >
+                  <span class="material-icons mr-2">cloud_upload</span>
+                  Upload your ID image
+                </label>
+                <input
+                  id="file_upload1"
+                  name="IdImage1"
+                  type="file"
+                  class="hidden"
+                  required
+                  onChange={handleImageChange}
+                />
+              </div>
             </div>
           </div>
 
@@ -781,16 +865,15 @@ function SoloApp(eventId, eventName) {
           )}
         </div>
 
-    {/* Submit Button */}
-    <button
-      type="submit"
-      className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-cyber-pink"
-    >
-      Register Team
-    </button>
-  </form>
-</div>
-
+        {/* Submit Button */}
+        <button
+          type="submit"
+          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-cyber-pink"
+        >
+          Register Team
+        </button>
+      </form>
+    </div>
   );
 }
 
@@ -873,7 +956,7 @@ function FootballApp() {
       alert("Captain's details are required!");
       return;
     }
-    if (!name2 || !phone2 || (!name3 && !phone3)) {
+    if (!name2 || !phone2 && (!name3 && !phone3) && (!name4 && !phone4)) {
       alert("At least one more player is required!");
       return;
     }
@@ -928,13 +1011,22 @@ function FootballApp() {
                 required
               /> */}
               <div class="w-1/2 flex items-center space-x-2">
-  <label for="file_upload1" class="flex justify-center items-center cursor-pointer w-full px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
-   
-    <span class="material-icons mr-2">cloud_upload</span>
-    Upload your ID image
-  </label>
-  <input id="file_upload1" name="IdImage1" type="file" class="hidden" required onChange={handleImageChange} />
-</div>
+                <label
+                  for="file_upload1"
+                  class="flex justify-center items-center cursor-pointer w-full px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
+                >
+                  <span class="material-icons mr-2">cloud_upload</span>
+                  Upload your ID image
+                </label>
+                <input
+                  id="file_upload1"
+                  name="IdImage1"
+                  type="file"
+                  class="hidden"
+                  required
+                  onChange={handleImageChange}
+                />
+              </div>
             </div>
           </div>
 
@@ -977,13 +1069,21 @@ function FootballApp() {
             className="w-full p-2 border rounded"
           /> */}
           <div class="flex items-center space-x-2">
-  <label for="file_upload2" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
-   
-    <span class="material-icons mr-2">cloud_upload</span>
-    Upload your ID image
-  </label>
-  <input id="file_upload2" name="IdImage2" type="file" class="hidden"  onChange={handleImageChange} />
-</div>
+            <label
+              for="file_upload2"
+              class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full"
+            >
+              <span class="material-icons mr-2">cloud_upload</span>
+              Upload your ID image
+            </label>
+            <input
+              id="file_upload2"
+              name="IdImage2"
+              type="file"
+              class="hidden"
+              onChange={handleImageChange}
+            />
+          </div>
           {imagePreviews.IdImage2 && (
             <img
               src={imagePreviews.IdImage2}
@@ -1021,14 +1121,22 @@ function FootballApp() {
             className="w-full p-2 border rounded"
           /> */}
 
-<div class="flex items-center space-x-2">
-  <label for="file_upload3" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
-   
-    <span class="material-icons mr-2">cloud_upload</span>
-    Upload your ID image
-  </label>
-  <input id="file_upload3" name="IdImage3" type="file" class="hidden"  onChange={handleImageChange} />
-</div>
+          <div class="flex items-center space-x-2">
+            <label
+              for="file_upload3"
+              class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full"
+            >
+              <span class="material-icons mr-2">cloud_upload</span>
+              Upload your ID image
+            </label>
+            <input
+              id="file_upload3"
+              name="IdImage3"
+              type="file"
+              class="hidden"
+              onChange={handleImageChange}
+            />
+          </div>
           {imagePreviews.IdImage3 && (
             <img
               src={imagePreviews.IdImage3}
@@ -1066,14 +1174,22 @@ function FootballApp() {
             className="w-full p-2 border rounded"
           /> */}
 
-<div class="flex items-center space-x-2">
-  <label for="file_upload4" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
-   
-    <span class="material-icons mr-2">cloud_upload</span>
-    Upload your ID image
-  </label>
-  <input id="file_upload4" name="IdImage4" type="file" class="hidden"  onChange={handleImageChange} />
-</div>
+          <div class="flex items-center space-x-2">
+            <label
+              for="file_upload4"
+              class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full"
+            >
+              <span class="material-icons mr-2">cloud_upload</span>
+              Upload your ID image
+            </label>
+            <input
+              id="file_upload4"
+              name="IdImage4"
+              type="file"
+              class="hidden"
+              onChange={handleImageChange}
+            />
+          </div>
           {imagePreviews.IdImage4 && (
             <img
               src={imagePreviews.IdImage4}
@@ -1089,8 +1205,8 @@ function FootballApp() {
           <div className="w-full flex justify-center items-center gap-2">
             <input
               type="text"
-              name="name2"
-              value={userInput.name2}
+              name="name5"
+              value={userInput.name5}
               onChange={handleChange}
               placeholder="Player 4 Name"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
@@ -1098,8 +1214,8 @@ function FootballApp() {
             />
             <input
               type="tel"
-              name="phone2"
-              value={userInput.phone2}
+              name="phone5"
+              value={userInput.phone5}
               onChange={handleChange}
               placeholder="Player 4 Phone"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
@@ -1113,16 +1229,24 @@ function FootballApp() {
             className="w-full p-2 border rounded"
           /> */}
           <div class="flex items-center space-x-2">
-  <label for="file_upload5" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
-   
-    <span class="material-icons mr-2">cloud_upload</span>
-    Upload your ID image
-  </label>
-  <input id="file_upload5" name="IdImage2" type="file" class="hidden"  onChange={handleImageChange} />
-</div>
-          {imagePreviews.IdImage2 && (
+            <label
+              for="file_upload5"
+              class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full"
+            >
+              <span class="material-icons mr-2">cloud_upload</span>
+              Upload your ID image
+            </label>
+            <input
+              id="file_upload5"
+              name="IdImage5"
+              type="file"
+              class="hidden"
+              onChange={handleImageChange}
+            />
+          </div>
+          {imagePreviews.IdImage5 && (
             <img
-              src={imagePreviews.IdImage2}
+              src={imagePreviews.IdImage5}
               alt="ID Preview"
               className="mt-2 w-32 h-32 object-cover rounded"
             />
@@ -1131,12 +1255,12 @@ function FootballApp() {
 
         {/* Player 5 */}
         <div className="p-4 bg-gunmetal text-cyber-blue rounded-lg shadow-md">
-          <h3 className="text-lg font-medium mb-2">Player 5</h3>
+          <h3 className="text-lg font-medium mb-2">Player 5(optional)</h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
               type="text"
-              name="name2"
-              value={userInput.name2}
+              name="name6"
+              value={userInput.name6}
               onChange={handleChange}
               placeholder="Player 5 Name"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
@@ -1144,8 +1268,8 @@ function FootballApp() {
             />
             <input
               type="tel"
-              name="phone2"
-              value={userInput.phone2}
+              name="phone6"
+              value={userInput.phone6}
               onChange={handleChange}
               placeholder="Player 5 Phone"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
@@ -1159,17 +1283,25 @@ function FootballApp() {
             className="w-full p-2 border rounded"
           /> */}
 
-<div class="flex items-center space-x-2">
-  <label for="file_upload6" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
-   
-    <span class="material-icons mr-2">cloud_upload</span>
-    Upload your ID image
-  </label>
-  <input id="file_upload6" name="IdImage2" type="file" class="hidden"  onChange={handleImageChange} />
-</div>
-          {imagePreviews.IdImage2 && (
+          <div class="flex items-center space-x-2">
+            <label
+              for="file_upload6"
+              class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full"
+            >
+              <span class="material-icons mr-2">cloud_upload</span>
+              Upload your ID image
+            </label>
+            <input
+              id="file_upload6"
+              name="IdImage6"
+              type="file"
+              class="hidden"
+              onChange={handleImageChange}
+            />
+          </div>
+          {imagePreviews.IdImage6 && (
             <img
-              src={imagePreviews.IdImage2}
+              src={imagePreviews.IdImage6}
               alt="ID Preview"
               className="mt-2 w-32 h-32 object-cover rounded"
             />
@@ -1182,8 +1314,8 @@ function FootballApp() {
           <div className="w-full flex justify-center items-center gap-2">
             <input
               type="text"
-              name="name2"
-              value={userInput.name2}
+              name="name7"
+              value={userInput.name7}
               onChange={handleChange}
               placeholder="Player 6 Name"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
@@ -1191,8 +1323,8 @@ function FootballApp() {
             />
             <input
               type="tel"
-              name="phone2"
-              value={userInput.phone2}
+              name="phone7"
+              value={userInput.phone7}
               onChange={handleChange}
               placeholder="Player 6 Phone"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
@@ -1207,63 +1339,24 @@ function FootballApp() {
           /> */}
 
           <div class="flex items-center space-x-2">
-  <label for="file_upload7" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
-   
-    <span class="material-icons mr-2">cloud_upload</span>
-    Upload your ID image
-  </label>
-  <input id="file_upload7" name="IdImage2" type="file" class="hidden"  onChange={handleImageChange} />
-</div>
-          {imagePreviews.IdImage2 && (
-            <img
-              src={imagePreviews.IdImage2}
-              alt="ID Preview"
-              className="mt-2 w-32 h-32 object-cover rounded"
-            />
-          )}
-        </div>
-
-        {/* Player 7 */}
-        <div className="p-4 bg-gunmetal text-cyber-blue rounded-lg shadow-md">
-          <h3 className="text-lg font-medium mb-2">Player 7 (optional)</h3>
-          <div className="w-full flex justify-center items-center gap-2">
+            <label
+              for="file_upload7"
+              class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full"
+            >
+              <span class="material-icons mr-2">cloud_upload</span>
+              Upload your ID image
+            </label>
             <input
-              type="text"
-              name="name2"
-              value={userInput.name2}
-              onChange={handleChange}
-              placeholder="Player 7 Name"
-              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
-              required
-            />
-            <input
-              type="tel"
-              name="phone2"
-              value={userInput.phone2}
-              onChange={handleChange}
-              placeholder="Player 7 Phone"
-              className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
-              required
+              id="file_upload7"
+              name="IdImage7"
+              type="file"
+              class="hidden"
+              onChange={handleImageChange}
             />
           </div>
-          {/* <input
-            type="file"
-            name="IdImage2"
-            onChange={handleImageChange}
-            className="w-full p-2 border rounded"
-          /> */}
-
-<div class="flex items-center space-x-2">
-  <label for="file_upload8" class="flex justify-center items-center cursor-pointer w-full py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full">
-   
-    <span class="material-icons mr-2">cloud_upload</span>
-    Upload your ID image
-  </label>
-  <input id="file_upload8" name="IdImage2" type="file" class="hidden"  onChange={handleImageChange} />
-</div>
-          {imagePreviews.IdImage2 && (
+          {imagePreviews.IdImage7 && (
             <img
-              src={imagePreviews.IdImage2}
+              src={imagePreviews.IdImage7}
               alt="ID Preview"
               className="mt-2 w-32 h-32 object-cover rounded"
             />
@@ -1282,7 +1375,7 @@ function FootballApp() {
   );
 }
 
-export { QuadApp, DualApp, TrioApp, SoloApp,FootballApp };
+export { QuadApp, DualApp, TrioApp, SoloApp, FootballApp };
 
 /* <form className="space-y-6">
             <div className="flex flex-col gap-4">
