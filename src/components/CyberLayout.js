@@ -4,7 +4,7 @@ import Footer from './Footer';
 
 function CyberLayout({ children }) {
   return (
-    <div className="min-h-screen flex flex-col relative overflow-hidden">
+    <div className="h-screen overflow-y-auto flex flex-col relative overflow-x-hidden">
       {/* Base Background */}
       <div className="fixed inset-0  no-repeat bg-cover bg-center " style={{backgroundImage:'url("grad.avif")'}} />
 
@@ -18,7 +18,7 @@ function CyberLayout({ children }) {
       <div className="fixed inset-0 bg-gradient-to-r from-cyber-blue/5 via-cyber-purple/5 to-cyber-pink/5" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col min-h-screen">
+      <div className="relative z-10 flex flex-col h-auto">
         <Navbar />
         {/* <main className="flex-grow pt-16 sm:pt-20"> */}
         <main className="flex-grow">

@@ -98,7 +98,7 @@ function Events() {
       onClick={onClose}
     >
       <motion.div
-        className="bg-black/90 rounded-xl border border-cyber-blue/30 p-8 max-w-2xl w-full
+        className="bg-black/90 rounded-xl border border-cyber-blue/30  max-w-2xl w-full
                    shadow-[0_0_30px_rgba(0,243,255,0.2)] relative"
         initial={{ scale: 0.9, y: 20 }}
         animate={{ scale: 1, y: 0 }}
@@ -109,7 +109,7 @@ function Events() {
          
           <button
             onClick={onClose}
-            className="text-slate-400 hover:text-cyber-blue transition-colors "
+            className="text-slate-400 hover:text-cyber-blue transition-colors text-lg"
           >
             ✕
           </button>
@@ -123,13 +123,23 @@ function Events() {
   );  
 
 
-  useEffect(()=>{
-       console.log("forms---",selectedRegistration);
-  },[selectedRegistration]);
+  // for the background scrolling bug  when popup is open
+  useEffect(() => {
+   
+    if (selectedRegistration || selectedRules) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto'; 
+    };
+  }, [selectedRegistration,selectedRules]);
 
   return (
     <CyberLayout>
-      <div className="min-h-screen px-3 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <div className="h-auto overflow-auto px-3 sm:px-6 lg:px-8 py-16 sm:py-20">
         <div className="max-w-6xl mx-auto">
           <motion.h1
             className="text-3xl sm:text-5xl md:text-6xl text-center mb-8 sm:mb-12 font-bold text-gunmetal"
@@ -228,7 +238,7 @@ function Events() {
                                     {subEvent.status}
                                   </span>
                                 </div>
-                                <p className="text-sm sm:text-base text-white leading-relaxed mb-4 flex-grow">
+                                <p className="text-sm text-left sm:text-base text-white leading-relaxed mb-4 flex-grow">
                                   {subEvent.description}
                                 </p>
                                 

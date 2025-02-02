@@ -1,13 +1,33 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const navRef=useRef(null);
+
+// for the mobile navbar - when clicked outside the navbar div , it closes automatically
+  useEffect(() => {
+    
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        // Trigger the close action (or any other logic)
+        setIsMenuOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+
+    
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+
   return (
     // <nav className="px-4 py-3 sm:py-4 bg-[#2a3135] fixed w-full top-0 z-50 shadow-lg opacity-75"></nav>
-    <nav className="px-4 py-3 sm:py-4 w-full top-0 z-50 opacity-75">
+    <nav className="px-4 py-3 sm:py-4 w-full top-0 z-50 sm:opacity-75">
       <div className="container mx-auto relative">
         <div className="flex justify-between items-center">
           <motion.div
@@ -74,7 +94,8 @@ function Navbar() {
         </div>
 
         <motion.div 
-          className={`${isMenuOpen ? 'flex' : 'hidden'} absolute top-9 left-0 w-full z-10 md:hidden flex-col gap-4 pt-4 rounded-md shadow-[0px_0px_10px_black]`}
+          ref={navRef}
+          className={`${isMenuOpen ? 'flex' : 'hidden'} absolute top-10 left-0 w-full z-9999999 md:hidden flex-col gap-4 pt-4 rounded-md shadow-[0px_0px_10px_black] bg-[#c0c0c0] text-black`}
           initial={false}
           animate={{ height: isMenuOpen ? 'auto' : 0 }}
         >
@@ -88,7 +109,7 @@ function Navbar() {
             <Link
               key={link.path}
               to={link.path}
-              className="text-black font-medium py-2 px-4 rounded-lg
+              className="font-medium py-2 px-4 rounded-lg
                         hover:bg-cyber-blue/10 transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >

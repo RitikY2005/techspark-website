@@ -90,7 +90,7 @@ function QuadApp() {
               />
             </div>
 
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
               {/* Email */}
               <input
                 type="email"
@@ -98,7 +98,7 @@ function QuadApp() {
                 value={userInput.email}
                 onChange={handleChange}
                 placeholder="Email"
-                className="w-1/2 p-2 border bg-gunmetal rounded"
+                className="w-full sm:w-1/2 p-2 border bg-gunmetal rounded"
               />
               {/* <input
                 type="file"
@@ -107,13 +107,14 @@ function QuadApp() {
                 className="w-full p-2 border rounded"
                 required
               /> */}
-              <div class="w-1/2 flex items-center space-x-2">
+              <div class="w-full sm:w-1/2 flex items-center space-x-2">
                 <label
                   for="file_upload1"
-                  class="w-full flex items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
+                  class="w-full flex no-wrap items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
                 >
                   <span class="material-icons mr-2">cloud_upload</span>
-                  Upload your ID image
+                  <span className="hidden sm:block">Upload your id image</span>
+                  <span className="sm:hidden text-sm">Upload image</span>
                 </label>
                 <input
                   id="file_upload1"
@@ -387,7 +388,7 @@ function DualApp(eventId, eventName) {
               />
             </div>
 
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
               {/* Email */}
               <input
                 type="email"
@@ -395,7 +396,7 @@ function DualApp(eventId, eventName) {
                 value={userInput.email}
                 onChange={handleChange}
                 placeholder="Email"
-                className="w-1/2 p-2 bg-gunmetal border rounded mb-2"
+                className="w-full sm:w-1/2 p-2 bg-gunmetal border rounded mb-2"
               />
               {/* <input
                 type="file"
@@ -405,13 +406,13 @@ function DualApp(eventId, eventName) {
                 required
               /> */}
 
-              <div class="w-1/2 flex items-center space-x-2">
+              <div class="w-full sm:w-1/2 flex items-center space-x-2">
                 <label
                   for="file_upload1"
                   class="flex justify-center items-center cursor-pointer w-full px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none whitespace-nowrap max-w-full"
                 >
                   <span class="material-icons mr-2">cloud_upload</span>
-                  Upload your ID image
+                  Upload your id image
                 </label>
                 <input
                   id="file_upload1"
@@ -584,7 +585,7 @@ function TrioApp(eventId, eventName) {
               />
             </div>
 
-            <div className="flex items-center space-x-2">
+            <div className="flex flex-col sm:flex-row items-center space-x-2">
               {/* Email */}
               <input
                 type="email"
@@ -592,7 +593,7 @@ function TrioApp(eventId, eventName) {
                 value={userInput.email}
                 onChange={handleChange}
                 placeholder="Email"
-                className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
+                className="w-full sm:w-1/2 p-2 border bg-gunmetal rounded mb-2"
               />
               {/* <input
                 type="file"
@@ -602,7 +603,7 @@ function TrioApp(eventId, eventName) {
                 required
               /> */}
 
-              <div class="w-1/2 flex items-center space-x-2">
+              <div class="w-full sm:w-1/2 flex items-center space-x-2">
                 <label
                   for="file_upload3"
                   class="w-full flex justify-center items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
@@ -819,7 +820,7 @@ function SoloApp(eventId, eventName) {
               />
             </div>
 
-            <div className="flex items-center space-x-2">
+            <div className="flex flex-col sm:flex-row items-center space-x-2">
               {/* Email */}
               <input
                 type="email"
@@ -827,7 +828,7 @@ function SoloApp(eventId, eventName) {
                 value={userInput.email}
                 onChange={handleChange}
                 placeholder="Player Email"
-                className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
+                className="w-full sm:w-1/2 p-2 border bg-gunmetal rounded mb-2"
               />
               {/* <input
                 type="file"
@@ -836,7 +837,7 @@ function SoloApp(eventId, eventName) {
                 className="w-full p-2 border rounded"
                 required
               /> */}
-              <div class="w-1/2 flex items-center space-x-2">
+              <div class="w-full sm:w-1/2 flex items-center space-x-2">
                 <label
                   for="file_upload1"
                   class="flex jsutify-center items-center cursor-pointer w-full px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
@@ -993,7 +994,7 @@ function FootballApp() {
               />
             </div>
 
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
               {/* Email */}
               <input
                 type="email"
@@ -1001,7 +1002,7 @@ function FootballApp() {
                 value={userInput.email}
                 onChange={handleChange}
                 placeholder="Email"
-                className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
+                className="w-full sm:w-1/2 p-2 border bg-gunmetal rounded mb-2"
               />
               {/* <input
                 type="file"
@@ -1010,7 +1011,7 @@ function FootballApp() {
                 className="w-full p-2 border rounded"
                 required
               /> */}
-              <div class="w-1/2 flex items-center space-x-2">
+              <div class="w-full sm:w-1/2 flex items-center space-x-2">
                 <label
                   for="file_upload1"
                   class="flex justify-center items-center cursor-pointer w-full px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
