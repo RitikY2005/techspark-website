@@ -99,6 +99,7 @@ function QuadApp() {
                 onChange={handleChange}
                 placeholder="Email"
                 className="w-full sm:w-1/2 p-2 border bg-gunmetal rounded"
+                required
               />
               {/* <input
                 type="file"
@@ -180,6 +181,7 @@ function QuadApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              required
             />
           </div>
           {imagePreviews.IdImage2 && (
@@ -202,6 +204,7 @@ function QuadApp() {
               onChange={handleChange}
               placeholder="Player 2 Name"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
+              required
             />
             <input
               type="tel"
@@ -210,6 +213,7 @@ function QuadApp() {
               onChange={handleChange}
               placeholder="Player 2 Phone"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
+              required
             />
           </div>
           {/* <input
@@ -234,6 +238,7 @@ function QuadApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              required
             />
           </div>
           {imagePreviews.IdImage3 && (
@@ -256,6 +261,7 @@ function QuadApp() {
               onChange={handleChange}
               placeholder="Player 3 Name"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
+              required
             />
             <input
               type="tel"
@@ -264,6 +270,7 @@ function QuadApp() {
               onChange={handleChange}
               placeholder="Player 3 Phone"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
+              required
             />
           </div>
           {/* <input
@@ -287,6 +294,7 @@ function QuadApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              required
             />
           </div>
           {imagePreviews.IdImage4 && (
@@ -396,6 +404,7 @@ function DualApp(eventId, eventName) {
                 onChange={handleChange}
                 placeholder="Email"
                 className="w-full sm:w-1/2 p-2 bg-gunmetal border rounded mb-2"
+                required
               />
               {/* <input
                 type="file"
@@ -478,6 +487,7 @@ function DualApp(eventId, eventName) {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              required
             />
           </div>
           {imagePreviews.IdImage2 && (
@@ -593,6 +603,7 @@ function TrioApp(eventId, eventName) {
                 onChange={handleChange}
                 placeholder="Email"
                 className="w-full sm:w-1/2 p-2 border bg-gunmetal rounded mb-2"
+                required
               />
               {/* <input
                 type="file"
@@ -675,6 +686,7 @@ function TrioApp(eventId, eventName) {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              required
             />
           </div>
           {imagePreviews.IdImage2 && (
@@ -697,6 +709,7 @@ function TrioApp(eventId, eventName) {
               onChange={handleChange}
               placeholder="Player 3 Name"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
+              required
             />
             <input
               type="tel"
@@ -705,6 +718,7 @@ function TrioApp(eventId, eventName) {
               onChange={handleChange}
               placeholder="Player 3 Phone"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
+              required
             />
           </div>
           {/* <input
@@ -727,6 +741,7 @@ function TrioApp(eventId, eventName) {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              required
             />
           </div>
           {imagePreviews.IdImage3 && (
@@ -828,6 +843,7 @@ function SoloApp(eventId, eventName) {
                 onChange={handleChange}
                 placeholder="Player Email"
                 className="w-full sm:w-1/2 p-2 border bg-gunmetal rounded mb-2"
+                required
               />
               {/* <input
                 type="file"
@@ -1002,6 +1018,7 @@ function FootballApp() {
                 onChange={handleChange}
                 placeholder="Email"
                 className="w-full sm:w-1/2 p-2 border bg-gunmetal rounded mb-2"
+                required
               />
               {/* <input
                 type="file"
@@ -1082,6 +1099,7 @@ function FootballApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              required
             />
           </div>
           {imagePreviews.IdImage2 && (
@@ -1104,6 +1122,7 @@ function FootballApp() {
               onChange={handleChange}
               placeholder="Player 2 Name"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
+              required
             />
             <input
               type="tel"
@@ -1112,6 +1131,7 @@ function FootballApp() {
               onChange={handleChange}
               placeholder="Player 2 Phone"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
+              required
             />
           </div>
           {/* <input
@@ -1135,6 +1155,7 @@ function FootballApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              required
             />
           </div>
           {imagePreviews.IdImage3 && (
@@ -1157,6 +1178,7 @@ function FootballApp() {
               onChange={handleChange}
               placeholder="Player 3 Name"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
+              required
             />
             <input
               type="tel"
@@ -1165,6 +1187,7 @@ function FootballApp() {
               onChange={handleChange}
               placeholder="Player 3 Phone"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
+              required
             />
           </div>
           {/* <input
@@ -1188,6 +1211,7 @@ function FootballApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              required
             />
           </div>
           {imagePreviews.IdImage4 && (
@@ -1242,6 +1266,7 @@ function FootballApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              required
             />
           </div>
           {imagePreviews.IdImage5 && (
@@ -1264,7 +1289,6 @@ function FootballApp() {
               onChange={handleChange}
               placeholder="Player 5 Name"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
-              required
             />
             <input
               type="tel"
@@ -1273,7 +1297,6 @@ function FootballApp() {
               onChange={handleChange}
               placeholder="Player 5 Phone"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
-              required
             />
           </div>
           {/* <input
@@ -1319,7 +1342,6 @@ function FootballApp() {
               onChange={handleChange}
               placeholder="Player 6 Name"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
-              required
             />
             <input
               type="tel"
@@ -1328,7 +1350,6 @@ function FootballApp() {
               onChange={handleChange}
               placeholder="Player 6 Phone"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
-              required
             />
           </div>
           {/* <input
