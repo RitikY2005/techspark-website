@@ -365,11 +365,11 @@ function DualApp(eventId, eventName) {
     const { name1, phone1, IdImage1, name2, phone2,IdImage2 } = userInput;
 
     if (!name1 || !phone1 || !IdImage1) {
-      alert("Captain's details are required!");
+      alert("Player 1  details are required!");
       return;
     }
     if (!name2 || !phone2 || !IdImage2) {
-      alert("At least one more player is required!");
+      alert("Player 2 details are required!");
       return;
     }
     
