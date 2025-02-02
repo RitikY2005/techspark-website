@@ -45,16 +45,25 @@ function QuadApp() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { name1, phone1, IdImage1, name2, phone2, name3, phone3 } = userInput;
+    const { name1, phone1, IdImage1, name2, phone2,IdImage2, name3, phone3,IdImage3,name4, phone4,IdImage4} = userInput;
 
     if (!name1 || !phone1 || !IdImage1) {
       alert("Captain's details are required!");
       return;
     }
-    if (!name2 || !phone2 || (!name3 && !phone3)) {
-      alert("At least one more player is required!");
+    if (!name2 || !phone2 || !IdImage2) {
+      alert("Player 1 details are required!");
       return;
     }
+    if (!name3 || !phone3 || !IdImage3) {
+      alert("Player 2 details are required!");
+      return;
+    }
+    if (!name4 || !phone4 || !IdImage4) {
+      alert("Player 3 details are required!");
+      return;
+    }
+    
 
     console.log("Form Submitted:", userInput);
   };
@@ -121,7 +130,6 @@ function QuadApp() {
                   name="IdImage1"
                   type="file"
                   class="hidden"
-                  required
                   onChange={handleImageChange}
                 />
               </div>
@@ -181,7 +189,6 @@ function QuadApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
-              required
             />
           </div>
           {imagePreviews.IdImage2 && (
@@ -238,7 +245,6 @@ function QuadApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
-              required
             />
           </div>
           {imagePreviews.IdImage3 && (
@@ -294,7 +300,6 @@ function QuadApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
-              required
             />
           </div>
           {imagePreviews.IdImage4 && (
@@ -348,21 +353,27 @@ function DualApp(eventId, eventName) {
         [name]: URL.createObjectURL(file),
       }));
     }
+    else {
+      // If no file is selected, set the state to null
+      setUserInput((prev) => ({ ...prev, [name]: null }));
+      setImagePreviews((prev) => ({ ...prev, [name]: null }));
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { name1, phone1, IdImage1, name2, phone2 } = userInput;
+    const { name1, phone1, IdImage1, name2, phone2,IdImage2 } = userInput;
 
     if (!name1 || !phone1 || !IdImage1) {
       alert("Captain's details are required!");
       return;
     }
-    if (!name2 || !phone2) {
+    if (!name2 || !phone2 || !IdImage2) {
       alert("At least one more player is required!");
       return;
     }
-
+    
+    
     console.log("Form Submitted:", userInput);
   };
 
@@ -427,7 +438,6 @@ function DualApp(eventId, eventName) {
                   name="IdImage1"
                   type="file"
                   class="hidden"
-                  required
                   onChange={handleImageChange}
                 />
               </div>
@@ -487,7 +497,6 @@ function DualApp(eventId, eventName) {
               type="file"
               class="hidden"
               onChange={handleImageChange}
-              required
             />
           </div>
           {imagePreviews.IdImage2 && (
@@ -551,16 +560,22 @@ function TrioApp(eventId, eventName) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { name1, phone1, IdImage1, name2, phone2, name3, phone3 } = userInput;
+    const { name1, phone1, IdImage1, name2, phone2,IdImage2, name3, phone3,IdImage3 } = userInput;
 
     if (!name1 || !phone1 || !IdImage1) {
-      alert("Captain's details are required!");
+      alert("Player 1 details are required!");
       return;
     }
-    if (!name2 || !phone2 || (!name3 && !phone3)) {
-      alert("At least one more player is required!");
+    
+    if (!name2 || !phone2 || !IdImage2) {
+      alert("Player 2 details are required!");
       return;
     }
+    if (!name3 || !phone3 || !IdImage3) {
+      alert("Player 3 details are required!");
+      return;
+    }
+    
 
     console.log("Form Submitted:", userInput);
   };
@@ -626,7 +641,6 @@ function TrioApp(eventId, eventName) {
                   name="IdImage1"
                   type="file"
                   class="hidden"
-                  required
                   onChange={handleImageChange}
                 />
               </div>
@@ -686,7 +700,6 @@ function TrioApp(eventId, eventName) {
               type="file"
               class="hidden"
               onChange={handleImageChange}
-              required
             />
           </div>
           {imagePreviews.IdImage2 && (
@@ -741,7 +754,6 @@ function TrioApp(eventId, eventName) {
               type="file"
               class="hidden"
               onChange={handleImageChange}
-              required
             />
           </div>
           {imagePreviews.IdImage3 && (
@@ -865,7 +877,6 @@ function SoloApp(eventId, eventName) {
                   name="IdImage1"
                   type="file"
                   class="hidden"
-                  required
                   onChange={handleImageChange}
                 />
               </div>
@@ -954,6 +965,7 @@ function FootballApp() {
       IdImage2,
       name3,
       phone3,
+      IdImage3,
       name4,
       phone4,
       IdImage4,
@@ -972,8 +984,20 @@ function FootballApp() {
       alert("Captain's details are required!");
       return;
     }
-    if (!name2 || !phone2 && (!name3 && !phone3) && (!name4 && !phone4)) {
-      alert("At least one more player is required!");
+    if (!name2 || !phone2 || !IdImage2) {
+      alert("Player 1 details are required!");
+      return;
+    }
+    if (!name3 || !phone3 || !IdImage3) {
+      alert("Player 2 details are required!");
+      return;
+    }
+    if (!name4 || !phone4 || !IdImage4) {
+      alert("Player 3 details are required!");
+      return;
+    }
+    if (!name5 || !phone5 || !IdImage5) {
+      alert("Player 4 details are required!");
       return;
     }
 
@@ -1040,7 +1064,6 @@ function FootballApp() {
                   name="IdImage1"
                   type="file"
                   class="hidden"
-                  required
                   onChange={handleImageChange}
                 />
               </div>
@@ -1099,7 +1122,6 @@ function FootballApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
-              required
             />
           </div>
           {imagePreviews.IdImage2 && (
@@ -1155,7 +1177,6 @@ function FootballApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
-              required
             />
           </div>
           {imagePreviews.IdImage3 && (
@@ -1211,7 +1232,6 @@ function FootballApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
-              required
             />
           </div>
           {imagePreviews.IdImage4 && (
@@ -1266,7 +1286,6 @@ function FootballApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
-              required
             />
           </div>
           {imagePreviews.IdImage5 && (
