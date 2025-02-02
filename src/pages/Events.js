@@ -22,6 +22,9 @@ function Events() {
     }
   };
 
+
+  
+
   const handleRegister = (index,subIndex) => {
       const Registration_form= events[index].subEvents[subIndex]?.registrationForm;
       console.log("indexss--",index,subIndex)
@@ -209,7 +212,7 @@ function Events() {
                               <motion.div
                                 key={subIndex}
                                 className="p-4 sm:p-6 bg-black/60 rounded-lg border border-cyber-blue/20
-                                         hover:border-cyber-blue/40 transition-all duration-300"
+                                         hover:border-cyber-blue/40 transition-all duration-300 flex flex-col justify-between"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.3, delay: subIndex * 0.1 }}
@@ -225,11 +228,11 @@ function Events() {
                                     {subEvent.status}
                                   </span>
                                 </div>
-                                <p className="text-sm sm:text-base text-white leading-relaxed mb-4">
+                                <p className="text-sm sm:text-base text-white leading-relaxed mb-4 flex-grow">
                                   {subEvent.description}
                                 </p>
                                 
-                                <div className='flex gap-4'>
+                                <div className='flex mt-10 gap-4'>
                                   <motion.button
                                     className="w-full sm:w-auto px-6 py-3 text-sm bg-black text-cyber-blue font-bold rounded-lg
                                              border border-cyber-blue/30 hover:border-white

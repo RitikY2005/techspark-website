@@ -5,3 +5,6 @@
 body.no-scroll {
     overflow: hidden;
   }
+  .tile-buttons {
+    margin-top: auto; /* Push buttons to the bottom */
+  }
