@@ -65,7 +65,7 @@
     subEvents: [
       {
         title: "Treasure Hunt",
-        description: "HUNT AGAINST TIME is a thrilling 3-stage challenge! The adventure begins, put your wit, skill, and teamwork to the ultimate test and emerge victorious!",
+        description: "HUNT AGAINST TIME is a thrilling 3-stage challenge! The adventure begins with a Riddle Stage, where you'll need to solve a series of difficult riddles to unlock the next level. Successfully completing the riddles will lead you to the Task Stage, where you'll have to accomplish a set of challenging tasks. Solving all riddles and tasks, finally you'll reach the Treasure Hunt Stage, where you'll use cryptic clues to track down hidden cards scattered around the college. The team that finds minimum 13 cards first will emerge victorious, putting their wit, skill, and teamwork to the ultimate test!",
         status: "STAY TUNED",
         registrationForm:TrioApp,
         eventRules:[
