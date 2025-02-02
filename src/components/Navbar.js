@@ -95,7 +95,7 @@ function Navbar() {
 
         <motion.div 
           ref={navRef}
-          className={`${isMenuOpen ? 'flex' : 'hidden'} absolute top-10 left-0 w-full z-9999999 md:hidden flex-col gap-4 pt-4 rounded-md shadow-[0px_0px_10px_black] bg-[#c0c0c0] text-black`}
+          className={`${isMenuOpen ? 'flex' : 'hidden'} absolute top-10 left-0 w-full z-9999999 md:hidden flex-col gap-4 pt-4 rounded-md shadow-[0px_0px_10px_black] bg-black/95 text-cyber-pink`}
           initial={false}
           animate={{ height: isMenuOpen ? 'auto' : 0 }}
         >
