@@ -110,7 +110,7 @@ function QuadApp() {
               <div class="w-full sm:w-1/2 flex items-center space-x-2">
                 <label
                   for="file_upload1"
-                  class="w-full flex no-wrap items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
+                  class="w-full flex no-wrap justify-center items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
                 >
                   <span class="material-icons mr-2">cloud_upload</span>
                   Upload your ID image
