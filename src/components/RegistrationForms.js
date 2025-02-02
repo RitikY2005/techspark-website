@@ -113,8 +113,7 @@ function QuadApp() {
                   class="w-full flex no-wrap items-center cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
                 >
                   <span class="material-icons mr-2">cloud_upload</span>
-                  <span className="hidden sm:block">Upload your id image</span>
-                  <span className="sm:hidden text-sm">Upload image</span>
+                  Upload your id image
                 </label>
                 <input
                   id="file_upload1"
