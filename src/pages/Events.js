@@ -232,7 +232,7 @@ function Events() {
                                   {subEvent.description}
                                 </p>
                                 
-                                <div className='flex mt-10 gap-4'>
+                                <div className='flex items-center mt-10 gap-4'>
                                   <motion.button
                                     className="w-full sm:w-auto px-6 py-3 text-sm bg-black text-cyber-blue font-bold rounded-lg
                                              border border-cyber-blue/30 hover:border-white

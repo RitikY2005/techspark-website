@@ -8,7 +8,7 @@ function Navbar() {
   return (
     // <nav className="px-4 py-3 sm:py-4 bg-[#2a3135] fixed w-full top-0 z-50 shadow-lg opacity-75"></nav>
     <nav className="px-4 py-3 sm:py-4 w-full top-0 z-50 opacity-75">
-      <div className="container mx-auto">
+      <div className="container mx-auto relative">
         <div className="flex justify-between items-center">
           <motion.div
             className="flex-shrink-0"
@@ -40,7 +40,7 @@ function Navbar() {
             className="md:hidden text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6" fill="none" stroke="black" viewBox="0 0 24 24">
               {isMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
@@ -74,7 +74,7 @@ function Navbar() {
         </div>
 
         <motion.div 
-          className={`${isMenuOpen ? 'flex' : 'hidden'} md:hidden flex-col gap-4 pt-4`}
+          className={`${isMenuOpen ? 'flex' : 'hidden'} absolute top-9 left-0 w-full z-10 md:hidden flex-col gap-4 pt-4 rounded-md shadow-[0px_0px_10px_black]`}
           initial={false}
           animate={{ height: isMenuOpen ? 'auto' : 0 }}
         >
@@ -88,7 +88,7 @@ function Navbar() {
             <Link
               key={link.path}
               to={link.path}
-              className="text-white font-medium py-2 px-4 rounded-lg
+              className="text-black font-medium py-2 px-4 rounded-lg
                         hover:bg-cyber-blue/10 transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
