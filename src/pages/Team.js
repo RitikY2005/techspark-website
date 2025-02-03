@@ -39,6 +39,9 @@ function Team() {
       logistics: [
         { name: "Sejal Kotak", role: "Logistics Head", image: "photos/Sejal_HOD_LOG.png" }
       ],
+      marketing: [
+        { name: "Suman Giri", role: "Marketing Head", image: "photos/Suman_HOD_Marketing.png" }
+      ],
       pr: [
         { name: "Ashika Ashok", role: "Public Relations Head", image: "photos/Ashika_HOD_PR.png" }
       ],
@@ -50,7 +53,7 @@ function Team() {
       ],
       technical: [
         { name: "Siddh Vyas", role: "Technical Head", image: "photos/Siddh_HOD_TECH.png" }
-      ],
+      ]
     }
   };
 
