@@ -119,7 +119,10 @@
         eventRules:[
          "All players must have the latest version of the game installed before the tournament starts.",
          "In-game voice chat is allowed; external communication is strictly prohibited.",
-         "The winner will be decided by the team with the highest total points across all four matches, based on placement and performance."
+         "The winner will be decided by the team with the highest total points across all four matches, based on placement and performance.",
+         "No cheating, exploiting glitches, or using unauthorized tools.",
+         "Tablets and emulators are prohibited. Players using them will be disqualified.",
+         "Every player has to arrange their own network and should also carry their own powerbank for charging their device.WiFi or hotspot would not be provided the OC"
         ]
       },
       {
@@ -131,7 +134,10 @@
                     "Game Speed: Normal",
                     "Ball Settings: Default settings",
                     "Team Selection: No duplicate teams are allowed. If both players select the same team, a coin flip will determine who keeps their selection.",
-                    "Game Mode: Live mode enabled for fairness."
+                    "Game Mode: Live mode enabled for fairness.",
+                    "If the game disconnects during the first half and the score is tied, the match will be restarted.",
+                    "If one player is leading, they have the option to restart or accept the win."
+
                    ]
       }
     ]
@@ -146,7 +152,7 @@
     time: "25 Feb 2025, 9:00 AM - 6:00 PM",
     subEvents: [
       {
-        title: "Netflix and Chill (Football Tournament)",
+        title: "Netflicks and Chill (Football Tournament)",
         description: "Gear up for an electrifying football tournament where passion meets glory on the field! Experience the thrill as teams clash, showcasing skill, speed, and sportsmanship in a battle for supremacy. “The beautiful game” awaits—filled with unforgettable moments. “A game of two halves” where comebacks and last-minute thrillers keep you on the edge of your seat.",
         status: "STAY TUNED",
         registrationForm:FootballApp,

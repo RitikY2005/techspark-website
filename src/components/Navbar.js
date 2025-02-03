@@ -42,7 +42,7 @@ function Navbar() {
                 className="h-8 sm:h-12 w-auto"
               />
               <div className="flex flex-col">
-                <span className="text-lg sm:text-2xl font-bold text-black tracking-wide">TechSpark</span>
+                <span className="text-lg sm:text-2xl font-spark text-black tracking-wide">TechSpark</span>
               </div>
               {/* <img 
                 src="/techspark-logo.png" 

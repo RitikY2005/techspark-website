@@ -4,7 +4,7 @@ import Footer from './Footer';
 
 function CyberLayout({ children }) {
   return (
-    <div className="h-screen overflow-y-auto flex flex-col relative overflow-x-hidden">
+    <div className="font-manrope h-screen overflow-y-auto flex flex-col relative overflow-x-hidden">
       {/* Base Background */}
       <div className="fixed inset-0  no-repeat bg-cover bg-center " style={{backgroundImage:'url("grad.avif")'}} />
 

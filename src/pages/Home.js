@@ -10,7 +10,7 @@ function Home() {
       <div className="relative min-h-[50vh] sm:min-h-screen flex flex-col  justify-center items-center">
         {/* Animated Background Elements */}
         <motion.div
-          className="absolute flex justify-center items-center w-[250px] sm:w-[300px] md:w-[600px] h-[250px] sm:h-[300px] md:h-[600px] opacity-5 z-10"
+          className="absolute flex justify-center items-center w-[150px] sm:w-[300px] md:w-[600px] h-[150px] sm:h-[300px] md:h-[600px] opacity-5 z-10"
           initial={{ rotate: 0 }}
           animate={{ rotate: 360 }}
           transition={{ duration: 50, repeat: Infinity, ease: "linear" }}

@@ -21,7 +21,8 @@ module.exports = {
         'cyber': '24px 24px, 24px 24px, 24px 24px',
       },
       fontFamily: {
-        'tech': ['Orbitron', 'sans-serif'],
+        'tech': ['Manrope', 'sans-serif'],
+        'spark': ['Black Future', 'sans-serif']
       },
     },
   },
