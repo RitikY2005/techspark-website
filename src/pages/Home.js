@@ -127,8 +127,8 @@ function Home() {
             24th and 25th February 2025
           </motion.p>
 
-          {/* Countdown Timer Section */}
-          <div className="text-center mt-12 sm:mt-16">
+             {/* Countdown Timer Section */}
+             <div className="text-center mt-12 sm:mt-16">
             <motion.h2
               className="text-xl sm:text-2xl md:text-4xl text-black mb-4 font-mangrove"
               initial={{ opacity: 0, y: -50 }}
