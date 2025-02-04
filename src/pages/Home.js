@@ -7,7 +7,7 @@ function Home() {
    // Countdown renderer function
    const renderer = ({ days, hours, minutes, seconds }) => (
     <motion.div
-      className="flex justify-center items-center space-x-6 text-2xl sm:text-3xl md:text-4xl text-black font-mangrove tracking-widest"
+      className="flex justify-center items-center space-x-6 text-2xl sm:text-3xl md:text-4xl text-gunmetal font-mangrove tracking-widest"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.2 }}
@@ -99,7 +99,7 @@ function Home() {
           transition={{ duration: 0.8 }}
         >
           <motion.h1
-            className="text-3xl sm:text-6xl md:text-7xl mb-4 sm:mb-6 text-[#2a3135] font-spark 
+            className="text-3xl sm:text-6xl md:text-7xl mb-4 sm:mb-6 text-gunmetal font-spark 
                        tracking-wider leading-tight"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -109,7 +109,7 @@ function Home() {
           </motion.h1>
 
           <motion.p
-            className="text-xl sm:text-2xl md:text-3xl text-black max-w-2xl mx-auto 
+            className="text-xl sm:text-2xl md:text-3xl text-gunmetal max-w-2xl mx-auto 
                        leading-relaxed mb-4 sm:mb-8 font-tech tracking-wide"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -119,7 +119,7 @@ function Home() {
           </motion.p>
 
           <motion.p
-            className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 sm:mb-12 text-[#2a3135]"
+            className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 sm:mb-12 text-gunmetal"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -130,7 +130,7 @@ function Home() {
              {/* Countdown Timer Section */}
              <div className="text-center mt-12 sm:mt-16">
             <motion.h2
-              className="text-xl sm:text-2xl md:text-4xl text-black mb-4 font-mangrove"
+              className="text-xl sm:text-2xl md:text-4xl text-gunmetal mb-4 font-mangrove"
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
