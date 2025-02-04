@@ -98,7 +98,7 @@ function Home() {
             24th and 25th February 2025
           </motion.p>
 
-          <Link to="/events">
+         <Link to="/events">
             <motion.button
               className="w-full sm:w-auto mt-4 sm:mt-8 px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg 
                         bg-cyber-blue text-gunmetal font-extrabold rounded-full 

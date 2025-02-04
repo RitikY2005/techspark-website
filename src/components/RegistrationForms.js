@@ -85,7 +85,8 @@ function QuadApp() {
                 value={userInput.name1}
                 onChange={handleChange}
                 placeholder="Captain Name"
-                className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
+                className="w-1/2 p-2 border bg-gunmetal rounded mb-2 border"
+                style={{ borderWidth: '0.1px', borderColor: '#ccc' }}
                 required
               />
               <input
@@ -94,8 +95,10 @@ function QuadApp() {
                 value={userInput.phone1}
                 onChange={handleChange}
                 placeholder="Captain Phone"
-                className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
+                className="w-1/2 p-2 border bg-gunmetal rounded mb-2 "
                 required
+                style={{ borderWidth: '0.1px', borderColor: '#ccc' }}
+
               />
             </div>
 

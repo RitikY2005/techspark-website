@@ -2,15 +2,30 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import CyberLayout from '../components/CyberLayout';
 
+
+
+
+
+
+
+
 function About() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
   const images = [
-    'slide1.jpg',
-    'slide2.jpg',
-    'slide3.jpg',
-    'slide4.jpg',
+    // 'slide1.jpg',
+    // 'slide2.jpg',
+    // 'slide3.jpg',
+    // 'slide4.jpg',
+    '/photos/DSC_0109.jpg',
+    '/photos/DSC_0221.jpg',
+    '/photos/DSC_0318.jpg',
+    '/photos/DSC_0383.JPG',
+    '/photos/DSC_0397.JPG',
+    '/photos/DSCN3591.JPG',
+    '/photos/DSCN3644.JPG',
+    '/photos/DSCN3664.JPG'
   ];
 
   const handleSlideChange = (newIndex) => {
@@ -59,7 +74,7 @@ function About() {
               TechSpark is an intercollegiate festival organized by the Department of Computer Science at Mithibai College. 
               The events range from immensely challenging ones like quizzes on various topics, coder battles like Hackathons 
               and time-crunching Programming Challenges to ones that have more of an artistic appeal such as Poster Making, 
-              Treasure Hunts, etc. We invite eminent speakers as guest lecturers to broaden our horizons on modern technologies and developments in the IT industry and other such fields of interest. Students, being the chief participants for whom these events have been thoughtfully curated, respond to every occasion by interacting and collaborating with great enthusiasm and in large numbers. This year, TechSpark is designed to be held on 8th and 9th of February, with the mysteries and nuances of our theme: Across the Cyberverse.
+              Treasure Hunts, etc. We invite eminent speakers as guest lecturers to broaden our horizons on modern technologies and developments in the IT industry and other such fields of interest. Students, being the chief participants for whom these events have been thoughtfully curated, respond to every occasion by interacting and collaborating with great enthusiasm and in large numbers. 
             </p>
           </motion.div>
 
@@ -212,8 +227,8 @@ function About() {
                 icon: "🤝"
               },
               {
-                title: "Theme 2025",
-                description: "This year's theme 'Across the Cyberverse' explores the mysteries and nuances of digital realms.",
+                title: "Theme",
+                description: "This year's theme 'The Silver Metamorphosis' explores the mysteries and nuances of digital realms.",
                 icon: "🌐"
               },
               {

@@ -10,3 +10,5 @@ body.no-scroll {
   .tile-buttons {
     margin-top: auto; /* Push buttons to the bottom */
   }
+
+  /* Custom class for thinner borders */
