@@ -37,7 +37,7 @@ function Navbar() {
           >
             <Link to="/" className="flex items-center gap-2 no-underline">
               <img 
-                src="/techspark-logo.png" 
+                src="/logo - black.png" 
                 alt="TechSpark Logo" 
                 className="h-8 sm:h-12 w-auto"
               />
@@ -96,6 +96,7 @@ function Navbar() {
         <motion.div 
           ref={navRef}
           className={`${isMenuOpen ? 'flex' : 'hidden'} absolute top-10 left-0 w-full z-9999999 md:hidden flex-col gap-4 pt-4 rounded-md shadow-[0px_0px_10px_black] bg-black/75 text-cyber-pink`}
+
           initial={false}
           animate={{ height: isMenuOpen ? 'auto' : 0 }}
         >
