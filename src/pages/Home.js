@@ -1,8 +1,36 @@
 import { motion } from "framer-motion";
 // import { Link } from "react-router-dom";center
 import CyberLayout from "../components/CyberLayout";
+import { useState, useEffect } from "react";
 
 function Home() {
+  const calculateTimeLeft = () => {
+    const eventDate = new Date("2025-02-24T00:00:00").getTime();
+    const now = new Date().getTime();
+    const difference = eventDate - now;
+
+    if (difference > 0) {
+      return {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / (1000 * 60)) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    } else {
+      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    }
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <CyberLayout>
       {/* Hero Section */}
@@ -21,8 +49,6 @@ function Home() {
             className="w-full h-full"
           />
         </motion.div>
-
-       
 
         {/* Floating Images - Hidden on small screens */}
         <motion.div
@@ -100,7 +126,43 @@ function Home() {
             24th and 25th February 2025
           </motion.p>
 
-         {/* <Link to="/events">
+          {/* Countdown Timer Section */}
+          <div className="text-center mt-12 sm:mt-16">
+            <motion.h2
+              className="text-xl sm:text-2xl md:text-4xl text-black  mb-4 font-mangrove"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+               Countdown to TechSpark'25 
+            </motion.h2>
+
+            <motion.div
+              className="flex justify-center items-center space-x-6 text-2xl sm:text-3xl md:text-4xl text-black font-mangrove"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="flex flex-col items-center">
+                <span>{timeLeft.days}</span>
+                <span className="text-sm">Days</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <span>{timeLeft.hours}</span>
+                <span className="text-sm">Hours</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <span>{timeLeft.minutes}</span>
+                <span className="text-sm">Minutes</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <span>{timeLeft.seconds}</span>
+                <span className="text-sm">Seconds</span>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* <Link to="/events">
             <motion.button
             
               className="w-full sm:w-auto mt-4 sm:mt-8 px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg 

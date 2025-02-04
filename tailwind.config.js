@@ -22,7 +22,8 @@ module.exports = {
       },
       fontFamily: {
         'tech': ['Manrope', 'sans-serif'],
-        'spark': ['Black Future', 'sans-serif']
+        'spark': ['Black Future', 'sans-serif'],
+        'mangrove': ['Mangrove', 'sans-serif']
       },
     },
   },
