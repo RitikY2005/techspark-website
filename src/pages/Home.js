@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";center
 import CyberLayout from "../components/CyberLayout";
 
 function Home() {
   return (
     <CyberLayout>
       {/* Hero Section */}
-      {/* <div className="relative min-h-screen flex flex-col justify-center items-center px-4 sm:px-8"> */}
+      {/* <div className="relative min-h-screen flex flex-col justify-center items- px-4 sm:px-8"> */}
       <div className="relative min-h-[50vh] sm:min-h-screen flex flex-col  justify-center items-center">
         {/* Animated Background Elements */}
         <motion.div
-          className="absolute flex justify-center items-center w-[150px] sm:w-[300px] md:w-[600px] h-[150px] sm:h-[300px] md:h-[600px] opacity-5 z-10"
+          className="flex md:hidden absolute  justify-center items-center w-[250px] sm:w-[300px] md:w-[600px] h-[250px] sm:h-[300px] md:h-[600px] opacity-5 z-10"
           initial={{ rotate: 0 }}
           animate={{ rotate: 360 }}
           transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
@@ -21,6 +21,8 @@ function Home() {
             className="w-full h-full"
           />
         </motion.div>
+
+       
 
         {/* Floating Images - Hidden on small screens */}
         <motion.div
@@ -70,7 +72,7 @@ function Home() {
           transition={{ duration: 0.8 }}
         >
           <motion.h1
-            className="text-3xl sm:text-6xl md:text-7xl mb-4 sm:mb-6 text-[#2a3135] font-bold font-tech 
+            className="text-3xl sm:text-6xl md:text-7xl mb-4 sm:mb-6 text-[#2a3135] font-spark 
                        tracking-wider leading-tight"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -98,8 +100,9 @@ function Home() {
             24th and 25th February 2025
           </motion.p>
 
-         <Link to="/events">
+         {/* <Link to="/events">
             <motion.button
+            
               className="w-full sm:w-auto mt-4 sm:mt-8 px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg 
                         bg-cyber-blue text-gunmetal font-extrabold rounded-full 
                         hover:-translate-y-1 transition-transform duration-200 shadow-lg
@@ -110,7 +113,7 @@ function Home() {
             >
               Register Now
             </motion.button>
-          </Link>
+          </Link> */}
         </motion.div>
       </div>
 

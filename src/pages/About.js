@@ -55,7 +55,7 @@ function About() {
       <div className="px-4 sm:px-8 pt-16 sm:pt-20">
         <div className="max-w-6xl mx-auto">
           <motion.h1
-            className="text-3xl sm:text-5xl md:text-6xl mb-8 text-[#2a3135] font-bold text-center"
+            className="text-3xl sm:text-5xl md:text-6xl mb-8 text-[#2a3135] font-spark text-center"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
@@ -71,10 +71,11 @@ function About() {
           >
             <h2 className="text-2xl sm:text-3xl mb-6 text-[#2a3135] font-bold">What is Techspark?</h2>
             <p className="text-base sm:text-lg text-[#2a3135] leading-relaxed max-w-4xl mx-auto text-justify">
-              TechSpark is an intercollegiate festival organized by the Department of Computer Science at Mithibai College. 
+            Stepping into the world of limitless possibilities with TechSpark, the iconig intercollegiate festival of the Computer Science Department of Mithibai College. More than just an event, Tech Spark is a celebration of technology. creativity, and innovation, where brilliance meets opportunity and ideas take flight. This year TechSpark is all set to take place on 24th and 25th February.
+              {/* TechSpark is an intercollegiate festival organized by the Department of Computer Science at Mithibai College. 
               The events range from immensely challenging ones like quizzes on various topics, coder battles like Hackathons 
               and time-crunching Programming Challenges to ones that have more of an artistic appeal such as Poster Making, 
-              Treasure Hunts, etc. We invite eminent speakers as guest lecturers to broaden our horizons on modern technologies and developments in the IT industry and other such fields of interest. Students, being the chief participants for whom these events have been thoughtfully curated, respond to every occasion by interacting and collaborating with great enthusiasm and in large numbers. 
+              Treasure Hunts, etc. We invite eminent speakers as guest lecturers to broaden our horizons on modern technologies and developments in the IT industry and other such fields of interest. Students, being the chief participants for whom these events have been thoughtfully curated, respond to every occasion by interacting and collaborating with great enthusiasm and in large numbers.  */}
             </p>
           </motion.div>
 
@@ -228,7 +229,7 @@ function About() {
               },
               {
                 title: "Theme",
-                description: "This year's theme 'The Silver Metamorphosis' explores the mysteries and nuances of digital realms.",
+                description: "This year's theme 'The Silver Metamorphosis' celebrates 25 years of excellence.",
                 icon: "🌐"
               },
               {
