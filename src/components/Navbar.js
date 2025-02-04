@@ -73,9 +73,9 @@ function Navbar() {
             {[
               { path: '/', label: 'Home' },
               { path: '/about', label: 'About' },
-              { path: '/team', label: 'Team' },
+              //{ path: '/team', label: 'Team' },
               { path: '/contact', label: 'Contact' },
-              { path: '/events', label: 'Events' }
+              //{ path: '/events', label: 'Events' }
             ].map((link) => (
               <Link
                 key={link.path}
@@ -102,9 +102,9 @@ function Navbar() {
           {[
             { path: '/', label: 'Home' },
             { path: '/about', label: 'About' },
-            { path: '/team', label: 'Team' },
+            // { path: '/team', label: 'Team' },
             { path: '/contact', label: 'Contact' },
-            { path: '/events', label: 'Events' }
+            // { path: '/events', label: 'Events' }
           ].map((link) => (
             <Link
               key={link.path}

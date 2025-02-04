@@ -4,7 +4,7 @@ import Footer from './Footer';
 
 function CyberLayout({ children }) {
   return (
-    <div className="font-manrope h-screen overflow-y-auto flex flex-col relative overflow-x-hidden">
+    <div className="font-tech h-screen overflow-y-auto flex flex-col relative overflow-x-hidden">
       {/* Base Background */}
       <div className="fixed inset-0  no-repeat bg-cover bg-center " style={{backgroundImage:'url("grad.avif")'}} />
 
@@ -19,6 +19,19 @@ function CyberLayout({ children }) {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col h-auto">
+      <div className='hidden md:flex absolute top-0 left-0 w-full  justify-center items-center h-[150px] sm:h-[300px] md:h-[600px] '>
+        <motion.div
+          className="absolute flex justify-center items-center w-[150px] sm:w-[300px] md:w-[600px]  opacity-5 z-10"
+          initial={{ rotate: 0 }}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+        >
+          <img
+            src="/techspark-logo.png"
+            alt="TechSpark Logo Background"
+            className="w-full h-full"
+          />
+        </motion.div></div>
         <Navbar />
         {/* <main className="flex-grow pt-16 sm:pt-20"> */}
         <main className="flex-grow">
