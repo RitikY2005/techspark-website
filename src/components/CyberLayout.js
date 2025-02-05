@@ -21,7 +21,7 @@ function CyberLayout({ children }) {
       <div className="relative z-10 flex flex-col h-auto">
       <div className='hidden md:flex absolute top-0 left-0 w-full  justify-center items-center h-[150px] sm:h-[300px] md:h-[600px] '>
         <motion.div
-          className="absolute flex justify-center items-center w-[150px] sm:w-[300px] md:w-[600px]  opacity-5 z-10"
+          className="absolute flex justify-center items-center w-[150px] sm:w-[300px] md:w-[600px] opacity-5"
           initial={{ rotate: 0 }}
           animate={{ rotate: 360 }}
           transition={{ duration: 50, repeat: Infinity, ease: "linear" }}

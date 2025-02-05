@@ -36,7 +36,7 @@ function Home() {
     <CyberLayout>
       {/* Hero Section */}
       {/* <div className="relative min-h-screen flex flex-col justify-center items- px-4 sm:px-8"> */}
-      <div className="relative min-h-[50vh] sm:min-h-screen flex flex-col  justify-center items-center">
+      <div className="relative min-h-[100vh] sm:min-h-screen flex flex-col  justify-center items-center">
         {/* Animated Background Elements */}
         <motion.div
           className="flex md:hidden absolute  justify-center items-center w-[250px] sm:w-[300px] md:w-[600px] h-[250px] sm:h-[300px] md:h-[600px] opacity-5 z-10"

@@ -37,9 +37,14 @@ function Navbar() {
           >
             <Link to="/" className="flex items-center gap-2 no-underline">
               <img 
+                src="/mithibai-logo.png" 
+                alt="Mithibai Logo" 
+                className="w-[70px] h-[60px] md:h-[70px]"
+              />
+              <img 
                 src="/logo - black.png" 
                 alt="TechSpark Logo" 
-                className="h-8 sm:h-12 w-auto"
+                className="h-10 sm:h-12 w-auto"
               />
               <div className="flex flex-col">
                 <span className="text-lg sm:text-2xl font-spark text-black tracking-wide">TechSpark</span>
