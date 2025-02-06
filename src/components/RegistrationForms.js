@@ -1013,7 +1013,7 @@ function FootballApp() {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Captain Details */}
         <div className="p-4 bg-gunmetal rounded-lg shadow-md">
-          <h3 className="text-lg font-medium mb-2">Captain</h3>
+          <h3 className="text-lg font-medium mb-2">Captain (Player 1)</h3>
           <div className="w-full">
             <div className="flex items-center bg-gunmetal justify-center gap-2">
               <input
@@ -1021,7 +1021,7 @@ function FootballApp() {
                 name="name1"
                 value={userInput.name1}
                 onChange={handleChange}
-                placeholder="Captain Name"
+                placeholder="Player 1 Name"
                 className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
                 required
               />
@@ -1030,7 +1030,7 @@ function FootballApp() {
                 name="phone1"
                 value={userInput.phone1}
                 onChange={handleChange}
-                placeholder="Captain Phone"
+                placeholder="Player 1 Phone"
                 className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
                 required
               />
@@ -1084,14 +1084,14 @@ function FootballApp() {
 
         {/* Player 1 */}
         <div className="p-4 bg-gunmetal text-cyber-blue rounded-lg shadow-md">
-          <h3 className="text-lg font-medium mb-2">Player 1</h3>
+          <h3 className="text-lg font-medium mb-2">Player 2</h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
               type="text"
               name="name2"
               value={userInput.name2}
               onChange={handleChange}
-              placeholder="Player 1 Name"
+              placeholder="Player 2 Name"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
@@ -1100,7 +1100,7 @@ function FootballApp() {
               name="phone2"
               value={userInput.phone2}
               onChange={handleChange}
-              placeholder="Player 1 Phone"
+              placeholder="Player 2 Phone"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
@@ -1138,14 +1138,14 @@ function FootballApp() {
 
         {/* Player 2 */}
         <div className="p-4 bg-gunmetal text-cyber-blue rounded-lg shadow-md">
-          <h3 className="text-lg font-medium mb-2">Player 2</h3>
+          <h3 className="text-lg font-medium mb-2">Player 3</h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
               type="text"
               name="name3"
               value={userInput.name3}
               onChange={handleChange}
-              placeholder="Player 2 Name"
+              placeholder="Player 3 Name"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
@@ -1154,7 +1154,7 @@ function FootballApp() {
               name="phone3"
               value={userInput.phone3}
               onChange={handleChange}
-              placeholder="Player 2 Phone"
+              placeholder="Player 3 Phone"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
@@ -1193,14 +1193,14 @@ function FootballApp() {
 
         {/* Player 3  */}
         <div className="p-4 bg-gunmetal text-cyber-blue rounded-lg shadow-md">
-          <h3 className="text-lg font-medium mb-2">Player 3 </h3>
+          <h3 className="text-lg font-medium mb-2">Player 4 </h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
               type="text"
               name="name4"
               value={userInput.name4}
               onChange={handleChange}
-              placeholder="Player 3 Name"
+              placeholder="Player 4 Name"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
@@ -1209,7 +1209,7 @@ function FootballApp() {
               name="phone4"
               value={userInput.phone4}
               onChange={handleChange}
-              placeholder="Player 3 Phone"
+              placeholder="Player 4 Phone"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
@@ -1248,14 +1248,14 @@ function FootballApp() {
 
         {/* Player 4 */}
         <div className="p-4 bg-gunmetal text-cyber-blue rounded-lg shadow-md">
-          <h3 className="text-lg font-medium mb-2">Player 4</h3>
+          <h3 className="text-lg font-medium mb-2">Player 5</h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
               type="text"
               name="name5"
               value={userInput.name5}
               onChange={handleChange}
-              placeholder="Player 4 Name"
+              placeholder="Player 5 Name"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
@@ -1264,7 +1264,7 @@ function FootballApp() {
               name="phone5"
               value={userInput.phone5}
               onChange={handleChange}
-              placeholder="Player 4 Phone"
+              placeholder="Player 5 Phone"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
               required
             />
@@ -1302,14 +1302,14 @@ function FootballApp() {
 
         {/* Player 5 */}
         <div className="p-4 bg-gunmetal text-cyber-blue rounded-lg shadow-md">
-          <h3 className="text-lg font-medium mb-2">Player 5(optional)</h3>
+          <h3 className="text-lg font-medium mb-2">Player 6 (optional)</h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
               type="text"
               name="name6"
               value={userInput.name6}
               onChange={handleChange}
-              placeholder="Player 5 Name"
+              placeholder="Player 6 Name"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
             />
             <input
@@ -1317,7 +1317,7 @@ function FootballApp() {
               name="phone6"
               value={userInput.phone6}
               onChange={handleChange}
-              placeholder="Player 5 Phone"
+              placeholder="Player 6 Phone"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
             />
           </div>
@@ -1355,14 +1355,14 @@ function FootballApp() {
 
         {/* Player 6 */}
         <div className="p-4 bg-gunmetal rounded-lg shadow-md">
-          <h3 className="text-lg font-medium mb-2">Player 6 (Optional)</h3>
+          <h3 className="text-lg font-medium mb-2">Player 7 (optional)</h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
               type="text"
               name="name7"
               value={userInput.name7}
               onChange={handleChange}
-              placeholder="Player 6 Name"
+              placeholder="Player 7 Name"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
             />
             <input
@@ -1370,7 +1370,7 @@ function FootballApp() {
               name="phone7"
               value={userInput.phone7}
               onChange={handleChange}
-              placeholder="Player 6 Phone"
+              placeholder="Player 7 Phone"
               className="w-1/2 p-2 border bg-gunmetal rounded mb-2"
             />
           </div>

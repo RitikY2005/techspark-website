@@ -1,12 +1,31 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Instagram, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Instagram, Linkedin, X, YoutubeIcon } from "lucide-react";
+
+const XLogo = (props) => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    x="0px" 
+    y="0px" 
+    width="24" 
+    height="24" 
+    viewBox="0 0 256 256" 
+    style={{ fill: '#ffffff', mixBlendMode: 'normal' }} // Fixed style prop
+    {...props}
+  >
+    <g fill="#ffffff" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10">
+      <g transform="scale(5.12,5.12)">
+        <path d="M5.91992,6l14.66211,21.375l-14.35156,16.625h3.17969l12.57617,-14.57812l10,14.57813h12.01367l-15.31836,-22.33008l13.51758,-15.66992h-3.16992l-11.75391,13.61719l-9.3418,-13.61719zM9.7168,8h7.16406l23.32227,34h-7.16406z"></path>
+      </g>
+    </g>
+  </svg>
+);;
 
 const socialLinks = [
   { href: "https://www.instagram.com/mithibaitechspark/", icon: Instagram, label: "Instagram" },
   { href: "https://in.linkedin.com/company/mithibaitechspark", icon: Linkedin, label: "LinkedIn" },
-  { href: "https://x.com/M_TechSpark", icon: Twitter, label: "Twitter" },
-  { href: "#", icon: Facebook, label: "Facebook" },
+  { href: "https://x.com/M_TechSpark", icon: XLogo, label: "X" },
+  { href: "https://youtube.com/@mithibaitechspark", icon: YoutubeIcon, label: "YouTube" },
 ];
 
 function Footer() {
@@ -16,7 +35,7 @@ function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
           {/* TechSpark Section */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-cyber-blue mb-4 tracking-wide">TechSpark</h3>
+            <h3 className="text-xl font-bold text-cyber-blue mb-4 tracking-wide">Mithibai TechSpark</h3>
             <p className="text-gray-300">Engraving Adaptability</p>
           </div>
 
@@ -49,10 +68,10 @@ function Footer() {
               <li className="flex items-center gap-2">
                 <span>Email:</span>
                 <a 
-                  href="mailto:info@techspark.com"
+                  href="mailto:cp@mithibaitechspark.in"
                   className="hover:text-cyber-blue transition-colors duration-300"
                 >
-                  info@techspark.com
+                  cp@mithibaitechspark.in
                 </a>
               </li>
               <li className="flex items-center gap-2">
