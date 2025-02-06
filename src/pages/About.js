@@ -96,7 +96,6 @@ function About() {
                 className="absolute left-6 top-1/2 -translate-y-1/2 z-20
                          p-2 -ml-2
                          text-white/25 hover:text-cyber-blue
-                         opacity-0 group-hover:opacity-100 
                          transition-all duration-300
                          disabled:cursor-not-allowed disabled:opacity-0"
                 aria-label="Previous slide"
@@ -105,7 +104,7 @@ function About() {
                   xmlns="http://www.w3.org/2000/svg" 
                   viewBox="0 0 24 24" 
                   fill="none" 
-                  stroke="currentColor" 
+                  stroke="white" 
                   className="w-8 h-8"
                 >
                   <path 
@@ -167,7 +166,7 @@ function About() {
                 className="absolute right-6 top-1/2 -translate-y-1/2 z-20
                          p-2 -mr-2
                          text-white/25 hover:text-cyber-blue
-                         opacity-0 group-hover:opacity-100 
+                          
                          transition-all duration-300
                          disabled:cursor-not-allowed disabled:opacity-0"
                 aria-label="Next slide"
@@ -176,7 +175,7 @@ function About() {
                   xmlns="http://www.w3.org/2000/svg" 
                   viewBox="0 0 24 24" 
                   fill="none" 
-                  stroke="currentColor" 
+                  stroke="white" 
                   className="w-8 h-8"
                 >
                   <path 
