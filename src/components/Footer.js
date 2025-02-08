@@ -80,7 +80,7 @@ function Footer() {
                   href="tel:+911234567890"
                   className="hover:text-cyber-blue transition-colors duration-300"
                 >
-                  +91 123 456 7890
+                  +91 91377 94913
                 </a>
               </li>
               <li>Mithibai College, Mumbai</li>
