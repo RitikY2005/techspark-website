@@ -194,16 +194,6 @@ function Events() {
                         {event.title}
                         <div className="text-base sm:text-lg text-white leading-relaxed mt-6">
                           <p>{event.description}</p>
-                            <div className="flex flex-wrap justify-center md:justify-start gap-6 sm:gap-8 text-slate-400 mt-6">
-                              <div className="flex items-center text-white gap-3">
-                                <span className="text-cyber-blue">📍</span>
-                                {event.location}
-                              </div>
-                              <div className="flex items-center text-white gap-2">
-                                <span className="text-cyber-blue">⏰</span>
-                                {event.time}
-                              </div>
-                            </div>
                           </div>  
                       </div>
                     </motion.h2>
