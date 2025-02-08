@@ -45,10 +45,18 @@ function About() {
     handleSlideChange(newIndex);
   };
 
+  // useEffect(() => {
+  //   const timer = setInterval(nextSlide, 3000);
+  //   return () => clearInterval(timer);
+  // }, [currentSlide]);
   useEffect(() => {
-    const timer = setInterval(nextSlide, 8000);
-    return () => clearInterval(timer);
-  }, [currentSlide]);
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % images.length);
+    }, 3000); // Set the interval time (e.g., 5000ms for 5 seconds)
+  
+    return () => clearInterval(timer); // Cleanup function
+  }, []); // Empty dependency array ensures this runs only once
+  
 
   return (
     <CyberLayout>
