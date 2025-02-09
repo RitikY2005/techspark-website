@@ -98,7 +98,7 @@ function Contact() {
   return (
     <CyberLayout>
       <div className="min-h-screen px-4 sm:px-6 lg:px-8 py-20">
-        <div className="max-w-2xl mx-auto z-100">
+        <div className="max-w-2xl mx-auto">
           <motion.h1
             className="text-5xl md:text-6xl text-center mb-12 font-bold text-gunmetal"
             initial={{ opacity: 0, y: -20 }}
