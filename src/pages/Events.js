@@ -21,7 +21,8 @@ function Events() {
   };
 
   const handleRegister = (index, subIndex) => {
-    const RegistrationForm = events[index].subEvents[subIndex]?.registrationForm;
+    const RegistrationForm =
+      events[index].subEvents[subIndex]?.registrationForm;
     if (RegistrationForm) {
       setSelectedRegistration(<RegistrationForm />);
     }
@@ -44,7 +45,10 @@ function Events() {
       >
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold text-cyber-blue">{title} Rules</h2>
-          <button onClick={onClose} className="text-slate-400 hover:text-cyber-blue transition-colors">
+          <button
+            onClick={onClose}
+            className="text-slate-400 hover:text-cyber-blue transition-colors"
+          >
             ✕
           </button>
         </div>
@@ -90,7 +94,10 @@ function Events() {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="absolute right-3 top-3 z-10">
-          <button onClick={onClose} className="text-slate-400 hover:text-cyber-blue transition-colors text-lg">
+          <button
+            onClick={onClose}
+            className="text-slate-400 hover:text-cyber-blue transition-colors text-lg"
+          >
             ✕
           </button>
         </div>
@@ -177,54 +184,65 @@ function Events() {
                         >
                           <div className="space-y-6 mt-6">
                             {/* Sub Events */}
-                            <div className="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                              {event.subEvents.map((subEvent, subIndex) => (
-                                <motion.div
-                                  key={subIndex}
-                                  className={`p-4 sm:p-6 bg-black/60 rounded-lg border border-cyber-blue/20 hover:border-cyber-blue/40 transition-all duration-300 flex flex-col justify-between ${subIndex === 0 ? "md:col-span-2" : ""}`}
-                                  initial={{ opacity: 0, y: 20 }}
-                                  animate={{ opacity: 1, y: 0 }}
-                                  transition={{ duration: 0.3, delay: subIndex * 0.1 }}
-                                >
-                                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3 sm:mb-4 gap-2">
-                                    <h3 className="text-lg sm:text-xl font-bold text-cyber-blue">
-                                      {subEvent.title}
-                                    </h3>
-                                    <span
-                                      className={`px-3 py-1 text-xs font-bold rounded-full whitespace-nowrap ${
-                                        subEvent.status === "REGISTRATION LIVE"
-                                          ? "bg-cyber-blue/20 text-cyber-blue animate-pulse"
-                                          : "bg-cyber-blue/10 text-cyber-blue"
-                                      }`}
-                                    >
-                                      {subEvent.status}
-                                    </span>
-                                  </div>
-                                  <p className="text-sm text-left sm:text-base text-white leading-relaxed mb-4 flex-grow">
-                                    {subEvent.description}
-                                  </p>
+                            <div className="mt-6 sm:mt-8 grid gap-4 sm:gap-6">
+                              {event.subEvents.map((subEvent, subIndex) => {
+                                const isEven = event.subEvents.length % 2 === 0;
+                                return (
+                                  <motion.div
+                                    key={subIndex}
+                                    className={`p-4 sm:p-6 bg-black/60 rounded-lg border border-cyber-blue/20 hover:border-cyber-blue/40 transition-all duration-300 flex flex-col justify-between ${subIndex === 0 && !isEven ? "md:col-span-2" : ""} ${isEven ? "md:col-span-1" : ""}`}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{
+                                      duration: 0.3,
+                                      delay: subIndex * 0.1,
+                                    }}
+                                  >
+                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3 sm:mb-4 gap-2">
+                                      <h3 className="text-lg sm:text-xl font-bold text-cyber-blue">
+                                        {subEvent.title}
+                                      </h3>
+                                      <span
+                                        className={`px-3 py-1 text-xs font-bold rounded-full whitespace-nowrap ${
+                                          subEvent.status ===
+                                          "REGISTRATION LIVE"
+                                            ? "bg-cyber-blue/20 text-cyber-blue animate-pulse"
+                                            : "bg-cyber-blue/10 text-cyber-blue"
+                                        }`}
+                                      >
+                                        {subEvent.status}
+                                      </span>
+                                    </div>
+                                    <p className="text-sm text-left sm:text-base text-white leading-relaxed mb-4 flex-grow">
+                                      {subEvent.description}
+                                    </p>
 
-                                  <div className="flex items-center mt-10 gap-4">
-                                    <motion.button
-                                      className="w-full sm:w-auto px-6 py-3 text-sm bg-black text-cyber-blue font-bold rounded-lg border border-cyber-blue/30 hover:border-white hover:shadow-[0,0,15px,rgba(0,243,255,0.3)] transition-all duration-300"
-                                      whileHover={{ scale: 1.02 }}
-                                      whileTap={{ scale: 0.98 }}
-                                      onClick={() => handleViewRules(index, subIndex)}
-                                    >
-                                      View Rules
-                                    </motion.button>
+                                    <div className="flex items-center mt-10 gap-4">
+                                      <motion.button
+                                        className="w-full sm:w-auto px-6 py-3 text-sm bg-black text-cyber-blue font-bold rounded-lg border border-cyber-blue/30 hover:border-white hover:shadow-[0,0,15px,rgba(0,243,255,0.3)] transition-all duration-300"
+                                        whileHover={{ scale: 1.02 }}
+                                        whileTap={{ scale: 0.98 }}
+                                        onClick={() =>
+                                          handleViewRules(index, subIndex)
+                                        }
+                                      >
+                                        View Rules
+                                      </motion.button>
 
-                                    <motion.button
-                                      className="w-full sm:w-auto px-6 py-3 text-sm bg-cyber-blue text-black font-bold rounded-lg border border-cyber-blue/30 hover:border-white hover:shadow-[0,0,15px,rgba(0,243,255,0.3)] transition-all duration-300"
-                                      whileHover={{ scale: 1.02 }}
-                                      whileTap={{ scale: 0.98 }}
-                                      onClick={() => handleRegister(index, subIndex)}
-                                    >
-                                      Register
-                                    </motion.button>
-                                  </div>
-                                </motion.div>
-                              ))}
+                                      <motion.button
+                                        className="w-full sm:w-auto px-6 py-3 text-sm bg-cyber-blue text-black font-bold rounded-lg border border-cyber-blue/30 hover:border-white hover:shadow-[0,0,15px,rgba(0,243,255,0.3)] transition-all duration-300"
+                                        whileHover={{ scale: 1.02 }}
+                                        whileTap={{ scale: 0.98 }}
+                                        onClick={() =>
+                                          handleRegister(index, subIndex)
+                                        }
+                                      >
+                                        Register
+                                      </motion.button>
+                                    </div>
+                                  </motion.div>
+                                );
+                              })}
                             </div>
                           </div>
                         </motion.div>
