@@ -3,6 +3,8 @@
  import {TrioApp} from '../components/RegistrationForms.js';
  import {SoloApp} from '../components/RegistrationForms.js';
  import {FootballApp} from '../components/RegistrationForms.js';
+ import { useState } from "react";
+ import React from 'react';
 
  const events = [
   {
@@ -173,9 +175,9 @@
         status: "STAY TUNED",
         registrationForm:SoloApp,
         eventRules:[
-        "Time control - 5 minutes rapid.",
-        "The game ends in checkmate, stalemate, resignation or draw(several conditions apply).",
-        "Everyone should have a chess clock app prior to the game.",
+        "Game Type: 5-minute blitz.",
+        "The chess clock app should be installed on the participant's mobile device prior to the game.",
+        "Illegal Moves : The player will receive a warning for the first illegal move. After the second illegal move the player will have to forfeit the game.",
         "If the game ends in a draw, one minute bullet will be played."
         ]
       }

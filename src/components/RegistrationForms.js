@@ -30,18 +30,38 @@ function QuadApp() {
   };
 
   const handleImageChange = (e) => {
+    e.preventDefault();
     const { name } = e.target;
     const file = e.target.files[0];
     if (file) {
+      const fileType = file.type;
+      if (!['image/png', 'image/jpeg', 'image/jpg'].includes(fileType)) {
+      alert('Please upload only PNG, JPG or JPEG images.');
+      setImagePreviews({ IdImage1: null });
+      return;
+    }
+
+    // Check file size (5MB in this case, adjust as needed)
+    const maxSize = 5 * 1024 * 1024; // 5MB
+    if (file.size > maxSize) {
+     alert('File size must be less than 5MB.');
+     return;
+    }
+
       setUserInput((prev) => ({ ...prev, [name]: file }));
       setImagePreviews((prev) => ({
         ...prev,
         [name]: URL.createObjectURL(file),
       }));
-    } else {
-      e.target.value = null;
     }
+    else {
+      //If no file is selected, set the state to null
+    setUserInput((prev) => ({ ...prev, [name]: null }));
+    setImagePreviews((prev) => ({ ...prev, [name]: null }));
+    }
+    e.target.value = null;
   };
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -76,7 +96,7 @@ function QuadApp() {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Captain Details */}
         <div className="p-4 bg-black text-cyber-blue rounded-lg shadow-md">
-          <h3 className="text-lg font-medium mb-2">Captain</h3>
+          <h3 className="text-lg font-medium mb-2">Captain (Player 1)</h3>
           <div className="w-full">
             <div className="flex items-center justify-center gap-2">
               <input
@@ -84,22 +104,25 @@ function QuadApp() {
                 name="name1"
                 value={userInput.name1}
                 onChange={handleChange}
-                placeholder="Captain Name"
+                placeholder="Player 1 Name"
                 className="w-1/2 p-2 border bg-black rounded mb-2 border"
                 style={{ borderWidth: '0.1px', borderColor: '#ccc' }}
                 required
               />
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-2 border rounded mb-2 px-[2px] h-[42px]">
+              <span className="text-gray-400">+91</span>
               <input
                 type="tel"
                 name="phone1"
                 value={userInput.phone1}
                 onChange={handleChange}
-                placeholder="Captain Phone"
-                className="w-1/2 p-2 border bg-black rounded mb-2 "
+                placeholder="Player 1 Phone"
+                className="px-16 py-1 items-left bg-black mb-2 "
                 required
                 style={{ borderWidth: '0.1px', borderColor: '#ccc' }}
 
               />
+              </div>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
@@ -134,6 +157,7 @@ function QuadApp() {
                   type="file"
                   class="hidden"
                   onChange={handleImageChange}
+                  accept=".png, .jpeg, .jpg"
                 />
               </div>
             </div>
@@ -192,6 +216,7 @@ function QuadApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept=".png, .jpeg, .jpg"
             />
           </div>
           {imagePreviews.IdImage2 && (
@@ -248,6 +273,7 @@ function QuadApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept=".png, .jpeg, .jpg"
             />
           </div>
           {imagePreviews.IdImage3 && (
@@ -303,6 +329,7 @@ function QuadApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept=".png, .jpeg, .jpg"
             />
           </div>
           {imagePreviews.IdImage4 && (
@@ -317,7 +344,7 @@ function QuadApp() {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-cyber-pink"
+          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md  "
         >
           Register Team
         </button>
@@ -346,10 +373,42 @@ function DualApp(eventId, eventName) {
     setUserInput((prev) => ({ ...prev, [name]: value }));
   };
 
+  // const handleImageChange = (e) => {
+  //   const { name } = e.target;
+  //   const file = e.target.files[0];
+  //   if (file) {
+  //     setUserInput((prev) => ({ ...prev, [name]: file }));
+  //     setImagePreviews((prev) => ({
+  //       ...prev,
+  //       [name]: URL.createObjectURL(file),
+  //     }));
+  //   }
+  //   else {
+  //     // If no file is selected, set the state to null
+  //     setUserInput((prev) => ({ ...prev, [name]: null }));
+  //     setImagePreviews((prev) => ({ ...prev, [name]: null }));
+  //   }
+  // };
+
   const handleImageChange = (e) => {
+    e.preventDefault();
     const { name } = e.target;
     const file = e.target.files[0];
     if (file) {
+      const fileType = file.type;
+      if (!['image/png', 'image/jpeg', 'image/jpg'].includes(fileType)) {
+      alert('Please upload only PNG, JPG or JPEG images.');
+      setImagePreviews({ IdImage1: null });
+      return;
+    }
+
+    // Check file size (5MB in this case, adjust as needed)
+    const maxSize = 5 * 1024 * 1024; // 5MB
+    if (file.size > maxSize) {
+     alert('File size must be less than 5MB.');
+     return;
+    }
+
       setUserInput((prev) => ({ ...prev, [name]: file }));
       setImagePreviews((prev) => ({
         ...prev,
@@ -357,11 +416,12 @@ function DualApp(eventId, eventName) {
       }));
     }
     else {
-      // If no file is selected, set the state to null
-      setUserInput((prev) => ({ ...prev, [name]: null }));
-      setImagePreviews((prev) => ({ ...prev, [name]: null }));
+      //If no file is selected, set the state to null
+    setUserInput((prev) => ({ ...prev, [name]: null }));
+    setImagePreviews((prev) => ({ ...prev, [name]: null }));
     }
   };
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -434,7 +494,7 @@ function DualApp(eventId, eventName) {
                   class="flex justify-center items-center cursor-pointer w-full px-4 py-2 bg-grey text-black border-grey border rounded mb-2 rounded-md   focus:outline-none whitespace-nowrap max-w-full"
                 >
                   <span class="material-icons mr-2">cloud_upload</span>
-                  Upload your id image
+                  Upload your ID image
                 </label>
                 <input
                   id="file_upload1"
@@ -442,6 +502,7 @@ function DualApp(eventId, eventName) {
                   type="file"
                   class="hidden"
                   onChange={handleImageChange}
+                  accept=".png, .jpeg, .jpg"
                 />
               </div>
             </div>
@@ -500,6 +561,7 @@ function DualApp(eventId, eventName) {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept=".png, .jpeg, .jpg"
             />
           </div>
           {imagePreviews.IdImage2 && (
@@ -514,7 +576,7 @@ function DualApp(eventId, eventName) {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-cyber-pink"
+          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md  "
         >
           Register Team
         </button>
@@ -550,14 +612,34 @@ function TrioApp(eventId, eventName) {
   };
 
   const handleImageChange = (e) => {
+    e.preventDefault();
     const { name } = e.target;
     const file = e.target.files[0];
     if (file) {
+      const fileType = file.type;
+      if (!['image/png', 'image/jpeg', 'image/jpg'].includes(fileType)) {
+      alert('Please upload only PNG, JPG or JPEG images.');
+      setImagePreviews({ IdImage1: null });
+      return;
+    }
+
+    // Check file size (5MB in this case, adjust as needed)
+    const maxSize = 5 * 1024 * 1024; // 5MB
+    if (file.size > maxSize) {
+     alert('File size must be less than 5MB.');
+     return;
+    }
+
       setUserInput((prev) => ({ ...prev, [name]: file }));
       setImagePreviews((prev) => ({
         ...prev,
         [name]: URL.createObjectURL(file),
       }));
+    }
+    else {
+      //If no file is selected, set the state to null
+    setUserInput((prev) => ({ ...prev, [name]: null }));
+    setImagePreviews((prev) => ({ ...prev, [name]: null }));
     }
   };
 
@@ -645,6 +727,7 @@ function TrioApp(eventId, eventName) {
                   type="file"
                   class="hidden"
                   onChange={handleImageChange}
+                  accept=".png, .jpeg, .jpg"
                 />
               </div>
             </div>
@@ -703,6 +786,7 @@ function TrioApp(eventId, eventName) {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept=".png, .jpeg, .jpg"
             />
           </div>
           {imagePreviews.IdImage2 && (
@@ -757,6 +841,7 @@ function TrioApp(eventId, eventName) {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept=".png, .jpeg, .jpg"
             />
           </div>
           {imagePreviews.IdImage3 && (
@@ -770,7 +855,7 @@ function TrioApp(eventId, eventName) {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-cyber-pink"
+          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md  "
         >
           Register Team
         </button>
@@ -779,12 +864,12 @@ function TrioApp(eventId, eventName) {
   );
 }
 
-function SoloApp(eventId, eventName) {
+function SoloApp({eventId, eventName}) {
   const [userInput, setUserInput] = useState({
     name1: "",
     phone1: "",
     IdImage1: "",
-    email: "",
+    email: ""
   });
 
   const [imagePreviews, setImagePreviews] = useState({
@@ -797,16 +882,37 @@ function SoloApp(eventId, eventName) {
   };
 
   const handleImageChange = (e) => {
+    e.preventDefault();
     const { name } = e.target;
     const file = e.target.files[0];
     if (file) {
+      const fileType = file.type;
+      if (!['image/png', 'image/jpeg', 'image/jpg'].includes(fileType)) {
+      alert('Please upload only PNG, JPG or JPEG images.');
+      setImagePreviews({ IdImage1: null });
+      return;
+    }
+
+    // Check file size (5MB in this case, adjust as needed)
+    const maxSize = 5 * 1024 * 1024; // 5MB
+    if (file.size > maxSize) {
+     alert('File size must be less than 5MB.');
+     return;
+    }
+
       setUserInput((prev) => ({ ...prev, [name]: file }));
       setImagePreviews((prev) => ({
         ...prev,
         [name]: URL.createObjectURL(file),
       }));
     }
+    else {
+      //If no file is selected, set the state to null
+    setUserInput((prev) => ({ ...prev, [name]: null }));
+    setImagePreviews((prev) => ({ ...prev, [name]: null }));
+    }
   };
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -881,6 +987,7 @@ function SoloApp(eventId, eventName) {
                   type="file"
                   class="hidden"
                   onChange={handleImageChange}
+                  accept=".png, .jpeg, .jpg"
                 />
               </div>
             </div>
@@ -898,7 +1005,7 @@ function SoloApp(eventId, eventName) {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-cyber-pink"
+          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md  "
         >
           Register Team
         </button>
@@ -938,6 +1045,9 @@ function FootballApp() {
     IdImage2: null,
     IdImage3: null,
     IdImage4: null,
+    IdImage5: null,
+    IdImage6: null,
+    IdImage7: null
   });
 
   const handleChange = (e) => {
@@ -946,14 +1056,34 @@ function FootballApp() {
   };
 
   const handleImageChange = (e) => {
+    e.preventDefault();
     const { name } = e.target;
     const file = e.target.files[0];
     if (file) {
+      const fileType = file.type;
+      if (!['image/png', 'image/jpeg', 'image/jpg'].includes(fileType)) {
+      alert('Please upload only PNG, JPG or JPEG images.');
+      setImagePreviews({ IdImage1: null });
+      return;
+    }
+
+    // Check file size (5MB in this case, adjust as needed)
+    const maxSize = 5 * 1024 * 1024; // 5MB
+    if (file.size > maxSize) {
+     alert('File size must be less than 5MB.');
+     return;
+    }
+
       setUserInput((prev) => ({ ...prev, [name]: file }));
       setImagePreviews((prev) => ({
         ...prev,
         [name]: URL.createObjectURL(file),
       }));
+    }
+    else {
+      //If no file is selected, set the state to null
+    setUserInput((prev) => ({ ...prev, [name]: null }));
+    setImagePreviews((prev) => ({ ...prev, [name]: null }));
     }
   };
 
@@ -1068,6 +1198,7 @@ function FootballApp() {
                   type="file"
                   class="hidden"
                   onChange={handleImageChange}
+                  accept=".png, .jpeg, .jpg"
                 />
               </div>
             </div>
@@ -1125,6 +1256,7 @@ function FootballApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept=".png, .jpeg, .jpg"
             />
           </div>
           {imagePreviews.IdImage2 && (
@@ -1180,6 +1312,7 @@ function FootballApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept=".png, .jpeg, .jpg"
             />
           </div>
           {imagePreviews.IdImage3 && (
@@ -1235,6 +1368,7 @@ function FootballApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept=".png, .jpeg, .jpg"
             />
           </div>
           {imagePreviews.IdImage4 && (
@@ -1289,6 +1423,7 @@ function FootballApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept=".png, .jpeg, .jpg"
             />
           </div>
           {imagePreviews.IdImage5 && (
@@ -1342,6 +1477,7 @@ function FootballApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept=".png, .jpeg, .jpg"
             />
           </div>
           {imagePreviews.IdImage6 && (
@@ -1395,6 +1531,7 @@ function FootballApp() {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept=".png, .jpeg, .jpg"
             />
           </div>
           {imagePreviews.IdImage7 && (
@@ -1409,7 +1546,7 @@ function FootballApp() {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-cyber-pink"
+          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md  "
         >
           Register Team
         </button>
