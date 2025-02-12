@@ -109,20 +109,17 @@ function QuadApp() {
                 style={{ borderWidth: '0.1px', borderColor: '#ccc' }}
                 required
               />
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-2 border rounded mb-2 px-[2px] h-[42px]">
-              <span className="text-gray-400">+91</span>
+              
               <input
                 type="tel"
                 name="phone1"
                 value={userInput.phone1}
                 onChange={handleChange}
                 placeholder="Player 1 Phone"
-                className="px-16 py-1 items-left bg-black mb-2 "
+                className="w-1/2 p-2 border bg-black rounded mb-2"
                 required
-                style={{ borderWidth: '0.1px', borderColor: '#ccc' }}
-
               />
-              </div>
+              
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
