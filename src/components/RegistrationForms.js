@@ -106,7 +106,7 @@ function QuadApp({eventName}) {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Captain Details */}
         <div className="p-4 bg-black text-cyber-blue rounded-lg shadow-md">
-          <h3 className="text-lg font-medium mb-2">Captain</h3>
+          <h3 className="text-lg font-medium mb-2">Captain (Player 1) </h3>
           <div className="w-full">
             <div className="flex items-center justify-center gap-2">
               <input
@@ -114,7 +114,7 @@ function QuadApp({eventName}) {
                 name="name1"
                 value={userInput.name1}
                 onChange={handleChange}
-                placeholder="Captain Name"
+                placeholder="Player 1 Name"
                 className="w-1/2 p-2 border bg-black rounded mb-2 "
                 style={{ borderWidth: '0.1px', borderColor: '#ccc' }}
                 required
@@ -124,7 +124,7 @@ function QuadApp({eventName}) {
                 name="phone1"
                 value={userInput.phone1}
                 onChange={handleChange}
-                placeholder="Captain Phone"
+                placeholder="Player 1 Phone"
                 className="w-1/2 p-2 border bg-black rounded mb-2 "
                 required
                 style={{ borderWidth: '0.1px', borderColor: '#ccc' }}
@@ -179,16 +179,16 @@ function QuadApp({eventName}) {
           )}
         </div>
 
-        {/* Player 1 */}
+        {/* Player 2 */}
         <div className="p-4 bg-black text-cyber-blue rounded-lg shadow-md">
-          <h3 className="text-lg font-medium mb-2">Player 1</h3>
+          <h3 className="text-lg font-medium mb-2">Player 2</h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
               type="text"
               name="name2"
               value={userInput.name2}
               onChange={handleChange}
-              placeholder="Player 1 Name"
+              placeholder="Player 2 Name"
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
@@ -197,7 +197,7 @@ function QuadApp({eventName}) {
               name="phone2"
               value={userInput.phone2}
               onChange={handleChange}
-              placeholder="Player 1 Phone"
+              placeholder="Player 2 Phone"
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
@@ -235,16 +235,16 @@ function QuadApp({eventName}) {
           )}
         </div>
 
-        {/* Player 2 */}
+        {/* Player 3 */}
         <div className="p-4 bg-black text-cyber-blue rounded-lg shadow-md">
-          <h3 className="text-lg font-medium mb-2">Player 2</h3>
+          <h3 className="text-lg font-medium mb-2">Player 3</h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
               type="text"
               name="name3"
               value={userInput.name3}
               onChange={handleChange}
-              placeholder="Player 2 Name"
+              placeholder="Player 3 Name"
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
@@ -253,7 +253,7 @@ function QuadApp({eventName}) {
               name="phone3"
               value={userInput.phone3}
               onChange={handleChange}
-              placeholder="Player 2 Phone"
+              placeholder="Player 3 Phone"
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
@@ -292,16 +292,16 @@ function QuadApp({eventName}) {
           )}
         </div>
 
-        {/* Player 3 (Optional) */}
+        {/* Player 4 (Optional) */}
         <div className="p-4 bg-black text-cyber-blue rounded-lg shadow-md">
-          <h3 className="text-lg font-medium mb-2">Player 3 </h3>
+          <h3 className="text-lg font-medium mb-2">Player 4 </h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
               type="text"
               name="name4"
               value={userInput.name4}
               onChange={handleChange}
-              placeholder="Player 3 Name"
+              placeholder="Player 4 Name"
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
@@ -310,7 +310,7 @@ function QuadApp({eventName}) {
               name="phone4"
               value={userInput.phone4}
               onChange={handleChange}
-              placeholder="Player 3 Phone"
+              placeholder="Player 4 Phone"
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
@@ -351,7 +351,7 @@ function QuadApp({eventName}) {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-cyber-pink"
+          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md  "
         >
           Register Team
         </button>
@@ -492,7 +492,7 @@ function DualApp({eventName}) {
                   class="flex justify-center items-center cursor-pointer w-full px-4 py-2 bg-grey text-black border-grey border rounded mb-2 rounded-md   focus:outline-none whitespace-nowrap max-w-full"
                 >
                   <span class="material-icons mr-2">cloud_upload</span>
-                  Upload your id image
+                  Upload your ID image
                 </label>
                 <input
                   id="file_upload1"
@@ -574,7 +574,7 @@ function DualApp({eventName}) {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-cyber-pink"
+          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md  "
         >
           Register Team
         </button>
@@ -863,7 +863,7 @@ function TrioApp({eventName}) {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-cyber-pink"
+          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md  "
         >
           Register Team
         </button>
@@ -948,7 +948,7 @@ function SoloApp({eventName}) {
     <div className="max-w-2xl mx-auto p-6 bg-black text-cyber-blue shadow-md rounded-lg">
       <h2 className="text-2xl font-semibold text-center mb-4">Registration</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Captain Details */}
+        {/* Player Details */}
         <div className="p-4 bg-black rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Player</h3>
           <div className="w-full">
@@ -1023,7 +1023,7 @@ function SoloApp({eventName}) {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-cyber-pink"
+          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md  "
         >
           Register Team
         </button>
@@ -1222,7 +1222,7 @@ function FootballApp({eventName}) {
           )}
         </div>
 
-        {/* Player 1 */}
+        {/* Player 2 */}
         <div className="p-4 bg-black text-cyber-blue rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Player 2</h3>
           <div className="w-full flex justify-center items-center gap-2">
@@ -1277,7 +1277,7 @@ function FootballApp({eventName}) {
           )}
         </div>
 
-        {/* Player 2 */}
+        {/* Player 3 */}
         <div className="p-4 bg-black text-cyber-blue rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Player 3</h3>
           <div className="w-full flex justify-center items-center gap-2">
@@ -1333,7 +1333,7 @@ function FootballApp({eventName}) {
           )}
         </div>
 
-        {/* Player 3  */}
+        {/* Player 4  */}
         <div className="p-4 bg-black text-cyber-blue rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Player 4 </h3>
           <div className="w-full flex justify-center items-center gap-2">
@@ -1389,7 +1389,7 @@ function FootballApp({eventName}) {
           )}
         </div>
 
-        {/* Player 4 */}
+        {/* Player 5 */}
         <div className="p-4 bg-black text-cyber-blue rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Player 5</h3>
           <div className="w-full flex justify-center items-center gap-2">
@@ -1444,7 +1444,7 @@ function FootballApp({eventName}) {
           )}
         </div>
 
-        {/* Player 5 */}
+        {/* Player 6 */}
         <div className="p-4 bg-black text-cyber-blue rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Player 6 (optional)</h3>
           <div className="w-full flex justify-center items-center gap-2">
@@ -1498,7 +1498,7 @@ function FootballApp({eventName}) {
           )}
         </div>
 
-        {/* Player 6 */}
+        {/* Player 7 */}
         <div className="p-4 bg-black rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Player 7 (optional)</h3>
           <div className="w-full flex justify-center items-center gap-2">
@@ -1555,7 +1555,7 @@ function FootballApp({eventName}) {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md hover:bg-cyber-pink"
+          className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md  "
         >
           Register Team
         </button>
