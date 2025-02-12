@@ -32,18 +32,38 @@ function QuadApp({eventName}) {
   };
 
   const handleImageChange = (e) => {
+    e.preventDefault();
     const { name } = e.target;
     const file = e.target.files[0];
     if (file) {
+      const fileType = file.type;
+      if (!['image/png', 'image/jpeg', 'image/jpg'].includes(fileType)) {
+      alert('Please upload only PNG, JPG or JPEG images.');
+      setImagePreviews({ IdImage1: null });
+      return;
+    }
+
+    // Check file size (5MB in this case, adjust as needed)
+    const maxSize = 5 * 1024 * 1024; // 5MB
+    if (file.size > maxSize) {
+     alert('File size must be less than 5MB.');
+     return;
+    }
+
       setUserInput((prev) => ({ ...prev, [name]: file }));
       setImagePreviews((prev) => ({
         ...prev,
         [name]: URL.createObjectURL(file),
       }));
-    } else {
-      e.target.value = null;
     }
+    else {
+      //If no file is selected, set the state to null
+    setUserInput((prev) => ({ ...prev, [name]: null }));
+    setImagePreviews((prev) => ({ ...prev, [name]: null }));
+    }
+    e.target.value = null;
   };
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -144,6 +164,7 @@ function QuadApp({eventName}) {
                   type="file"
                   class="hidden"
                   onChange={handleImageChange}
+                  accept="image/jpeg, image/png,image/jpg"
                 />
               </div>
             </div>
@@ -202,6 +223,7 @@ function QuadApp({eventName}) {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept="image/jpeg, image/png,image/jpg"
             />
           </div>
           {imagePreviews.IdImage2 && (
@@ -258,6 +280,7 @@ function QuadApp({eventName}) {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept="image/jpeg, image/png,image/jpg"
             />
           </div>
           {imagePreviews.IdImage3 && (
@@ -313,6 +336,7 @@ function QuadApp({eventName}) {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept="image/jpeg, image/png,image/jpg"
             />
           </div>
           {imagePreviews.IdImage4 && (
@@ -357,9 +381,24 @@ function DualApp({eventName}) {
   };
 
   const handleImageChange = (e) => {
+    e.preventDefault();
     const { name } = e.target;
     const file = e.target.files[0];
     if (file) {
+      const fileType = file.type;
+      if (!['image/png', 'image/jpeg', 'image/jpg'].includes(fileType)) {
+      alert('Please upload only PNG, JPG or JPEG images.');
+      setImagePreviews({ IdImage1: null });
+      return;
+    }
+
+    // Check file size (5MB in this case, adjust as needed)
+    const maxSize = 5 * 1024 * 1024; // 5MB
+    if (file.size > maxSize) {
+     alert('File size must be less than 5MB.');
+     return;
+    }
+
       setUserInput((prev) => ({ ...prev, [name]: file }));
       setImagePreviews((prev) => ({
         ...prev,
@@ -367,11 +406,13 @@ function DualApp({eventName}) {
       }));
     }
     else {
-      // If no file is selected, set the state to null
-      setUserInput((prev) => ({ ...prev, [name]: null }));
-      setImagePreviews((prev) => ({ ...prev, [name]: null }));
+      //If no file is selected, set the state to null
+    setUserInput((prev) => ({ ...prev, [name]: null }));
+    setImagePreviews((prev) => ({ ...prev, [name]: null }));
     }
+    e.target.value = null;
   };
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -459,6 +500,7 @@ function DualApp({eventName}) {
                   type="file"
                   class="hidden"
                   onChange={handleImageChange}
+                  accept="image/jpeg, image/png,image/jpg"
                 />
               </div>
             </div>
@@ -517,6 +559,7 @@ function DualApp({eventName}) {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept="image/jpeg, image/png,image/jpg"
             />
           </div>
           {imagePreviews.IdImage2 && (
@@ -567,16 +610,38 @@ function TrioApp({eventName}) {
   };
 
   const handleImageChange = (e) => {
+    e.preventDefault();
     const { name } = e.target;
     const file = e.target.files[0];
     if (file) {
+      const fileType = file.type;
+      if (!['image/png', 'image/jpeg', 'image/jpg'].includes(fileType)) {
+      alert('Please upload only PNG, JPG or JPEG images.');
+      setImagePreviews({ IdImage1: null });
+      return;
+    }
+
+    // Check file size (5MB in this case, adjust as needed)
+    const maxSize = 5 * 1024 * 1024; // 5MB
+    if (file.size > maxSize) {
+     alert('File size must be less than 5MB.');
+     return;
+    }
+
       setUserInput((prev) => ({ ...prev, [name]: file }));
       setImagePreviews((prev) => ({
         ...prev,
         [name]: URL.createObjectURL(file),
       }));
     }
+    else {
+      //If no file is selected, set the state to null
+    setUserInput((prev) => ({ ...prev, [name]: null }));
+    setImagePreviews((prev) => ({ ...prev, [name]: null }));
+    }
+    e.target.value = null;
   };
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -670,6 +735,7 @@ function TrioApp({eventName}) {
                   type="file"
                   class="hidden"
                   onChange={handleImageChange}
+                  accept="image/jpeg, image/png,image/jpg"
                 />
               </div>
             </div>
@@ -728,6 +794,7 @@ function TrioApp({eventName}) {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept="image/jpeg, image/png,image/jpg"
             />
           </div>
           {imagePreviews.IdImage2 && (
@@ -782,6 +849,7 @@ function TrioApp({eventName}) {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept="image/jpeg, image/png,image/jpg"
             />
           </div>
           {imagePreviews.IdImage3 && (
@@ -822,16 +890,38 @@ function SoloApp({eventName}) {
   };
 
   const handleImageChange = (e) => {
+    e.preventDefault();
     const { name } = e.target;
     const file = e.target.files[0];
     if (file) {
+      const fileType = file.type;
+      if (!['image/png', 'image/jpeg', 'image/jpg'].includes(fileType)) {
+      alert('Please upload only PNG, JPG or JPEG images.');
+      setImagePreviews({ IdImage1: null });
+      return;
+    }
+
+    // Check file size (5MB in this case, adjust as needed)
+    const maxSize = 5 * 1024 * 1024; // 5MB
+    if (file.size > maxSize) {
+     alert('File size must be less than 5MB.');
+     return;
+    }
+
       setUserInput((prev) => ({ ...prev, [name]: file }));
       setImagePreviews((prev) => ({
         ...prev,
         [name]: URL.createObjectURL(file),
       }));
     }
+    else {
+      //If no file is selected, set the state to null
+    setUserInput((prev) => ({ ...prev, [name]: null }));
+    setImagePreviews((prev) => ({ ...prev, [name]: null }));
+    }
+    e.target.value = null;
   };
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -915,6 +1005,7 @@ function SoloApp({eventName}) {
                   type="file"
                   class="hidden"
                   onChange={handleImageChange}
+                  accept="image/jpeg, image/png,image/jpg"
                 />
               </div>
             </div>
@@ -980,16 +1071,38 @@ function FootballApp({eventName}) {
   };
 
   const handleImageChange = (e) => {
+    e.preventDefault();
     const { name } = e.target;
     const file = e.target.files[0];
     if (file) {
+      const fileType = file.type;
+      if (!['image/png', 'image/jpeg', 'image/jpg'].includes(fileType)) {
+      alert('Please upload only PNG, JPG or JPEG images.');
+      setImagePreviews({ IdImage1: null });
+      return;
+    }
+
+    // Check file size (5MB in this case, adjust as needed)
+    const maxSize = 5 * 1024 * 1024; // 5MB
+    if (file.size > maxSize) {
+     alert('File size must be less than 5MB.');
+     return;
+    }
+
       setUserInput((prev) => ({ ...prev, [name]: file }));
       setImagePreviews((prev) => ({
         ...prev,
         [name]: URL.createObjectURL(file),
       }));
     }
+    else {
+      //If no file is selected, set the state to null
+    setUserInput((prev) => ({ ...prev, [name]: null }));
+    setImagePreviews((prev) => ({ ...prev, [name]: null }));
+    }
+    e.target.value = null;
   };
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -1094,6 +1207,7 @@ function FootballApp({eventName}) {
                   type="file"
                   class="hidden"
                   onChange={handleImageChange}
+                  accept="image/jpeg, image/png,image/jpg"
                 />
               </div>
             </div>
@@ -1151,6 +1265,7 @@ function FootballApp({eventName}) {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept="image/jpeg, image/png,image/jpg"
             />
           </div>
           {imagePreviews.IdImage2 && (
@@ -1206,6 +1321,7 @@ function FootballApp({eventName}) {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept="image/jpeg, image/png,image/jpg"
             />
           </div>
           {imagePreviews.IdImage3 && (
@@ -1261,6 +1377,7 @@ function FootballApp({eventName}) {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept="image/jpeg, image/png,image/jpg"
             />
           </div>
           {imagePreviews.IdImage4 && (
@@ -1315,6 +1432,7 @@ function FootballApp({eventName}) {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept="image/jpeg, image/png,image/jpg"
             />
           </div>
           {imagePreviews.IdImage5 && (
@@ -1368,6 +1486,7 @@ function FootballApp({eventName}) {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept="image/jpeg, image/png,image/jpg"
             />
           </div>
           {imagePreviews.IdImage6 && (
@@ -1421,6 +1540,7 @@ function FootballApp({eventName}) {
               type="file"
               class="hidden"
               onChange={handleImageChange}
+              accept="image/jpeg, image/png,image/jpg"
             />
           </div>
           {imagePreviews.IdImage7 && (
