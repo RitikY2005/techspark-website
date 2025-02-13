@@ -119,17 +119,22 @@ function QuadApp({eventName}) {
                 style={{ borderWidth: '0.1px', borderColor: '#ccc' }}
                 required
               />
-              <input
-                type="tel"
-                name="phone1"
-                value={userInput.phone1}
-                onChange={handleChange}
-                placeholder="Player 1 Phone"
-                className="w-1/2 p-2 border bg-black rounded mb-2 "
-                required
-                style={{ borderWidth: '0.1px', borderColor: '#ccc' }}
+              <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
+                <span className="text-gray-400 mr-2">+91</span>
+                <input
+                  type="tel"
+                  name="phone1"
+                  value={userInput.phone1}
+                  onChange={(e) => {
+                    const val = e.target.value.replace(/\D/g, "").slice(0, 10);
+                    handleChange({ target: { name: "phone1", value: val } });
+                  }}
+                  placeholder="Player 1 Phone"
+                  className="bg-black text-white outline-none flex-1"
+                  required
+                />
+              </div>
 
-              />
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
@@ -142,6 +147,7 @@ function QuadApp({eventName}) {
                 placeholder="Email"
                 className="w-full sm:w-1/2 p-2 border bg-black rounded"
                 required
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
               />
               {/* <input
                 type="file"
@@ -192,15 +198,22 @@ function QuadApp({eventName}) {
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
-            <input
-              type="tel"
-              name="phone2"
-              value={userInput.phone2}
-              onChange={handleChange}
-              placeholder="Player 2 Phone"
-              className="w-1/2 p-2 border bg-black rounded mb-2"
-              required
-            />
+            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
+                <span className="text-gray-400 mr-2">+91</span>
+                <input
+                  type="tel"
+                  name="phone2"
+                  value={userInput.phone2}
+                  onChange={(e) => {
+                    const val = e.target.value.replace(/\D/g, "").slice(0, 10);
+                    handleChange({ target: { name: "phone2", value: val } });
+                  }}
+                  placeholder="Player 2 Phone"
+                  className="bg-black text-white outline-none flex-1"
+                  required
+                />
+              </div>
+
           </div>
           {/* <input
             type="file"
@@ -248,15 +261,22 @@ function QuadApp({eventName}) {
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
-            <input
-              type="tel"
-              name="phone3"
-              value={userInput.phone3}
-              onChange={handleChange}
-              placeholder="Player 3 Phone"
-              className="w-1/2 p-2 border bg-black rounded mb-2"
-              required
-            />
+            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
+                <span className="text-gray-400 mr-2">+91</span>
+                <input
+                  type="tel"
+                  name="phone3"
+                  value={userInput.phone3}
+                  onChange={(e) => {
+                    const val = e.target.value.replace(/\D/g, "").slice(0, 10);
+                    handleChange({ target: { name: "phone3", value: val } });
+                  }}
+                  placeholder="Player 3 Phone"
+                  className="bg-black text-white outline-none flex-1"
+                  required
+                />
+              </div>
+
           </div>
           {/* <input
             type="file"
@@ -305,15 +325,22 @@ function QuadApp({eventName}) {
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
-            <input
-              type="tel"
-              name="phone4"
-              value={userInput.phone4}
-              onChange={handleChange}
-              placeholder="Player 4 Phone"
-              className="w-1/2 p-2 border bg-black rounded mb-2"
-              required
-            />
+            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
+                <span className="text-gray-400 mr-2">+91</span>
+                <input
+                  type="tel"
+                  name="phone4"
+                  value={userInput.phone4}
+                  onChange={(e) => {
+                    const val = e.target.value.replace(/\D/g, "").slice(0, 10);
+                    handleChange({ target: { name: "phone4", value: val } });
+                  }}
+                  placeholder="Player 4 Phone"
+                  className="bg-black text-white outline-none flex-1"
+                  required
+                />
+              </div>
+
           </div>
           {/* <input
             type="file"
@@ -456,15 +483,21 @@ function DualApp({eventName}) {
                 className="w-1/2 p-2 border bg-black rounded mb-2"
                 required
               />
-              <input
-                type="tel"
-                name="phone1"
-                value={userInput.phone1}
-                onChange={handleChange}
-                placeholder="Player 1 Phone"
-                className="w-1/2 p-2 border bg-black rounded mb-2"
-                required
-              />
+              <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
+                <span className="text-gray-400 mr-2">+91</span>
+                <input
+                  type="tel"
+                  name="phone1"
+                  value={userInput.phone1}
+                  onChange={(e) => {
+                    const val = e.target.value.replace(/\D/g, "").slice(0, 10);
+                    handleChange({ target: { name: "phone1", value: val } });
+                  }}
+                  placeholder="Player 1 Phone"
+                  className="bg-black text-white outline-none flex-1"
+                  required
+                />
+              </div>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
@@ -477,6 +510,7 @@ function DualApp({eventName}) {
                 placeholder="Email"
                 className="w-full sm:w-1/2 p-2 bg-black border rounded mb-2"
                 required
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
               />
               {/* <input
                 type="file"
@@ -528,15 +562,21 @@ function DualApp({eventName}) {
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
-            <input
-              type="tel"
-              name="phone2"
-              value={userInput.phone2}
-              onChange={handleChange}
-              placeholder="Player 2 Phone"
-              className="w-1/2 p-2 border bg-black rounded mb-2"
-              required
-            />
+            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
+                <span className="text-gray-400 mr-2">+91</span>
+                <input
+                  type="tel"
+                  name="phone2"
+                  value={userInput.phone2}
+                  onChange={(e) => {
+                    const val = e.target.value.replace(/\D/g, "").slice(0, 10);
+                    handleChange({ target: { name: "phone2", value: val } });
+                  }}
+                  placeholder="Player 2 Phone"
+                  className="bg-black text-white outline-none flex-1"
+                  required
+                />
+              </div>
           </div>
           {/* <input
             type="file"
@@ -691,15 +731,22 @@ function TrioApp({eventName}) {
                 className="w-1/2 p-2 border bg-black rounded mb-2"
                 required
               />
-              <input
-                type="tel"
-                name="phone1"
-                value={userInput.phone1}
-                onChange={handleChange}
-                placeholder="Player 1 Phone"
-                className="w-1/2 p-2 border bg-black rounded mb-2"
-                required
-              />
+              <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
+                <span className="text-gray-400 mr-2">+91</span>
+                <input
+                  type="tel"
+                  name="phone1"
+                  value={userInput.phone1}
+                  onChange={(e) => {
+                    const val = e.target.value.replace(/\D/g, "").slice(0, 10);
+                    handleChange({ target: { name: "phone1", value: val } });
+                  }}
+                  placeholder="Player 1 Phone"
+                  className="bg-black text-white outline-none flex-1"
+                  required
+                />
+              </div>
+
             </div>
 
             <div className="flex flex-col sm:flex-row items-center space-x-2">
@@ -712,6 +759,7 @@ function TrioApp({eventName}) {
                 placeholder="Email"
                 className="w-full sm:w-1/2 p-2 border bg-black rounded mb-2"
                 required
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
               />
               {/* <input
                 type="file"
@@ -763,15 +811,22 @@ function TrioApp({eventName}) {
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
-            <input
-              type="tel"
-              name="phone2"
-              value={userInput.phone2}
-              onChange={handleChange}
-              placeholder="Player 2 Phone"
-              className="w-1/2 p-2 border bg-black rounded mb-2"
-              required
-            />
+            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
+                <span className="text-gray-400 mr-2">+91</span>
+                <input
+                  type="tel"
+                  name="phone2"
+                  value={userInput.phone2}
+                  onChange={(e) => {
+                    const val = e.target.value.replace(/\D/g, "").slice(0, 10);
+                    handleChange({ target: { name: "phone2", value: val } });
+                  }}
+                  placeholder="Player 2 Phone"
+                  className="bg-black text-white outline-none flex-1"
+                  required
+                />
+              </div>
+
           </div>
           {/* <input
             type="file"
@@ -819,15 +874,22 @@ function TrioApp({eventName}) {
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
-            <input
-              type="tel"
-              name="phone3"
-              value={userInput.phone3}
-              onChange={handleChange}
-              placeholder="Player 3 Phone"
-              className="w-1/2 p-2 border bg-black rounded mb-2"
-              required
-            />
+            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
+                <span className="text-gray-400 mr-2">+91</span>
+                <input
+                  type="tel"
+                  name="phone3"
+                  value={userInput.phone3}
+                  onChange={(e) => {
+                    const val = e.target.value.replace(/\D/g, "").slice(0, 10);
+                    handleChange({ target: { name: "phone3", value: val } });
+                  }}
+                  placeholder="Player 3 Phone"
+                  className="bg-black text-white outline-none flex-1"
+                  required
+                />
+              </div>
+
           </div>
           {/* <input
             type="file"
@@ -962,15 +1024,22 @@ function SoloApp({eventName}) {
                 className="w-1/2 p-2 border bg-black rounded mb-2"
                 required
               />
-              <input
-                type="tel"
-                name="phone1"
-                value={userInput.phone1}
-                onChange={handleChange}
-                placeholder="Player Phone"
-                className="w-1/2 p-2 border bg-black rounded mb-2"
-                required
-              />
+              <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
+                <span className="text-gray-400 mr-2">+91</span>
+                <input
+                  type="tel"
+                  name="phone1"
+                  value={userInput.phone1}
+                  onChange={(e) => {
+                    const val = e.target.value.replace(/\D/g, "").slice(0, 10);
+                    handleChange({ target: { name: "phone1", value: val } });
+                  }}
+                  placeholder="Player Phone"
+                  className="bg-black text-white outline-none flex-1"
+                  required
+                />
+              </div>
+
             </div>
 
             <div className="flex flex-col sm:flex-row items-center space-x-2">
@@ -983,6 +1052,7 @@ function SoloApp({eventName}) {
                 placeholder="Player Email"
                 className="w-full sm:w-1/2 p-2 border bg-black rounded mb-2"
                 required
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
               />
               {/* <input
                 type="file"
@@ -1164,15 +1234,22 @@ function FootballApp({eventName}) {
                 className="w-1/2 p-2 border bg-black rounded mb-2"
                 required
               />
-              <input
-                type="tel"
-                name="phone1"
-                value={userInput.phone1}
-                onChange={handleChange}
-                placeholder="Player 1 Phone"
-                className="w-1/2 p-2 border bg-black rounded mb-2"
-                required
-              />
+              <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
+                <span className="text-gray-400 mr-2">+91</span>
+                <input
+                  type="tel"
+                  name="phone1"
+                  value={userInput.phone1}
+                  onChange={(e) => {
+                    const val = e.target.value.replace(/\D/g, "").slice(0, 10);
+                    handleChange({ target: { name: "phone1", value: val } });
+                  }}
+                  placeholder="Player 1 Phone"
+                  className="bg-black text-white outline-none flex-1"
+                  required
+                />
+              </div>
+
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
@@ -1185,6 +1262,7 @@ function FootballApp({eventName}) {
                 placeholder="Email"
                 className="w-full sm:w-1/2 p-2 border bg-black rounded mb-2"
                 required
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
               />
               {/* <input
                 type="file"
@@ -1235,15 +1313,22 @@ function FootballApp({eventName}) {
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
-            <input
-              type="tel"
-              name="phone2"
-              value={userInput.phone2}
-              onChange={handleChange}
-              placeholder="Player 2 Phone"
-              className="w-1/2 p-2 border bg-black rounded mb-2"
-              required
-            />
+            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
+                <span className="text-gray-400 mr-2">+91</span>
+                <input
+                  type="tel"
+                  name="phone2"
+                  value={userInput.phone2}
+                  onChange={(e) => {
+                    const val = e.target.value.replace(/\D/g, "").slice(0, 10);
+                    handleChange({ target: { name: "phone2", value: val } });
+                  }}
+                  placeholder="Player 2 Phone"
+                  className="bg-black text-white outline-none flex-1"
+                  required
+                />
+              </div>
+
           </div>
           {/* <input
             type="file"
@@ -1290,15 +1375,22 @@ function FootballApp({eventName}) {
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
-            <input
-              type="tel"
-              name="phone3"
-              value={userInput.phone3}
-              onChange={handleChange}
-              placeholder="Player 3 Phone"
-              className="w-1/2 p-2 border bg-black rounded mb-2"
-              required
-            />
+            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
+                <span className="text-gray-400 mr-2">+91</span>
+                <input
+                  type="tel"
+                  name="phone3"
+                  value={userInput.phone3}
+                  onChange={(e) => {
+                    const val = e.target.value.replace(/\D/g, "").slice(0, 10);
+                    handleChange({ target: { name: "phone3", value: val } });
+                  }}
+                  placeholder="Player 3 Phone"
+                  className="bg-black text-white outline-none flex-1"
+                  required
+                />
+              </div>
+
           </div>
           {/* <input
             type="file"
@@ -1346,15 +1438,22 @@ function FootballApp({eventName}) {
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
-            <input
-              type="tel"
-              name="phone4"
-              value={userInput.phone4}
-              onChange={handleChange}
-              placeholder="Player 4 Phone"
-              className="w-1/2 p-2 border bg-black rounded mb-2"
-              required
-            />
+            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
+                <span className="text-gray-400 mr-2">+91</span>
+                <input
+                  type="tel"
+                  name="phone4"
+                  value={userInput.phone4}
+                  onChange={(e) => {
+                    const val = e.target.value.replace(/\D/g, "").slice(0, 10);
+                    handleChange({ target: { name: "phone4", value: val } });
+                  }}
+                  placeholder="Player 4 Phone"
+                  className="bg-black text-white outline-none flex-1"
+                  required
+                />
+              </div>
+
           </div>
           {/* <input
             type="file"
@@ -1402,15 +1501,22 @@ function FootballApp({eventName}) {
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
-            <input
-              type="tel"
-              name="phone5"
-              value={userInput.phone5}
-              onChange={handleChange}
-              placeholder="Player 5 Phone"
-              className="w-1/2 p-2 border bg-black rounded mb-2"
-              required
-            />
+            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
+                <span className="text-gray-400 mr-2">+91</span>
+                <input
+                  type="tel"
+                  name="phone5"
+                  value={userInput.phone5}
+                  onChange={(e) => {
+                    const val = e.target.value.replace(/\D/g, "").slice(0, 10);
+                    handleChange({ target: { name: "phone5", value: val } });
+                  }}
+                  placeholder="Player 5 Phone"
+                  className="bg-black text-white outline-none flex-1"
+                  required
+                />
+              </div>
+
           </div>
           {/* <input
             type="file"
@@ -1456,14 +1562,22 @@ function FootballApp({eventName}) {
               placeholder="Player 6 Name"
               className="w-1/2 p-2 border bg-black rounded mb-2"
             />
-            <input
-              type="tel"
-              name="phone6"
-              value={userInput.phone6}
-              onChange={handleChange}
-              placeholder="Player 6 Phone"
-              className="w-1/2 p-2 border bg-black rounded mb-2"
-            />
+            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
+                <span className="text-gray-400 mr-2">+91</span>
+                <input
+                  type="tel"
+                  name="phone6"
+                  value={userInput.phone6}
+                  onChange={(e) => {
+                    const val = e.target.value.replace(/\D/g, "").slice(0, 10);
+                    handleChange({ target: { name: "phone6", value: val } });
+                  }}
+                  placeholder="Player 6 Phone"
+                  className="bg-black text-white outline-none flex-1"
+                  required
+                />
+              </div>
+
           </div>
           {/* <input
             type="file"
@@ -1510,14 +1624,22 @@ function FootballApp({eventName}) {
               placeholder="Player 7 Name"
               className="w-1/2 p-2 border bg-black rounded mb-2"
             />
-            <input
-              type="tel"
-              name="phone7"
-              value={userInput.phone7}
-              onChange={handleChange}
-              placeholder="Player 7 Phone"
-              className="w-1/2 p-2 border bg-black rounded mb-2"
-            />
+            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
+                <span className="text-gray-400 mr-2">+91</span>
+                <input
+                  type="tel"
+                  name="phone7"
+                  value={userInput.phone7}
+                  onChange={(e) => {
+                    const val = e.target.value.replace(/\D/g, "").slice(0, 10);
+                    handleChange({ target: { name: "phone7", value: val } });
+                  }}
+                  placeholder="Player 7 Phone"
+                  className="bg-black text-white outline-none flex-1"
+                  required
+                />
+              </div>
+
           </div>
           {/* <input
             type="file"
