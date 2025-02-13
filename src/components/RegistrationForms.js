@@ -1,8 +1,10 @@
 import { useState } from "react";
 import validateFormDetails from "../hooks/validateForms";
+import registerForms from "../hooks/registerForms";
 
 
 function QuadApp({eventName}) {
+  const [isLoading,setIsLoading]=useState(false);
   const [userInput, setUserInput] = useState({
     name1: "",
     phone1: "",
@@ -65,12 +67,25 @@ function QuadApp({eventName}) {
   };
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    if(validateFormDetails(userInput,eventName)){
+    setIsLoading(true);
+    const verify= validateFormDetails(userInput,eventName);
+    if(verify.success && verify.success===true){
        console.log(userInput,eventName);
        console.log("User is ready for registration..");
+
+       const formSubmitStatus=await registerForms(verify?.finalData);
+
+       if(formSubmitStatus.success && formSubmitStatus.success===true){
+           alert(formSubmitStatus.message);
+           setIsLoading(false);
+       } else{
+          alert(formSubmitStatus.message);
+       }
+
+    } else{
+      alert(verify.message);
     }
     
 
@@ -935,6 +950,7 @@ function TrioApp({eventName}) {
 }
 
 function SoloApp({eventName}) {
+  const [isLoading,setIsLoading]=useState(false);
   const [userInput, setUserInput] = useState({
     name1: "",
     phone1: "",
@@ -985,20 +1001,33 @@ function SoloApp({eventName}) {
   };
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    if(validateFormDetails(userInput,eventName)){
+    setIsLoading(true);
+    const verify= validateFormDetails(userInput,eventName);
+    if(verify.success && verify.success===true){
        console.log(userInput,eventName);
        console.log("User is ready for registration..");
+
+       const formSubmitStatus=await registerForms(verify?.finalData);
+
+       if(formSubmitStatus.success && formSubmitStatus.success===true){
+           alert(formSubmitStatus.message);
+           setIsLoading(false);
+       } else{
+          alert(formSubmitStatus.message);
+       }
+
+    } else{
+      alert(verify.message);
     }
     
 
     setUserInput({
       name1: "",
-    phone1: "",
-    IdImage1: "",
-    email: "",
+      phone1: "",
+      IdImage1: "",
+      email: "",
     });
 
     setImagePreviews({
