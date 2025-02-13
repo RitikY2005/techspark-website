@@ -16,10 +16,14 @@ async function registerForms(finalData) {
     players: finalData.players,
   };
 
-  // ✅ Wait for all images to upload before proceeding
   try {
+    // Upload player images and update their URLs
     const uploadedPlayers = await Promise.all(
       teamData.players.map(async (player) => {
+        if (!player.IdImage) {
+          throw new Error("Player image is missing");
+        }
+
         const file = player.IdImage;
         const storageRef = ref(storage, `idImages/${Date.now()}_${file.name}`);
 
@@ -32,10 +36,13 @@ async function registerForms(finalData) {
       })
     );
 
-    // ✅ Update teamData with uploaded image URLs
+    // Update teamData with uploaded image URLs
     teamData.players = uploadedPlayers;
 
-    // ✅ Now store the data in Firestore after all uploads are done
+    // Log the final data to be uploaded
+    console.log("teamData to be uploaded:", JSON.stringify(teamData, null, 2));
+
+    // Save data to Firestore
     await addDoc(collection(db, "teams"), teamData);
     console.log("Team data saved successfully!");
 
