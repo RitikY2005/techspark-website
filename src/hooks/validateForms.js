@@ -9,15 +9,15 @@ const validateFormDetails=(details={},eventName='')=>{
   const requiredParticipantsNum=participantsNum[eventName];
   
   Object.entries(details).forEach(([key,value])=>{
-    if(key.includes("name") && value!=null){
+    if(key.includes("name") && value!=null && value!==""){
       memberNames.push(value);
     }
-    else if(key.includes("phone") && value!=null){
+    else if(key.includes("phone") && value!=null && value!==""){
       memberPhones.push(value);
     }
     else if(key.includes("IdImage") && value!=null && value!==""){
       memberImages.push(value);
-    } else if(key.includes("email") && value!=null){
+    } else if(key.includes("email") && value!=null && value!==""){
         memberEmail.push(value);
     }
   });

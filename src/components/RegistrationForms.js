@@ -1,6 +1,7 @@
 import { useState } from "react";
 import validateFormDetails from "../hooks/validateForms";
 import registerForms from "../hooks/registerForms";
+import Loader from './Loader.js';
 
 
 function QuadApp({eventName}) {
@@ -116,7 +117,7 @@ function QuadApp({eventName}) {
   return (
     <div className="max-w-2xl mx-auto p-6 bg-black shadow-md rounded-lg">
       <h2 className="text-2xl font-semibold text-cyber-blue text-center mb-4">
-        Registration
+        Registration 
       </h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Captain Details */}
@@ -186,6 +187,7 @@ function QuadApp({eventName}) {
                   class="hidden"
                   onChange={handleImageChange}
                   accept="image/jpeg, image/png,image/jpg"
+                  disabled={isLoading?true:false}
                 />
               </div>
             </div>
@@ -252,6 +254,7 @@ function QuadApp({eventName}) {
               class="hidden"
               onChange={handleImageChange}
               accept="image/jpeg, image/png,image/jpg"
+              disabled={isLoading?true:false}
             />
           </div>
           {imagePreviews.IdImage2 && (
@@ -316,6 +319,7 @@ function QuadApp({eventName}) {
               class="hidden"
               onChange={handleImageChange}
               accept="image/jpeg, image/png,image/jpg"
+              disabled={isLoading?true:false}
             />
           </div>
           {imagePreviews.IdImage3 && (
@@ -379,6 +383,7 @@ function QuadApp({eventName}) {
               class="hidden"
               onChange={handleImageChange}
               accept="image/jpeg, image/png,image/jpg"
+              disabled={isLoading?true:false}
             />
           </div>
           {imagePreviews.IdImage4 && (
@@ -393,9 +398,10 @@ function QuadApp({eventName}) {
         {/* Submit Button */}
         <button
           type="submit"
+          disabled={isLoading?true:false}
           className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md  "
         >
-          Register Team
+          {isLoading?<Loader width={"15px"} height={"15px"}/>:"Register Team"}
         </button>
       </form>
     </div>
@@ -403,6 +409,7 @@ function QuadApp({eventName}) {
 }
 
 function DualApp({eventName}) {
+  const [isLoading,setIsLoading]=useState(false);
   const [userInput, setUserInput] = useState({
     name1: "",
     phone1: "",
@@ -410,6 +417,7 @@ function DualApp({eventName}) {
     name2: "",
     phone2: "",
     IdImage2: "",
+    email:""
   });
 
   const [imagePreviews, setImagePreviews] = useState({
@@ -456,22 +464,37 @@ function DualApp({eventName}) {
   };
 
 
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    if(validateFormDetails(userInput,eventName)){
+    setIsLoading(true);
+    const verify= validateFormDetails(userInput,eventName);
+    if(verify.success && verify.success===true){
        console.log(userInput,eventName);
        console.log("User is ready for registration..");
+
+       const formSubmitStatus=await registerForms(verify?.finalData);
+
+       if(formSubmitStatus.success && formSubmitStatus.success===true){
+           alert(formSubmitStatus.message);
+           setIsLoading(false);
+       } else{
+          alert(formSubmitStatus.message);
+       }
+
+    } else{
+      alert(verify.message);
     }
     
 
     setUserInput({
       name1: "",
-    phone1: "",
-    IdImage1: "",
-    name2: "",
-    phone2: "",
-    IdImage2: "",
+      phone1: "",
+      IdImage1: "",
+      name2: "",
+      phone2: "",
+      IdImage2: "",
+      email:""
     });
 
     setImagePreviews({
@@ -479,6 +502,7 @@ function DualApp({eventName}) {
     IdImage2: null,
     });
   };
+
 
   return (
     <div className="max-w-2xl mx-auto p-6 bg-black text-cyber-blue shadow-md rounded-lg">
@@ -550,6 +574,7 @@ function DualApp({eventName}) {
                   class="hidden"
                   onChange={handleImageChange}
                   accept="image/jpeg, image/png,image/jpg"
+                  disabled={isLoading?true:false}
                 />
               </div>
             </div>
@@ -615,6 +640,7 @@ function DualApp({eventName}) {
               class="hidden"
               onChange={handleImageChange}
               accept="image/jpeg, image/png,image/jpg"
+              disabled={isLoading?true:false}
             />
           </div>
           {imagePreviews.IdImage2 && (
@@ -628,10 +654,11 @@ function DualApp({eventName}) {
 
         {/* Submit Button */}
         <button
+         disabled={isLoading?true:false}
           type="submit"
           className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md  "
         >
-          Register Team
+        {isLoading?<Loader width={"15px"} height={"15px"}/>:"Register Team"}
         </button>
       </form>
     </div>
@@ -639,6 +666,7 @@ function DualApp({eventName}) {
 }
 
 function TrioApp({eventName}) {
+  const [isLoading,setIsLoading]=useState(false);
   const [userInput, setUserInput] = useState({
     name1: "",
     phone1: "",
@@ -698,26 +726,39 @@ function TrioApp({eventName}) {
   };
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    if(validateFormDetails(userInput,eventName)){
+    setIsLoading(true);
+    const verify= validateFormDetails(userInput,eventName);
+    if(verify.success && verify.success===true){
        console.log(userInput,eventName);
        console.log("User is ready for registration..");
+
+       const formSubmitStatus=await registerForms(verify?.finalData);
+
+       if(formSubmitStatus.success && formSubmitStatus.success===true){
+           alert(formSubmitStatus.message);
+           setIsLoading(false);
+       } else{
+          alert(formSubmitStatus.message);
+       }
+
+    } else{
+      alert(verify.message);
     }
     
 
     setUserInput({
       name1: "",
-      phone1: "",
-      IdImage1: "",
-      name2: "",
-      phone2: "",
-      IdImage2: "",
-      name3: "",
-      phone3: "",
-      IdImage3: "",
-      email: "",
+    phone1: "",
+    IdImage1: "",
+    name2: "",
+    phone2: "",
+    IdImage2: "",
+    name3: "",
+    phone3: "",
+    IdImage3: "",
+    email: "",
     });
 
     setImagePreviews({
@@ -727,6 +768,7 @@ function TrioApp({eventName}) {
       IdImage4: null,
     });
   };
+
 
   return (
     <div className="max-w-2xl mx-auto p-6 bg-black text-cyber-blue shadow-md rounded-lg">
@@ -799,6 +841,7 @@ function TrioApp({eventName}) {
                   class="hidden"
                   onChange={handleImageChange}
                   accept="image/jpeg, image/png,image/jpg"
+                  disabled={isLoading?true:false}
                 />
               </div>
             </div>
@@ -865,6 +908,7 @@ function TrioApp({eventName}) {
               class="hidden"
               onChange={handleImageChange}
               accept="image/jpeg, image/png,image/jpg"
+              disabled={isLoading?true:false}
             />
           </div>
           {imagePreviews.IdImage2 && (
@@ -927,6 +971,7 @@ function TrioApp({eventName}) {
               class="hidden"
               onChange={handleImageChange}
               accept="image/jpeg, image/png,image/jpg"
+              disabled={isLoading?true:false}
             />
           </div>
           {imagePreviews.IdImage3 && (
@@ -939,10 +984,11 @@ function TrioApp({eventName}) {
         </div>
         {/* Submit Button */}
         <button
+         disabled={isLoading?true:false}
           type="submit"
           className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md  "
         >
-          Register Team
+        {isLoading?<Loader width={"15px"} height={"15px"}/>:"Register Team"}
         </button>
       </form>
     </div>
@@ -1035,6 +1081,7 @@ function SoloApp({eventName}) {
     });
   };
 
+
   return (
     <div className="max-w-2xl mx-auto p-6 bg-black text-cyber-blue shadow-md rounded-lg">
       <h2 className="text-2xl font-semibold text-center mb-4">Registration</h2>
@@ -1105,6 +1152,7 @@ function SoloApp({eventName}) {
                   class="hidden"
                   onChange={handleImageChange}
                   accept="image/jpeg, image/png,image/jpg"
+                  disabled={isLoading?true:false}
                 />
               </div>
             </div>
@@ -1121,10 +1169,11 @@ function SoloApp({eventName}) {
 
         {/* Submit Button */}
         <button
+         disabled={isLoading?true:false}
           type="submit"
           className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md  "
         >
-          Register Team
+           {isLoading?<Loader width={"15px"} height={"15px"}/>:"Register Team"}
         </button>
       </form>
     </div>
@@ -1132,6 +1181,7 @@ function SoloApp({eventName}) {
 }
 
 function FootballApp({eventName}) {
+  const [isLoading,setIsLoading]=useState(false);
   const [userInput, setUserInput] = useState({
     name1: "",
     phone1: "",
@@ -1203,12 +1253,25 @@ function FootballApp({eventName}) {
   };
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    if(validateFormDetails(userInput,eventName)){
+    setIsLoading(true);
+    const verify= validateFormDetails(userInput,eventName);
+    if(verify.success && verify.success===true){
        console.log(userInput,eventName);
        console.log("User is ready for registration..");
+
+       const formSubmitStatus=await registerForms(verify?.finalData);
+
+       if(formSubmitStatus.success && formSubmitStatus.success===true){
+           alert(formSubmitStatus.message);
+           setIsLoading(false);
+       } else{
+          alert(formSubmitStatus.message);
+       }
+
+    } else{
+      alert(verify.message);
     }
     
 
@@ -1236,14 +1299,16 @@ function FootballApp({eventName}) {
       IdImage7: "",
       email: "",
     });
+    
 
     setImagePreviews({
       IdImage1: null,
-    IdImage2: null,
-    IdImage3: null,
-    IdImage4: null
+      IdImage2: null,
+      IdImage3: null,
+      IdImage4: null,
     });
   };
+
 
   return (
     <div className="max-w-2xl mx-auto p-6 bg-black text-cyber-blue shadow-md rounded-lg">
@@ -1315,6 +1380,7 @@ function FootballApp({eventName}) {
                   class="hidden"
                   onChange={handleImageChange}
                   accept="image/jpeg, image/png,image/jpg"
+                  disabled={isLoading?true:false}
                 />
               </div>
             </div>
@@ -1380,6 +1446,7 @@ function FootballApp({eventName}) {
               class="hidden"
               onChange={handleImageChange}
               accept="image/jpeg, image/png,image/jpg"
+              disabled={isLoading?true:false}
             />
           </div>
           {imagePreviews.IdImage2 && (
@@ -1443,6 +1510,7 @@ function FootballApp({eventName}) {
               class="hidden"
               onChange={handleImageChange}
               accept="image/jpeg, image/png,image/jpg"
+              disabled={isLoading?true:false}
             />
           </div>
           {imagePreviews.IdImage3 && (
@@ -1506,6 +1574,7 @@ function FootballApp({eventName}) {
               class="hidden"
               onChange={handleImageChange}
               accept="image/jpeg, image/png,image/jpg"
+              disabled={isLoading?true:false}
             />
           </div>
           {imagePreviews.IdImage4 && (
@@ -1568,6 +1637,7 @@ function FootballApp({eventName}) {
               class="hidden"
               onChange={handleImageChange}
               accept="image/jpeg, image/png,image/jpg"
+              disabled={isLoading?true:false}
             />
           </div>
           {imagePreviews.IdImage5 && (
@@ -1603,7 +1673,7 @@ function FootballApp({eventName}) {
                   }}
                   placeholder="Player 6 Phone"
                   className="bg-black text-white outline-none flex-1"
-                  required
+                  
                 />
               </div>
 
@@ -1630,6 +1700,7 @@ function FootballApp({eventName}) {
               class="hidden"
               onChange={handleImageChange}
               accept="image/jpeg, image/png,image/jpg"
+              disabled={isLoading?true:false}
             />
           </div>
           {imagePreviews.IdImage6 && (
@@ -1665,7 +1736,7 @@ function FootballApp({eventName}) {
                   }}
                   placeholder="Player 7 Phone"
                   className="bg-black text-white outline-none flex-1"
-                  required
+                  
                 />
               </div>
 
@@ -1692,6 +1763,7 @@ function FootballApp({eventName}) {
               class="hidden"
               onChange={handleImageChange}
               accept="image/jpeg, image/png,image/jpg"
+              disabled={isLoading?true:false}
             />
           </div>
           {imagePreviews.IdImage7 && (
@@ -1705,10 +1777,11 @@ function FootballApp({eventName}) {
 
         {/* Submit Button */}
         <button
+         disabled={isLoading?true:false}
           type="submit"
           className="w-full bg-cyber-blue text-gunmetal py-2 px-4 rounded-md  "
         >
-          Register Team
+         {isLoading?<Loader width={"15px"} height={"15px"}/>:"Register Team"}
         </button>
       </form>
     </div>

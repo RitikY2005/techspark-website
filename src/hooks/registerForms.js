@@ -1,6 +1,5 @@
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
-import { db, storage } from "../lib/firebase";
-import { addDoc, collection } from "firebase/firestore";
+import { db, storage ,sRef,push,set} from "../lib/firebase";
 
 async function registerForms(finalData) {
   if (Object.entries(finalData).length === 0) {
@@ -42,9 +41,13 @@ async function registerForms(finalData) {
     // Log the final data to be uploaded
     console.log("teamData to be uploaded:", JSON.stringify(teamData, null, 2));
 
-    // Save data to Firestore
-    await addDoc(collection(db, "teams"), teamData);
-    console.log("Team data saved successfully!");
+    // Save data to Firestore realtime database 
+    const teamsRef= sRef(db,"teams2025");
+    const newTeamRef= push(teamsRef);
+    await set(newTeamRef,teamData);
+    
+    
+    console.log("Team data saved successfully to database!");
 
     return {
       success: true,
