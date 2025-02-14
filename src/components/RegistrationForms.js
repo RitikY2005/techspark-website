@@ -4,6 +4,7 @@ import registerForms from "../hooks/registerForms";
 import Loader from './Loader.js';
 
 
+
 function QuadApp({eventName}) {
   const [isLoading,setIsLoading]=useState(false);
   const [userInput, setUserInput] = useState({
