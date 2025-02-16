@@ -34,6 +34,33 @@ const validateFormDetails = (details = {}, eventName = "") => {
     };
   }
 
+  // name alert 
+
+  if(memberNames.length<memberPhones.length){
+    return {
+      success: false,
+      message: "Every participant should have a name",
+    };
+  }
+
+  // phone alert 
+  if(memberPhones.length<memberImages.length){
+    return {
+      success: false,
+      message: "Every participant should have an phone number",
+    };
+  }
+
+  // image alert 
+  if(memberImages.length<memberNames.length){
+    return {
+      success: false,
+      message: "Every participant should have an image",
+    };
+  }
+
+  // a generalized error if any feild is missing
+
    if (
      memberNames.length !== memberPhones.length ||
      memberPhones.length !== memberImages.length
@@ -66,35 +93,36 @@ const validateFormDetails = (details = {}, eventName = "") => {
     };
   }
 
-  if (
-    memberPhones.length < requiredParticipantsNum.min ||
-    memberPhones.length > requiredParticipantsNum.max
-  ) {
-    return {
-      success: false,
-      message:
-        "There should be min " +
-        requiredParticipantsNum.min +
-        " and max " +
-        requiredParticipantsNum.max +
-        " participants",
-    };
-  }
+  // if (
+  //   memberPhones.length < requiredParticipantsNum.min ||
+  //   memberPhones.length > requiredParticipantsNum.max
+  // ) {
+  //   return {
+  //     success: false,
+  //     message:
+  //       "There should be min " +
+  //       requiredParticipantsNum.min +
+  //       " and max " +
+  //       requiredParticipantsNum.max +
+  //       " participants",
+  //   };
+  // }
 
-  if (
-    memberImages.length < requiredParticipantsNum.min ||
-    memberImages.length > requiredParticipantsNum.max
-  ) {
-    return {
-      success: false,
-      message:
-        "There should be min " +
-        requiredParticipantsNum.min +
-        " and max " +
-        requiredParticipantsNum.max +
-        " participants",
-    };
-  }
+  // if (
+  //   memberImages.length < requiredParticipantsNum.min ||
+  //   memberImages.length > requiredParticipantsNum.max
+  // ) {
+  //   return {
+  //     success: false,
+  //     message:
+  //       "There should be min " +
+  //       requiredParticipantsNum.min +
+  //       " and max " +
+  //       requiredParticipantsNum.max +
+  //       " participants",
+  //   };
+  // }
+
 
   if (memberEmail[0] == "" || memberEmail.length == 0) {
     return {
