@@ -34,48 +34,22 @@ const validateFormDetails = (details = {}, eventName = "") => {
     };
   }
 
-  
-  // participant name alert
-  if (memberPhones.length !== memberNames.length) {
-    return {
-      success: false,
-      message: "Each participant must have a name."
-    };
-  }
-  
-  // phone number alert
-
-  if (memberPhones.length !== memberNames.length) {
-    return {
-      success: false,
-      message: "Each participant must have a phone number.",
-    };
-  }
-
-  // id image upload alert
-  if (memberImages.length !== memberNames.length) {
-    return {
-      success: false,
-      message: "Each participant must upload an ID image.",
-    };
-  }
-
-  // if (
-  //   memberNames.length !== memberPhones.length ||
-  //   memberPhones.length !== memberImages.length
-  // ) {
-  //   console.log(
-  //     "lenght->>",
-  //     memberNames,
-  //     memberPhones,
-  //     memberEmail,
-  //     memberImages
-  //   );
-  //   return {
-  //     success: false,
-  //     message: "Data array should havve same lenght!",
-  //   };
-  // }
+   if (
+     memberNames.length !== memberPhones.length ||
+     memberPhones.length !== memberImages.length
+   ) {
+     console.log(
+       "lenght->>",
+       memberNames,
+       memberPhones,
+       memberEmail,
+       memberImages
+     );
+     return {
+       success: false,
+       message: "You have not filled all the required details!",
+     };
+   }
 
   if (
     memberNames.length < requiredParticipantsNum.min ||
