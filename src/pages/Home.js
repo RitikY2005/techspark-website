@@ -145,6 +145,36 @@ function Home() {
             />
           </div>
 
+          <a href="https://forms.gle/W1pTfRFMHhBQsU4w7" target="_blank" rel="noopener noreferrer">
+          <motion.button
+              className="w-full sm:w-auto mt-4 sm:mt-8 px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg 
+                        bg-cyber-blue text-gunmetal font-extrabold rounded-full 
+                        hover:-translate-y-1 transition-transform duration-200 shadow-lg
+                        border border-cyber-blue/30 hover:border-white
+                        hover:shadow-[0_0_15px_rgba(0,243,255,0.3)] text-cyber-pink"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+          >
+            RSVP for Alumni Meet
+          </motion.button>
+          </a>
+
+
+          {/* <Link to="https://forms.gle/W1pTfRFMHhBQsU4w7">
+            <motion.button
+            
+              className="w-full sm:w-auto mt-4 sm:mt-8 px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg 
+                        bg-cyber-blue text-gunmetal font-extrabold rounded-full 
+                        hover:-translate-y-1 transition-transform duration-200 shadow-lg
+                        border border-cyber-blue/30 hover:border-white
+                        hover:shadow-[0_0_15px_rgba(0,243,255,0.3)] text-[#cdcfdb]"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              RSVP for Alumni Meet
+            </motion.button>
+          </Link> */}
+
           {/* <Link to="/events">
             <motion.button
             

@@ -130,6 +130,7 @@ function QuadApp({eventName}) {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Captain Details */}
         <div className="p-4 bg-black text-cyber-blue rounded-lg shadow-md">
+        <p className="text-sm font-normal mb-2 text-cyber-pink"> (Upload Image in .png / .jpg / .jpeg format only)</p>
           <h3 className="text-lg font-medium mb-2">Captain (Player 1) </h3>
           <div className="w-full">
             <div className="flex items-center justify-center gap-2">
@@ -582,6 +583,7 @@ function DualApp({eventName}) {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Player 1 */}
         <div className="p-4 rounded-lg shadow-md">
+        <p className="text-sm font-normal mb-2 text-cyber-pink"> (Upload Image in .png / .jpg / .jpeg format only)</p>
           <h3 className="text-lg font-medium mb-2">Player 1</h3>
           <div className="w-full">
             <div className="flex items-center justify-center gap-2">
@@ -883,6 +885,7 @@ function TrioApp({eventName}) {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Player 1 Details */}
         <div className="p-4 bg-black rounded-lg shadow-md">
+        <p className="text-sm font-normal mb-2 text-cyber-pink"> (Upload Image in .png / .jpg / .jpeg format only)</p>
           <h3 className="text-lg font-medium mb-2">Player 1</h3>
           <div className="w-full">
             <div className="flex items-center justify-center gap-2">
@@ -1244,6 +1247,7 @@ function SoloApp({eventName}) {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Player Details */}
         <div className="p-4 bg-black rounded-lg shadow-md">
+        <p className="text-sm font-normal mb-2 text-cyber-pink"> (Upload Image in .png / .jpg / .jpeg format only)</p>
           <h3 className="text-lg font-medium mb-2">Player</h3>
           <div className="w-full">
             <div className="flex items-center bg-black justify-center gap-2">
@@ -1493,6 +1497,7 @@ function FootballApp({eventName}) {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Captain Details */}
         <div className="p-4 bg-black rounded-lg shadow-md">
+        <p className="text-sm font-normal mb-2 text-cyber-pink"> (Upload Image in .png / .jpg / .jpeg format only)</p>
           <h3 className="text-lg font-medium mb-2">Captain (Player 1)</h3>
           <div className="w-full">
             <div className="flex items-center bg-black justify-center gap-2">
