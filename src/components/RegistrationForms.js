@@ -130,10 +130,17 @@ function QuadApp({eventName}) {
                 type="text"
                 name="name1"
                 value={userInput.name1}
-                onChange={handleChange}
-                placeholder="Player 1 Name"
+                onChange={(e) => {
+                  const val = e.target.value;
+                  if (/[^A-Za-z ]/g.test(val)) {
+                  alert("Only alphabets and spaces are allowed!");
+                  }
+                  const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
+                  handleChange({ target: { name: "name1", value: val1 } });
+                }}
+                placeholder="Name"
                 className="w-1/2 p-2 border bg-black rounded mb-2 "
-                style={{ borderWidth: '0.1px', borderColor: '#ccc' }}
+                //style={{ borderWidth: '0.1px', borderColor: '#ccc' }}
                 required
               />
               <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
@@ -146,7 +153,13 @@ function QuadApp({eventName}) {
                     const val = e.target.value.replace(/\D/g, "").slice(0, 10);
                     handleChange({ target: { name: "phone1", value: val } });
                   }}
-                  placeholder="Player 1 Phone"
+                  onBlur={(e) => {
+                    if (e.target.value.length !== 10) {
+                      alert("Phone number must be exactly 10 digits!");
+                      handleChange({ target: { name: "phone1", value: "" } }); // Clear input
+                    }
+                  }}
+                  placeholder="Phone"
                   className="bg-black text-white outline-none flex-1"
                   required
                 />
@@ -161,10 +174,15 @@ function QuadApp({eventName}) {
                 name="email"
                 value={userInput.email}
                 onChange={handleChange}
+                onBlur={(e) => {
+                  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                  if (e.target.value && !emailPattern.test(e.target.value)) {
+                  alert("Please enter a valid email address!");
+                  setUserInput({ ...userInput, email: "" }); // Clear the input
+                  }}}
                 placeholder="Email"
                 className="w-full sm:w-1/2 p-2 border bg-black rounded"
                 required
-                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
               />
               {/* <input
                 type="file"
@@ -211,8 +229,16 @@ function QuadApp({eventName}) {
               type="text"
               name="name2"
               value={userInput.name2}
-              onChange={handleChange}
-              placeholder="Player 2 Name"
+              onChange={(e) => {
+                const val = e.target.value;
+                if (/[^A-Za-z ]/g.test(val)) {
+                alert("Only alphabets and spaces are allowed!");
+                }
+                const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
+                handleChange({ target: { name: "name2", value: val1 } });
+              }}
+
+              placeholder="Name"
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
@@ -226,7 +252,13 @@ function QuadApp({eventName}) {
                     const val = e.target.value.replace(/\D/g, "").slice(0, 10);
                     handleChange({ target: { name: "phone2", value: val } });
                   }}
-                  placeholder="Player 2 Phone"
+                  onBlur={(e) => {
+                    if (e.target.value.length !== 10) {
+                      alert("Phone number must be exactly 10 digits!");
+                      handleChange({ target: { name: "phone2", value: "" } }); // Clear input
+                    }
+                  }}
+                  placeholder="Phone"
                   className="bg-black text-white outline-none flex-1"
                   required
                 />
@@ -275,8 +307,16 @@ function QuadApp({eventName}) {
               type="text"
               name="name3"
               value={userInput.name3}
-              onChange={handleChange}
-              placeholder="Player 3 Name"
+              onChange={(e) => {
+                const val = e.target.value;
+                if (/[^A-Za-z ]/g.test(val)) {
+                alert("Only alphabets and spaces are allowed!");
+                }
+                const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
+                handleChange({ target: { name: "name3", value: val1 } });
+              }}
+
+              placeholder="Name"
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
@@ -290,7 +330,13 @@ function QuadApp({eventName}) {
                     const val = e.target.value.replace(/\D/g, "").slice(0, 10);
                     handleChange({ target: { name: "phone3", value: val } });
                   }}
-                  placeholder="Player 3 Phone"
+                  onBlur={(e) => {
+                    if (e.target.value.length !== 10) {
+                      alert("Phone number must be exactly 10 digits!");
+                      handleChange({ target: { name: "phone3", value: "" } }); // Clear input
+                    }
+                  }}
+                  placeholder="Phone"
                   className="bg-black text-white outline-none flex-1"
                   required
                 />
@@ -340,8 +386,16 @@ function QuadApp({eventName}) {
               type="text"
               name="name4"
               value={userInput.name4}
-              onChange={handleChange}
-              placeholder="Player 4 Name"
+              onChange={(e) => {
+                const val = e.target.value;
+                if (/[^A-Za-z ]/g.test(val)) {
+                alert("Only alphabets and spaces are allowed!");
+                }
+                const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
+                handleChange({ target: { name: "name4", value: val1 } });
+              }}
+
+              placeholder="Name"
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
@@ -355,7 +409,13 @@ function QuadApp({eventName}) {
                     const val = e.target.value.replace(/\D/g, "").slice(0, 10);
                     handleChange({ target: { name: "phone4", value: val } });
                   }}
-                  placeholder="Player 4 Phone"
+                  onBlur={(e) => {
+                    if (e.target.value.length !== 10) {
+                      alert("Phone number must be exactly 10 digits!");
+                      handleChange({ target: { name: "phone4", value: "" } }); // Clear input
+                    }
+                  }}
+                  placeholder="Phone"
                   className="bg-black text-white outline-none flex-1"
                   required
                 />
@@ -518,8 +578,16 @@ function DualApp({eventName}) {
                 type="text"
                 name="name1"
                 value={userInput.name1}
-                onChange={handleChange}
-                placeholder="Player 1 Name"
+                onChange={(e) => {
+                  const val = e.target.value;
+                  if (/[^A-Za-z ]/g.test(val)) {
+                  alert("Only alphabets and spaces are allowed!");
+                  }
+                  const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
+                  handleChange({ target: { name: "name1", value: val1 } });
+                }}
+
+                placeholder="Name"
                 className="w-1/2 p-2 border bg-black rounded mb-2"
                 required
               />
@@ -533,7 +601,13 @@ function DualApp({eventName}) {
                     const val = e.target.value.replace(/\D/g, "").slice(0, 10);
                     handleChange({ target: { name: "phone1", value: val } });
                   }}
-                  placeholder="Player 1 Phone"
+                  onBlur={(e) => {
+                    if (e.target.value.length !== 10) {
+                      alert("Phone number must be exactly 10 digits!");
+                      handleChange({ target: { name: "phone1", value: "" } }); // Clear input
+                    }
+                  }}
+                  placeholder="Phone"
                   className="bg-black text-white outline-none flex-1"
                   required
                 />
@@ -547,6 +621,12 @@ function DualApp({eventName}) {
                 name="email"
                 value={userInput.email}
                 onChange={handleChange}
+                onBlur={(e) => {
+                  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                  if (e.target.value && !emailPattern.test(e.target.value)) {
+                  alert("Please enter a valid email address!");
+                  setUserInput({ ...userInput, email: "" }); // Clear the input
+                  }}}
                 placeholder="Email"
                 className="w-full sm:w-1/2 p-2 bg-black border rounded mb-2"
                 required
@@ -598,8 +678,16 @@ function DualApp({eventName}) {
               type="text"
               name="name2"
               value={userInput.name2}
-              onChange={handleChange}
-              placeholder="Player 2 Name"
+              onChange={(e) => {
+                const val = e.target.value;
+                if (/[^A-Za-z ]/g.test(val)) {
+                alert("Only alphabets and spaces are allowed!");
+                }
+                const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
+                handleChange({ target: { name: "name2", value: val1 } });
+              }}
+
+              placeholder="Name"
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
@@ -613,7 +701,13 @@ function DualApp({eventName}) {
                     const val = e.target.value.replace(/\D/g, "").slice(0, 10);
                     handleChange({ target: { name: "phone2", value: val } });
                   }}
-                  placeholder="Player 2 Phone"
+                  onBlur={(e) => {
+                    if (e.target.value.length !== 10) {
+                      alert("Phone number must be exactly 10 digits!");
+                      handleChange({ target: { name: "phone2", value: "" } }); // Clear input
+                    }
+                  }}
+                  placeholder="Phone"
                   className="bg-black text-white outline-none flex-1"
                   required
                 />
@@ -784,8 +878,16 @@ function TrioApp({eventName}) {
                 type="text"
                 name="name1"
                 value={userInput.name1}
-                onChange={handleChange}
-                placeholder="Player 1 Name"
+                onChange={(e) => {
+                  const val = e.target.value;
+                  if (/[^A-Za-z ]/g.test(val)) {
+                  alert("Only alphabets and spaces are allowed!");
+                  }
+                  const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
+                  handleChange({ target: { name: "name1", value: val1 } });
+                }}
+
+                placeholder="Name"
                 className="w-1/2 p-2 border bg-black rounded mb-2"
                 required
               />
@@ -799,7 +901,13 @@ function TrioApp({eventName}) {
                     const val = e.target.value.replace(/\D/g, "").slice(0, 10);
                     handleChange({ target: { name: "phone1", value: val } });
                   }}
-                  placeholder="Player 1 Phone"
+                  onBlur={(e) => {
+                    if (e.target.value.length !== 10) {
+                      alert("Phone number must be exactly 10 digits!");
+                      handleChange({ target: { name: "phone1", value: "" } }); // Clear input
+                    }
+                  }}
+                  placeholder="Phone"
                   className="bg-black text-white outline-none flex-1"
                   required
                 />
@@ -814,6 +922,12 @@ function TrioApp({eventName}) {
                 name="email"
                 value={userInput.email}
                 onChange={handleChange}
+                onBlur={(e) => {
+                  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                  if (e.target.value && !emailPattern.test(e.target.value)) {
+                  alert("Please enter a valid email address!");
+                  setUserInput({ ...userInput, email: "" }); // Clear the input
+                  }}}
                 placeholder="Email"
                 className="w-full sm:w-1/2 p-2 border bg-black rounded mb-2"
                 required
@@ -865,8 +979,16 @@ function TrioApp({eventName}) {
               type="text"
               name="name2"
               value={userInput.name2}
-              onChange={handleChange}
-              placeholder="Player 2 Name"
+              onChange={(e) => {
+                const val = e.target.value;
+                if (/[^A-Za-z ]/g.test(val)) {
+                alert("Only alphabets and spaces are allowed!");
+                }
+                const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
+                handleChange({ target: { name: "name2", value: val1 } });
+              }}
+
+              placeholder="Name"
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
@@ -880,7 +1002,13 @@ function TrioApp({eventName}) {
                     const val = e.target.value.replace(/\D/g, "").slice(0, 10);
                     handleChange({ target: { name: "phone2", value: val } });
                   }}
-                  placeholder="Player 2 Phone"
+                  onBlur={(e) => {
+                    if (e.target.value.length !== 10) {
+                      alert("Phone number must be exactly 10 digits!");
+                      handleChange({ target: { name: "phone2", value: "" } }); // Clear input
+                    }
+                  }}
+                  placeholder="Phone"
                   className="bg-black text-white outline-none flex-1"
                   required
                 />
@@ -929,8 +1057,16 @@ function TrioApp({eventName}) {
               type="text"
               name="name3"
               value={userInput.name3}
-              onChange={handleChange}
-              placeholder="Player 3 Name"
+              onChange={(e) => {
+                const val = e.target.value;
+                if (/[^A-Za-z ]/g.test(val)) {
+                alert("Only alphabets and spaces are allowed!");
+                }
+                const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
+                handleChange({ target: { name: "name3", value: val1 } });
+              }}
+
+              placeholder="Name"
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
@@ -944,7 +1080,13 @@ function TrioApp({eventName}) {
                     const val = e.target.value.replace(/\D/g, "").slice(0, 10);
                     handleChange({ target: { name: "phone3", value: val } });
                   }}
-                  placeholder="Player 3 Phone"
+                  onBlur={(e) => {
+                    if (e.target.value.length !== 10) {
+                      alert("Phone number must be exactly 10 digits!");
+                      handleChange({ target: { name: "phone3", value: "" } }); // Clear input
+                    }
+                  }}
+                  placeholder="Phone"
                   className="bg-black text-white outline-none flex-1"
                   required
                 />
@@ -1096,8 +1238,15 @@ function SoloApp({eventName}) {
                 type="text"
                 name="name1"
                 value={userInput.name1}
-                onChange={handleChange}
-                placeholder="Player Name"
+                onChange={(e) => {
+                  const val = e.target.value;
+                  if (/[^A-Za-z ]/g.test(val)) {
+                  alert("Only alphabets and spaces are allowed!");
+                  }
+                  const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
+                  handleChange({ target: { name: "name1", value: val1 } });
+                }}
+                placeholder="Name"
                 className="w-1/2 p-2 border bg-black rounded mb-2"
                 required
               />
@@ -1111,7 +1260,13 @@ function SoloApp({eventName}) {
                     const val = e.target.value.replace(/\D/g, "").slice(0, 10);
                     handleChange({ target: { name: "phone1", value: val } });
                   }}
-                  placeholder="Player Phone"
+                  onBlur={(e) => {
+                    if (e.target.value.length !== 10) {
+                      alert("Phone number must be exactly 10 digits!");
+                      handleChange({ target: { name: "phone1", value: "" } }); // Clear input
+                    }
+                  }}
+                  placeholder="Phone"
                   className="bg-black text-white outline-none flex-1"
                   required
                 />
@@ -1126,7 +1281,13 @@ function SoloApp({eventName}) {
                 name="email"
                 value={userInput.email}
                 onChange={handleChange}
-                placeholder="Player Email"
+                onBlur={(e) => {
+                const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (e.target.value && !emailPattern.test(e.target.value)) {
+                alert("Please enter a valid email address!");
+                setUserInput({ ...userInput, email: "" }); // Clear the input
+                }}}
+                placeholder="Email"
                 className="w-full sm:w-1/2 p-2 border bg-black rounded mb-2"
                 required
                 pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
@@ -1141,7 +1302,7 @@ function SoloApp({eventName}) {
               <div class="w-full sm:w-1/2 flex items-center space-x-2">
                 <label
                   for="file_upload1"
-                  class="flex jsutify-center items-center cursor-pointer w-full px-4 py-2 text-black bg-grey border border-grey rounded mb-2 rounded-md focus:outline-none"
+                  class="flex justify-center items-center cursor-pointer w-full px-4 py-2 text-black bg-grey border border-grey rounded mb-2 rounded-md focus:outline-none"
                 >
                   <span class="material-icons mr-2">cloud_upload</span>
                   Upload your ID image
@@ -1324,8 +1485,16 @@ function FootballApp({eventName}) {
                 type="text"
                 name="name1"
                 value={userInput.name1}
-                onChange={handleChange}
-                placeholder="Player 1 Name"
+                onChange={(e) => {
+                  const val = e.target.value;
+                  if (/[^A-Za-z ]/g.test(val)) {
+                  alert("Only alphabets and spaces are allowed!");
+                  }
+                  const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
+                  handleChange({ target: { name: "name1", value: val1 } });
+                }}
+
+                placeholder="Name"
                 className="w-1/2 p-2 border bg-black rounded mb-2"
                 required
               />
@@ -1339,7 +1508,13 @@ function FootballApp({eventName}) {
                     const val = e.target.value.replace(/\D/g, "").slice(0, 10);
                     handleChange({ target: { name: "phone1", value: val } });
                   }}
-                  placeholder="Player 1 Phone"
+                  onBlur={(e) => {
+                    if (e.target.value.length !== 10) {
+                      alert("Phone number must be exactly 10 digits!");
+                      handleChange({ target: { name: "phone1", value: "" } }); // Clear input
+                    }
+                  }}
+                  placeholder="Phone"
                   className="bg-black text-white outline-none flex-1"
                   required
                 />
@@ -1354,6 +1529,12 @@ function FootballApp({eventName}) {
                 name="email"
                 value={userInput.email}
                 onChange={handleChange}
+                onBlur={(e) => {
+                  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                  if (e.target.value && !emailPattern.test(e.target.value)) {
+                  alert("Please enter a valid email address!");
+                  setUserInput({ ...userInput, email: "" }); // Clear the input
+                  }}}
                 placeholder="Email"
                 className="w-full sm:w-1/2 p-2 border bg-black rounded mb-2"
                 required
@@ -1404,8 +1585,16 @@ function FootballApp({eventName}) {
               type="text"
               name="name2"
               value={userInput.name2}
-              onChange={handleChange}
-              placeholder="Player 2 Name"
+              onChange={(e) => {
+                const val = e.target.value;
+                if (/[^A-Za-z ]/g.test(val)) {
+                alert("Only alphabets and spaces are allowed!");
+                }
+                const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
+                handleChange({ target: { name: "name2", value: val1 } });
+              }}
+
+              placeholder="Name"
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
@@ -1419,7 +1608,13 @@ function FootballApp({eventName}) {
                     const val = e.target.value.replace(/\D/g, "").slice(0, 10);
                     handleChange({ target: { name: "phone2", value: val } });
                   }}
-                  placeholder="Player 2 Phone"
+                  onBlur={(e) => {
+                    if (e.target.value.length !== 10) {
+                      alert("Phone number must be exactly 10 digits!");
+                      handleChange({ target: { name: "phone2", value: "" } }); // Clear input
+                    }
+                  }}
+                  placeholder="Phone"
                   className="bg-black text-white outline-none flex-1"
                   required
                 />
@@ -1467,8 +1662,16 @@ function FootballApp({eventName}) {
               type="text"
               name="name3"
               value={userInput.name3}
-              onChange={handleChange}
-              placeholder="Player 3 Name"
+              onChange={(e) => {
+                const val = e.target.value;
+                if (/[^A-Za-z ]/g.test(val)) {
+                alert("Only alphabets and spaces are allowed!");
+                }
+                const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
+                handleChange({ target: { name: "name3", value: val1 } });
+              }}
+
+              placeholder="Name"
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
@@ -1482,7 +1685,13 @@ function FootballApp({eventName}) {
                     const val = e.target.value.replace(/\D/g, "").slice(0, 10);
                     handleChange({ target: { name: "phone3", value: val } });
                   }}
-                  placeholder="Player 3 Phone"
+                  onBlur={(e) => {
+                    if (e.target.value.length !== 10) {
+                      alert("Phone number must be exactly 10 digits!");
+                      handleChange({ target: { name: "phone3", value: "" } }); // Clear input
+                    }
+                  }}
+                  placeholder="Phone"
                   className="bg-black text-white outline-none flex-1"
                   required
                 />
@@ -1531,8 +1740,16 @@ function FootballApp({eventName}) {
               type="text"
               name="name4"
               value={userInput.name4}
-              onChange={handleChange}
-              placeholder="Player 4 Name"
+              onChange={(e) => {
+                const val = e.target.value;
+                if (/[^A-Za-z ]/g.test(val)) {
+                alert("Only alphabets and spaces are allowed!");
+                }
+                const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
+                handleChange({ target: { name: "name4", value: val1 } });
+              }}
+
+              placeholder="Name"
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
@@ -1546,7 +1763,13 @@ function FootballApp({eventName}) {
                     const val = e.target.value.replace(/\D/g, "").slice(0, 10);
                     handleChange({ target: { name: "phone4", value: val } });
                   }}
-                  placeholder="Player 4 Phone"
+                  onBlur={(e) => {
+                    if (e.target.value.length !== 10) {
+                      alert("Phone number must be exactly 10 digits!");
+                      handleChange({ target: { name: "phone4", value: "" } }); // Clear input
+                    }
+                  }}
+                  placeholder="Phone"
                   className="bg-black text-white outline-none flex-1"
                   required
                 />
@@ -1595,8 +1818,16 @@ function FootballApp({eventName}) {
               type="text"
               name="name5"
               value={userInput.name5}
-              onChange={handleChange}
-              placeholder="Player 5 Name"
+              onChange={(e) => {
+                const val = e.target.value;
+                if (/[^A-Za-z ]/g.test(val)) {
+                alert("Only alphabets and spaces are allowed!");
+                }
+                const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
+                handleChange({ target: { name: "name5", value: val1 } });
+              }}
+
+              placeholder="Name"
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
@@ -1610,7 +1841,13 @@ function FootballApp({eventName}) {
                     const val = e.target.value.replace(/\D/g, "").slice(0, 10);
                     handleChange({ target: { name: "phone5", value: val } });
                   }}
-                  placeholder="Player 5 Phone"
+                  onBlur={(e) => {
+                    if (e.target.value.length !== 10) {
+                      alert("Phone number must be exactly 10 digits!");
+                      handleChange({ target: { name: "phone5", value: "" } }); // Clear input
+                    }
+                  }}
+                  placeholder="Phone"
                   className="bg-black text-white outline-none flex-1"
                   required
                 />
@@ -1658,8 +1895,16 @@ function FootballApp({eventName}) {
               type="text"
               name="name6"
               value={userInput.name6}
-              onChange={handleChange}
-              placeholder="Player 6 Name"
+              onChange={(e) => {
+                const val = e.target.value;
+                if (/[^A-Za-z ]/g.test(val)) {
+                alert("Only alphabets and spaces are allowed!");
+                }
+                const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
+                handleChange({ target: { name: "name6", value: val1 } });
+              }}
+
+              placeholder="Name"
               className="w-1/2 p-2 border bg-black rounded mb-2"
             />
             <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
@@ -1672,7 +1917,13 @@ function FootballApp({eventName}) {
                     const val = e.target.value.replace(/\D/g, "").slice(0, 10);
                     handleChange({ target: { name: "phone6", value: val } });
                   }}
-                  placeholder="Player 6 Phone"
+                  onBlur={(e) => {
+                    if (e.target.value.length !== 10) {
+                      alert("Phone number must be exactly 10 digits!");
+                      handleChange({ target: { name: "phone6", value: "" } }); // Clear input
+                    }
+                  }}
+                  placeholder="Phone"
                   className="bg-black text-white outline-none flex-1"
                   
                 />
@@ -1721,8 +1972,16 @@ function FootballApp({eventName}) {
               type="text"
               name="name7"
               value={userInput.name7}
-              onChange={handleChange}
-              placeholder="Player 7 Name"
+              onChange={(e) => {
+                const val = e.target.value;
+                if (/[^A-Za-z ]/g.test(val)) {
+                alert("Only alphabets and spaces are allowed!");
+                }
+                const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
+                handleChange({ target: { name: "name7", value: val1 } });
+              }}
+
+              placeholder="Name"
               className="w-1/2 p-2 border bg-black rounded mb-2"
             />
             <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
@@ -1735,7 +1994,13 @@ function FootballApp({eventName}) {
                     const val = e.target.value.replace(/\D/g, "").slice(0, 10);
                     handleChange({ target: { name: "phone7", value: val } });
                   }}
-                  placeholder="Player 7 Phone"
+                  onBlur={(e) => {
+                    if (e.target.value.length !== 10) {
+                      alert("Phone number must be exactly 10 digits!");
+                      handleChange({ target: { name: "phone1", value: "" } }); // Clear input
+                    }
+                  }}
+                  placeholder="Phone"
                   className="bg-black text-white outline-none flex-1"
                   
                 />
