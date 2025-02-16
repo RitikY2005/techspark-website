@@ -12,7 +12,7 @@
     month: "FEB",
     year: "2025",
     title: "Technical Events",
-    description: "Join us to explore the tech world with enthralling coding competitions and win the race against time",
+    description: "Join us to explore the tech world with enthralling coding competitions and win the race against time!",
     location: "Mithibai College, Mumbai",
     time: "24 Feb 2025, 9:00 AM - 6:00 PM",
     subEvents: [
@@ -35,10 +35,10 @@
         status: "STAY TUNED",
         registrationForm:DualApp,
         eventRules:[
-         "Each team must consist of 2 members only",
-         "The participants are not allowed to discuss with other teams during the coding round",
+         "Each team must consist of 2 members only.",
+         "The participants are not allowed to discuss with other teams during the coding round.",
          "The utilization of artificial intelligence, personal hardware, and mobile phones is not permitted during the event. ",
-         "The participants are also not allowed to open any new tabs or window in any browser or any files without the permission"
+         "The participants are also not allowed to open any new tabs or window in any browser or any files without permission."
         ]
       },
       {
@@ -71,10 +71,10 @@
         status: "STAY TUNED",
         registrationForm:TrioApp,
         eventRules:[
-         "Each team MUST contain exactly 3 players",
-         "ALL riddles MUST be answered correctly before moving to the tasks",
-         "At a time 1 team can perform only 1 task",
-         "Collected sticks should NOT be damaged and they need to be submitted together"
+         "Each team MUST contain exactly 3 players.",
+         "ALL riddles MUST be answered correctly before moving to the tasks.",
+         "At a time 1 team can perform only 1 task.",
+         "Collected sticks should NOT be damaged and they need to be submitted together."
         ]
       }, 
       {
@@ -83,7 +83,7 @@
         status: "STAY TUNED",
         registrationForm:SoloApp,
         eventRules:[
-          "No-interruptions during a speaker’s turn, unless it’s during the cross-fire round",
+          "No-interruptions during a speaker’s turn, unless it’s during the cross-fire round.",
           "The time limit must be strictly followed. Speakers will be penalized for exceeding the allotted time.",
           "The question will be repeated for a maximum of 3 times.",
           "No participant is allowed to reprimand the host or organizers regarding the topic given on the spot. Any form of disrespect, offensive language, or personal attacks will result in disqualification.",
@@ -96,8 +96,8 @@
         status: "STAY TUNED",
         registrationForm:DualApp,
         eventRules:[
-          "Each team must have 2 participants",
-          "Questions will be asked sequentially, and teams will buzz in to answer",
+          "Each team must have 2 participants.",
+          "Questions will be asked sequentially, and teams will buzz in to answer.",
           "After buzzing, teams will have 30 seconds to respond.",
           "The use of electronic devices, smartwatches, and laptops, is strictly prohibited during the event.",
           "Mobile phones may be used exclusively for operating the buzzer. AI tools or any external assistance are not allowed."
@@ -125,7 +125,7 @@
          "The winner will be decided by the team with the highest total points across all four matches, based on placement and performance.",
          "No cheating, exploiting glitches, or using unauthorized tools.",
          "Tablets and emulators are prohibited. Players using them will be disqualified.",
-         "Every player has to arrange their own network and should also carry their own powerbank for charging their device.WiFi or hotspot would not be provided the OC"
+         "Every player has to arrange their own network and should also carry their own powerbank for charging their device.WiFi or hotspot would not be provided by the OC."
         ]
       },
       {

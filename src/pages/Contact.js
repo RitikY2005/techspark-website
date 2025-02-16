@@ -2,8 +2,11 @@ import { motion } from 'framer-motion';
 import CyberLayout from '../components/CyberLayout';
 import { useState } from 'react';
 // import { initializeApp } from 'firebase/app';
-import { getDatabase, ref as sRef, push, set } from "firebase/database";
-import {db} from "../lib/firebase";
+
+import { db,sRef,push,set} from "../lib/firebase";
+import { Loader } from 'lucide-react';
+import { toast } from 'react-toastify';
+
 
 
 
@@ -27,7 +30,7 @@ function Contact() {
   //   e.preventDefault();
   //   // Add form submission logic here
   // };
-
+ const [isLoading,setIsLoading]=useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', contact: '', message: '' });
   const [errors, setErrors] = useState({});
 
@@ -60,6 +63,7 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     let newErrors = {};
     const timestamp = getCurrentDateTime();
 
@@ -73,6 +77,7 @@ function Contact() {
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
+      setIsLoading(false);
       return;
     }
 
@@ -86,16 +91,19 @@ function Contact() {
         message:formData.message
       });
       
-      //alert("We will contact you soon!");
+      //toast.error("We will contact you soon!");
       setFormData({ name: '', email: '', contact: '', message: '' } );
+      toast.success("form submitted successfully!");
     } catch (error) {
-      console.error("Error adding document: ", error);
+      // console.error("Error adding document: ", error);
+      toast.error("Form could not be submitted,try again!");
     }
     //document.getElementById("contact-form").reset();
 
 
     setErrors({});
     //console.log('Form submitted:', formData);
+    setIsLoading(false);
   };
 
 
@@ -168,14 +176,15 @@ function Contact() {
       />
       <motion.button
         type="submit"
+        disabled={isLoading?true:false}
         className="px-8 py-4 bg-cyber-blue text-black font-bold rounded-lg
                    border border-cyber-blue/30 hover:border-white
                    hover:shadow-[0_0_15px_rgba(0,243,255,0.3)]
-                   transition-all duration-300"
+                   transition-all duration-300 flex items-center justify-center cursor-pointer"
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
       >
-        SEND MESSAGE
+        {isLoading?<Loader width={"15px"} height={"15px"}/>:"SEND MESSAGE"}
       </motion.button>
     </motion.form>
         </div>

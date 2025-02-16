@@ -1,7 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import validateFormDetails from "../hooks/validateForms";
 import registerForms from "../hooks/registerForms";
 import Loader from './Loader.js';
+import { toast } from "react-toastify";
 
 
 
@@ -42,7 +43,8 @@ function QuadApp({eventName}) {
     if (file) {
       const fileType = file.type;
       if (!['image/png', 'image/jpeg', 'image/jpg'].includes(fileType)) {
-      alert('Please upload only PNG, JPG or JPEG images.');
+      // toast.error('Please upload only PNG, JPG or JPEG images.');
+      toast.error("Please upload only PNG, JPG or JPEG images.");
       setImagePreviews({ IdImage1: null });
       return;
     }
@@ -50,7 +52,8 @@ function QuadApp({eventName}) {
     // Check file size (5MB in this case, adjust as needed)
     const maxSize = 5 * 1024 * 1024; // 5MB
     if (file.size > maxSize) {
-     alert('File size must be less than 5MB.');
+    //  toast.error('File size must be less than 5MB.');
+     toast.error("File size must be less than 5MB.;")
      return;
     }
 
@@ -80,14 +83,17 @@ function QuadApp({eventName}) {
        const formSubmitStatus=await registerForms(verify?.finalData);
 
        if(formSubmitStatus.success && formSubmitStatus.success===true){
-           alert(formSubmitStatus.message);
+          //  toast.error(formSubmitStatus.message);
+           toast.success(formSubmitStatus.message);
            setIsLoading(false);
        } else{
-          alert(formSubmitStatus.message);
+          // toast.error(formSubmitStatus.message);
+          toast.error(formSubmitStatus.message);
        }
 
     } else{
-      alert(verify.message);
+      // toast.error(verify.message);
+      toast.error(verify.message);
     }
     
 
@@ -113,6 +119,7 @@ function QuadApp({eventName}) {
     IdImage3: null,
     IdImage4: null,
     });
+    setIsLoading(false);
   };
 
   return (
@@ -133,7 +140,8 @@ function QuadApp({eventName}) {
                 onChange={(e) => {
                   const val = e.target.value;
                   if (/[^A-Za-z ]/g.test(val)) {
-                  alert("Only alphabets and spaces are allowed!");
+                  // toast.error("Only alphabets and spaces are allowed!");
+                  toast.error("Only alphabets and spaces are allowed!");
                   }
                   const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                   handleChange({ target: { name: "name1", value: val1 } });
@@ -155,7 +163,8 @@ function QuadApp({eventName}) {
                   }}
                   onBlur={(e) => {
                     if (e.target.value.length !== 10) {
-                      alert("Phone number must be exactly 10 digits!");
+                      // toast.error("Phone number must be exactly 10 digits!");
+                      toast.error("Phone number must be exactly 10 digits!");
                       handleChange({ target: { name: "phone1", value: "" } }); // Clear input
                     }
                   }}
@@ -177,7 +186,8 @@ function QuadApp({eventName}) {
                 onBlur={(e) => {
                   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
                   if (e.target.value && !emailPattern.test(e.target.value)) {
-                  alert("Please enter a valid email address!");
+                  // toast.error("Please enter a valid email address!");
+                  toast.error("Please enter a valid email address!");
                   setUserInput({ ...userInput, email: "" }); // Clear the input
                   }}}
                 placeholder="Email"
@@ -232,7 +242,7 @@ function QuadApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                alert("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets and spaces are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name2", value: val1 } });
@@ -254,7 +264,7 @@ function QuadApp({eventName}) {
                   }}
                   onBlur={(e) => {
                     if (e.target.value.length !== 10) {
-                      alert("Phone number must be exactly 10 digits!");
+                      toast.error("Phone number must be exactly 10 digits!");
                       handleChange({ target: { name: "phone2", value: "" } }); // Clear input
                     }
                   }}
@@ -310,7 +320,7 @@ function QuadApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                alert("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets and spaces are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name3", value: val1 } });
@@ -332,7 +342,7 @@ function QuadApp({eventName}) {
                   }}
                   onBlur={(e) => {
                     if (e.target.value.length !== 10) {
-                      alert("Phone number must be exactly 10 digits!");
+                      toast.error("Phone number must be exactly 10 digits!");
                       handleChange({ target: { name: "phone3", value: "" } }); // Clear input
                     }
                   }}
@@ -389,7 +399,7 @@ function QuadApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                alert("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets and spaces are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name4", value: val1 } });
@@ -411,7 +421,7 @@ function QuadApp({eventName}) {
                   }}
                   onBlur={(e) => {
                     if (e.target.value.length !== 10) {
-                      alert("Phone number must be exactly 10 digits!");
+                      toast.error("Phone number must be exactly 10 digits!");
                       handleChange({ target: { name: "phone4", value: "" } }); // Clear input
                     }
                   }}
@@ -498,7 +508,7 @@ function DualApp({eventName}) {
     if (file) {
       const fileType = file.type;
       if (!['image/png', 'image/jpeg', 'image/jpg'].includes(fileType)) {
-      alert('Please upload only PNG, JPG or JPEG images.');
+      toast.error('Please upload only PNG, JPG or JPEG images.');
       setImagePreviews({ IdImage1: null });
       return;
     }
@@ -506,7 +516,7 @@ function DualApp({eventName}) {
     // Check file size (5MB in this case, adjust as needed)
     const maxSize = 5 * 1024 * 1024; // 5MB
     if (file.size > maxSize) {
-     alert('File size must be less than 5MB.');
+     toast.error('File size must be less than 5MB.');
      return;
     }
 
@@ -537,14 +547,14 @@ function DualApp({eventName}) {
        const formSubmitStatus=await registerForms(verify?.finalData);
 
        if(formSubmitStatus.success && formSubmitStatus.success===true){
-           alert(formSubmitStatus.message);
+           toast.success(formSubmitStatus.message);
            setIsLoading(false);
        } else{
-          alert(formSubmitStatus.message);
+          toast.error(formSubmitStatus.message);
        }
 
     } else{
-      alert(verify.message);
+      toast.error(verify.message);
     }
     
 
@@ -562,6 +572,7 @@ function DualApp({eventName}) {
       IdImage1: null,
     IdImage2: null,
     });
+    setIsLoading(false);
   };
 
 
@@ -581,7 +592,7 @@ function DualApp({eventName}) {
                 onChange={(e) => {
                   const val = e.target.value;
                   if (/[^A-Za-z ]/g.test(val)) {
-                  alert("Only alphabets and spaces are allowed!");
+                  toast.error("Only alphabets and spaces are allowed!");
                   }
                   const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                   handleChange({ target: { name: "name1", value: val1 } });
@@ -603,7 +614,7 @@ function DualApp({eventName}) {
                   }}
                   onBlur={(e) => {
                     if (e.target.value.length !== 10) {
-                      alert("Phone number must be exactly 10 digits!");
+                      toast.error("Phone number must be exactly 10 digits!");
                       handleChange({ target: { name: "phone1", value: "" } }); // Clear input
                     }
                   }}
@@ -624,7 +635,7 @@ function DualApp({eventName}) {
                 onBlur={(e) => {
                   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
                   if (e.target.value && !emailPattern.test(e.target.value)) {
-                  alert("Please enter a valid email address!");
+                  toast.error("Please enter a valid email address!");
                   setUserInput({ ...userInput, email: "" }); // Clear the input
                   }}}
                 placeholder="Email"
@@ -681,7 +692,7 @@ function DualApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                alert("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets and spaces are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name2", value: val1 } });
@@ -703,7 +714,7 @@ function DualApp({eventName}) {
                   }}
                   onBlur={(e) => {
                     if (e.target.value.length !== 10) {
-                      alert("Phone number must be exactly 10 digits!");
+                      toast.error("Phone number must be exactly 10 digits!");
                       handleChange({ target: { name: "phone2", value: "" } }); // Clear input
                     }
                   }}
@@ -794,7 +805,7 @@ function TrioApp({eventName}) {
     if (file) {
       const fileType = file.type;
       if (!['image/png', 'image/jpeg', 'image/jpg'].includes(fileType)) {
-      alert('Please upload only PNG, JPG or JPEG images.');
+      toast.error('Please upload only PNG, JPG or JPEG images.');
       setImagePreviews({ IdImage1: null });
       return;
     }
@@ -802,7 +813,7 @@ function TrioApp({eventName}) {
     // Check file size (5MB in this case, adjust as needed)
     const maxSize = 5 * 1024 * 1024; // 5MB
     if (file.size > maxSize) {
-     alert('File size must be less than 5MB.');
+     toast.error('File size must be less than 5MB.');
      return;
     }
 
@@ -832,14 +843,14 @@ function TrioApp({eventName}) {
        const formSubmitStatus=await registerForms(verify?.finalData);
 
        if(formSubmitStatus.success && formSubmitStatus.success===true){
-           alert(formSubmitStatus.message);
+           toast.success(formSubmitStatus.message);
            setIsLoading(false);
        } else{
-          alert(formSubmitStatus.message);
+          toast.error(formSubmitStatus.message);
        }
 
     } else{
-      alert(verify.message);
+      toast.error(verify.message);
     }
     
 
@@ -862,6 +873,7 @@ function TrioApp({eventName}) {
       IdImage3: null,
       IdImage4: null,
     });
+    setIsLoading(false);
   };
 
 
@@ -881,7 +893,7 @@ function TrioApp({eventName}) {
                 onChange={(e) => {
                   const val = e.target.value;
                   if (/[^A-Za-z ]/g.test(val)) {
-                  alert("Only alphabets and spaces are allowed!");
+                  toast.error("Only alphabets and spaces are allowed!");
                   }
                   const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                   handleChange({ target: { name: "name1", value: val1 } });
@@ -903,7 +915,7 @@ function TrioApp({eventName}) {
                   }}
                   onBlur={(e) => {
                     if (e.target.value.length !== 10) {
-                      alert("Phone number must be exactly 10 digits!");
+                      toast.error("Phone number must be exactly 10 digits!");
                       handleChange({ target: { name: "phone1", value: "" } }); // Clear input
                     }
                   }}
@@ -925,7 +937,7 @@ function TrioApp({eventName}) {
                 onBlur={(e) => {
                   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
                   if (e.target.value && !emailPattern.test(e.target.value)) {
-                  alert("Please enter a valid email address!");
+                  toast.error("Please enter a valid email address!");
                   setUserInput({ ...userInput, email: "" }); // Clear the input
                   }}}
                 placeholder="Email"
@@ -982,7 +994,7 @@ function TrioApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                alert("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets and spaces are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name2", value: val1 } });
@@ -1004,7 +1016,7 @@ function TrioApp({eventName}) {
                   }}
                   onBlur={(e) => {
                     if (e.target.value.length !== 10) {
-                      alert("Phone number must be exactly 10 digits!");
+                      toast.error("Phone number must be exactly 10 digits!");
                       handleChange({ target: { name: "phone2", value: "" } }); // Clear input
                     }
                   }}
@@ -1060,7 +1072,7 @@ function TrioApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                alert("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets and spaces are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name3", value: val1 } });
@@ -1082,7 +1094,7 @@ function TrioApp({eventName}) {
                   }}
                   onBlur={(e) => {
                     if (e.target.value.length !== 10) {
-                      alert("Phone number must be exactly 10 digits!");
+                      toast.error("Phone number must be exactly 10 digits!");
                       handleChange({ target: { name: "phone3", value: "" } }); // Clear input
                     }
                   }}
@@ -1163,7 +1175,7 @@ function SoloApp({eventName}) {
     if (file) {
       const fileType = file.type;
       if (!['image/png', 'image/jpeg', 'image/jpg'].includes(fileType)) {
-      alert('Please upload only PNG, JPG or JPEG images.');
+      toast.error('Please upload only PNG, JPG or JPEG images.');
       setImagePreviews({ IdImage1: null });
       return;
     }
@@ -1171,7 +1183,7 @@ function SoloApp({eventName}) {
     // Check file size (5MB in this case, adjust as needed)
     const maxSize = 5 * 1024 * 1024; // 5MB
     if (file.size > maxSize) {
-     alert('File size must be less than 5MB.');
+     toast.error('File size must be less than 5MB.');
      return;
     }
 
@@ -1201,14 +1213,14 @@ function SoloApp({eventName}) {
        const formSubmitStatus=await registerForms(verify?.finalData);
 
        if(formSubmitStatus.success && formSubmitStatus.success===true){
-           alert(formSubmitStatus.message);
+           toast.success(formSubmitStatus.message);
            setIsLoading(false);
        } else{
-          alert(formSubmitStatus.message);
+          toast.error(formSubmitStatus.message);
        }
 
     } else{
-      alert(verify.message);
+      toast.error(verify.message);
     }
     
 
@@ -1222,6 +1234,7 @@ function SoloApp({eventName}) {
     setImagePreviews({
       IdImage1: null,
     });
+    setIsLoading(false);
   };
 
 
@@ -1241,7 +1254,7 @@ function SoloApp({eventName}) {
                 onChange={(e) => {
                   const val = e.target.value;
                   if (/[^A-Za-z ]/g.test(val)) {
-                  alert("Only alphabets and spaces are allowed!");
+                  toast.error("Only alphabets and spaces are allowed!");
                   }
                   const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                   handleChange({ target: { name: "name1", value: val1 } });
@@ -1262,7 +1275,7 @@ function SoloApp({eventName}) {
                   }}
                   onBlur={(e) => {
                     if (e.target.value.length !== 10) {
-                      alert("Phone number must be exactly 10 digits!");
+                      toast.error("Phone number must be exactly 10 digits!");
                       handleChange({ target: { name: "phone1", value: "" } }); // Clear input
                     }
                   }}
@@ -1284,7 +1297,7 @@ function SoloApp({eventName}) {
                 onBlur={(e) => {
                 const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
                 if (e.target.value && !emailPattern.test(e.target.value)) {
-                alert("Please enter a valid email address!");
+                toast.error("Please enter a valid email address!");
                 setUserInput({ ...userInput, email: "" }); // Clear the input
                 }}}
                 placeholder="Email"
@@ -1388,7 +1401,7 @@ function FootballApp({eventName}) {
     if (file) {
       const fileType = file.type;
       if (!['image/png', 'image/jpeg', 'image/jpg'].includes(fileType)) {
-      alert('Please upload only PNG, JPG or JPEG images.');
+      toast.error('Please upload only PNG, JPG or JPEG images.');
       setImagePreviews({ IdImage1: null });
       return;
     }
@@ -1396,7 +1409,7 @@ function FootballApp({eventName}) {
     // Check file size (5MB in this case, adjust as needed)
     const maxSize = 5 * 1024 * 1024; // 5MB
     if (file.size > maxSize) {
-     alert('File size must be less than 5MB.');
+     toast.error('File size must be less than 5MB.');
      return;
     }
 
@@ -1426,14 +1439,14 @@ function FootballApp({eventName}) {
        const formSubmitStatus=await registerForms(verify?.finalData);
 
        if(formSubmitStatus.success && formSubmitStatus.success===true){
-           alert(formSubmitStatus.message);
+           toast.success(formSubmitStatus.message);
            setIsLoading(false);
        } else{
-          alert(formSubmitStatus.message);
+          toast.error(formSubmitStatus.message);
        }
 
     } else{
-      alert(verify.message);
+      toast.error(verify.message);
     }
     
 
@@ -1469,6 +1482,8 @@ function FootballApp({eventName}) {
       IdImage3: null,
       IdImage4: null,
     });
+    
+    setIsLoading(false);
   };
 
 
@@ -1488,7 +1503,7 @@ function FootballApp({eventName}) {
                 onChange={(e) => {
                   const val = e.target.value;
                   if (/[^A-Za-z ]/g.test(val)) {
-                  alert("Only alphabets and spaces are allowed!");
+                  toast.error("Only alphabets and spaces are allowed!");
                   }
                   const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                   handleChange({ target: { name: "name1", value: val1 } });
@@ -1510,7 +1525,7 @@ function FootballApp({eventName}) {
                   }}
                   onBlur={(e) => {
                     if (e.target.value.length !== 10) {
-                      alert("Phone number must be exactly 10 digits!");
+                      toast.error("Phone number must be exactly 10 digits!");
                       handleChange({ target: { name: "phone1", value: "" } }); // Clear input
                     }
                   }}
@@ -1532,7 +1547,7 @@ function FootballApp({eventName}) {
                 onBlur={(e) => {
                   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
                   if (e.target.value && !emailPattern.test(e.target.value)) {
-                  alert("Please enter a valid email address!");
+                  toast.error("Please enter a valid email address!");
                   setUserInput({ ...userInput, email: "" }); // Clear the input
                   }}}
                 placeholder="Email"
@@ -1588,7 +1603,7 @@ function FootballApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                alert("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets and spaces are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name2", value: val1 } });
@@ -1610,7 +1625,7 @@ function FootballApp({eventName}) {
                   }}
                   onBlur={(e) => {
                     if (e.target.value.length !== 10) {
-                      alert("Phone number must be exactly 10 digits!");
+                      toast.error("Phone number must be exactly 10 digits!");
                       handleChange({ target: { name: "phone2", value: "" } }); // Clear input
                     }
                   }}
@@ -1665,7 +1680,7 @@ function FootballApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                alert("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets and spaces are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name3", value: val1 } });
@@ -1687,7 +1702,7 @@ function FootballApp({eventName}) {
                   }}
                   onBlur={(e) => {
                     if (e.target.value.length !== 10) {
-                      alert("Phone number must be exactly 10 digits!");
+                      toast.error("Phone number must be exactly 10 digits!");
                       handleChange({ target: { name: "phone3", value: "" } }); // Clear input
                     }
                   }}
@@ -1743,7 +1758,7 @@ function FootballApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                alert("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets and spaces are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name4", value: val1 } });
@@ -1765,7 +1780,7 @@ function FootballApp({eventName}) {
                   }}
                   onBlur={(e) => {
                     if (e.target.value.length !== 10) {
-                      alert("Phone number must be exactly 10 digits!");
+                      toast.error("Phone number must be exactly 10 digits!");
                       handleChange({ target: { name: "phone4", value: "" } }); // Clear input
                     }
                   }}
@@ -1821,7 +1836,7 @@ function FootballApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                alert("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets and spaces are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name5", value: val1 } });
@@ -1843,7 +1858,7 @@ function FootballApp({eventName}) {
                   }}
                   onBlur={(e) => {
                     if (e.target.value.length !== 10) {
-                      alert("Phone number must be exactly 10 digits!");
+                      toast.error("Phone number must be exactly 10 digits!");
                       handleChange({ target: { name: "phone5", value: "" } }); // Clear input
                     }
                   }}
@@ -1898,7 +1913,7 @@ function FootballApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                alert("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets and spaces are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name6", value: val1 } });
@@ -1919,7 +1934,7 @@ function FootballApp({eventName}) {
                   }}
                   onBlur={(e) => {
                     if (e.target.value.length !== 10) {
-                      alert("Phone number must be exactly 10 digits!");
+                      toast.error("Phone number must be exactly 10 digits!");
                       handleChange({ target: { name: "phone6", value: "" } }); // Clear input
                     }
                   }}
@@ -1975,7 +1990,7 @@ function FootballApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                alert("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets and spaces are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name7", value: val1 } });
@@ -1996,7 +2011,7 @@ function FootballApp({eventName}) {
                   }}
                   onBlur={(e) => {
                     if (e.target.value.length !== 10) {
-                      alert("Phone number must be exactly 10 digits!");
+                      toast.error("Phone number must be exactly 10 digits!");
                       handleChange({ target: { name: "phone1", value: "" } }); // Clear input
                     }
                   }}
