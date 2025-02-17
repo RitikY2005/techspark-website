@@ -1,4 +1,4 @@
- import {QuadApp} from '../components/RegistrationForms.js';
+import {QuadApp} from '../components/RegistrationForms.js';
  import {DualApp} from '../components/RegistrationForms.js';
  import {TrioApp} from '../components/RegistrationForms.js';
  import {SoloApp} from '../components/RegistrationForms.js';
@@ -22,11 +22,11 @@
         status: "STAY TUNED",
         registrationForm:QuadApp,
         eventRules:[
-      "The team can have a min 3 participants & a maximum of 4 participants.",
+      "The team can have a minumum 2 participants & a maximum of 3 participants.",
       "Participants are required to bring their own hardware devices for the development of their projects.",
       "The participating teams have the liberty to choose any language or software for their projects.",
       "Participants are allowed & will be provided with internet access for the duration of the Hackathon.",
-      "Projects must be developed during the hackathon. Any pre-existing projects or code will not be accepted."
+      "Projects must be developed during the hackathon. Any pre-existing projects or code will not be accepted."
     ]
       },
       {
@@ -37,7 +37,7 @@
         eventRules:[
          "Each team must consist of 2 members only.",
          "The participants are not allowed to discuss with other teams during the coding round.",
-         "The utilization of artificial intelligence, personal hardware, and mobile phones is not permitted during the event. ",
+         "The evaluation criteria prioritize accuracy as the primary factor, followed by time complexity as a secondary consideration.",
          "The participants are also not allowed to open any new tabs or window in any browser or any files without permission."
         ]
       },
@@ -47,9 +47,9 @@
         status: "STAY TUNED",
         registrationForm:TrioApp,
         eventRules:[
-         "No use of mobile phones or web resources (including AI tools such as ChatGPT) is allowed unless required for a specific task.",
-         "Disruptive behavior may result in disqualification and fines for damages if necessary",
-         "Participants should report at least half an hour before the event. No late entries will be allowed."
+         "No use or access of any files or web resources, including AI tools like ChatGPT, unless explicitly required for a specific task.",
+         "All tasks must be completed within the stipulated time; no extensions will be granted.",
+         "Participants must remain within their designated area and not loiter around/invade other's space."
         ]
 
 
@@ -67,12 +67,12 @@
     subEvents: [
       {
         title: "Treasure Hunt",
-        description: "HUNT AGAINST TIME is a thrilling 3-stage challenge! The adventure begins with a Riddle Stage, where you'll need to solve a series of difficult riddles to unlock the next level. Successfully completing the riddles will lead you to the Task Stage, where you'll have to accomplish a set of challenging tasks. Solving all riddles and tasks, finally you'll reach the Treasure Hunt Stage, where you'll use cryptic clues to track down hidden cards scattered around the college. The team that finds minimum 13 cards first will emerge victorious, putting their wit, skill, and teamwork to the ultimate test!",
+        description: "Jack-of-all-Treasures is a thrilling 3-stage challenge! The adventure begins with a Riddle Stage, where you'll need to solve a series of difficult riddles to unlock the next level. Successfully completing the riddles will lead you to the Task Stage, where you'll have to accomplish a set of challenging tasks. Solving all riddles and tasks, finally you'll reach the Treasure Hunt Stage, where you'll use cryptic clues to track down hidden cards scattered around the college. The team that finds minimum 13 cards first will emerge victorious, putting their wit, skill, and teamwork to the ultimate test!",
         status: "STAY TUNED",
         registrationForm:TrioApp,
         eventRules:[
-         "Each team MUST contain exactly 3 players.",
-         "ALL riddles MUST be answered correctly before moving to the tasks.",
+         "Each team MUST contain at least 2 and at most 3 players.",
+         "All stages must be completed in sequence; teams cannot skip any stage.",
          "At a time 1 team can perform only 1 task.",
          "Collected cards should NOT be damaged and they need to be submitted together."
         ]
@@ -84,15 +84,15 @@
         registrationForm:SoloApp,
         eventRules:[
           "No-interruptions during a speaker’s turn, unless it’s during the cross-fire round.",
-          "Speakers can not exceed the alloted time.",
+          "The discussion topic will be given on the spot and use of AI tools such as ChatGPT is strictly prohibited during the event.",
           "The question will be repeated for a maximum of 3 times.",
           "No participant is allowed to reprimand the host or organizers regarding the topic given on the spot. Any form of disrespect, offensive language, or personal attacks will result in disqualification.",
-          "All arguments must be supported by credible sources. (Facts, statistics, and expert quotes are encouraged, but opinions should be minimized.)"
+          "All arguments must be supported by credible sources and can not exceed the alloted time."
         ]
       },
       {
         title: "Trivia",
-        description: "Unleash the power of words and ideas. This engaging event brings together sharp minds to discuss, argue, and explore diverse perspectives on pressing topics. This year's event promises to be bigger and better than ever, with exciting topics, esteemed judges, and prizes to be won.",
+        description: "Put your knowledge to the test in this electrifying pop culture trivia showdown! Dive into the world of movies, music, TV shows, memes, and more as you compete against sharp minds in a fast-paced battle of wits. Showcase your quick thinking, dominate the leaderboard, and claim ultimate bragging rights—along with exciting prizes! Get ready for the most thrilling quiz competition of the year!",
         status: "STAY TUNED",
         registrationForm:DualApp,
         eventRules:[
@@ -100,7 +100,7 @@
           "Questions will be asked sequentially, and teams will buzz in to answer.",
           "After buzzing, teams will have 30 seconds to respond.",
           "The use of electronic devices, smartwatches, and laptops, is strictly prohibited during the event.",
-          "Mobile phones may be used exclusively for operating the buzzer. AI tools or any external assistance are not allowed."
+          "Mobile phones should be used exclusively for operating the buzzer. AI tools or any external assistance are not allowed and would lead to immediate disqualification."
         ]
       }
     ]

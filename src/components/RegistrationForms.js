@@ -53,7 +53,7 @@ function QuadApp({eventName}) {
     const maxSize = 5 * 1024 * 1024; // 5MB
     if (file.size > maxSize) {
     //  toast.error('File size must be less than 5MB.');
-     toast.error("File size must be less than 5MB.;")
+     toast.error("File size must be less than 5MB.")
      return;
     }
 
@@ -123,13 +123,14 @@ function QuadApp({eventName}) {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-black shadow-md rounded-lg">
+    <div className="max-w-2xl mx-auto p-2 sm:p-6 bg-red shadow-md rounded-lg">
       <h2 className="text-2xl font-semibold text-cyber-blue text-center mb-4">
         Registration 
       </h2>
+      
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Captain Details */}
-        <div className="p-4 bg-black text-cyber-blue rounded-lg shadow-md">
+        <div className="p-2 sm:p-4 bg-black text-cyber-blue rounded-lg shadow-md">
         <p className="text-sm font-normal mb-2 text-cyber-pink"> (Upload Image in .png / .jpg / .jpeg format only)</p>
           <h3 className="text-lg font-medium mb-2">Captain (Player 1) </h3>
           <div className="w-full">
@@ -141,8 +142,8 @@ function QuadApp({eventName}) {
                 onChange={(e) => {
                   const val = e.target.value;
                   if (/[^A-Za-z ]/g.test(val)) {
-                  // toast.error("Only alphabets and spaces are allowed!");
-                  toast.error("Only alphabets and spaces are allowed!");
+                  // toast.error("Only alphabets are allowed!");
+                  toast.error("Only alphabets are allowed!");
                   }
                   const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                   handleChange({ target: { name: "name1", value: val1 } });
@@ -152,8 +153,8 @@ function QuadApp({eventName}) {
                 //style={{ borderWidth: '0.1px', borderColor: '#ccc' }}
                 required
               />
-              <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
-                <span className="text-gray-400 mr-2">+91</span>
+              <div className="flex items-center justify-start gap-2 border bg-black rounded mb-2 w-1/2 p-2 overflow-hidden">
+                <span className="text-gray-400">+91</span>
                 <input
                   type="tel"
                   name="phone1"
@@ -170,7 +171,7 @@ function QuadApp({eventName}) {
                     }
                   }}
                   placeholder="Phone"
-                  className="bg-black text-white outline-none flex-1"
+                  className="bg-black text-white outline-none w-full"
                   required
                 />
               </div>
@@ -243,7 +244,7 @@ function QuadApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                toast.error("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name2", value: val1 } });
@@ -253,8 +254,8 @@ function QuadApp({eventName}) {
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
-            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
-                <span className="text-gray-400 mr-2">+91</span>
+            <div className="flex items-center justify-start gap-2 border bg-black rounded mb-2 w-1/2 p-2 overflow-hidden">
+              <span className="text-gray-400">+91</span>
                 <input
                   type="tel"
                   name="phone2"
@@ -270,7 +271,7 @@ function QuadApp({eventName}) {
                     }
                   }}
                   placeholder="Phone"
-                  className="bg-black text-white outline-none flex-1"
+                  className="bg-black text-white outline-none w-full"
                   required
                 />
               </div>
@@ -321,7 +322,7 @@ function QuadApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                toast.error("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name3", value: val1 } });
@@ -331,8 +332,8 @@ function QuadApp({eventName}) {
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
-            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
-                <span className="text-gray-400 mr-2">+91</span>
+            <div className="flex items-center justify-start gap-2 border bg-black rounded mb-2 w-1/2 p-2 overflow-hidden">
+              <span className="text-gray-400">+91</span>
                 <input
                   type="tel"
                   name="phone3"
@@ -348,7 +349,7 @@ function QuadApp({eventName}) {
                     }
                   }}
                   placeholder="Phone"
-                  className="bg-black text-white outline-none flex-1"
+                  className="bg-black text-white outline-none w-full"
                   required
                 />
               </div>
@@ -400,7 +401,7 @@ function QuadApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                toast.error("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name4", value: val1 } });
@@ -410,8 +411,8 @@ function QuadApp({eventName}) {
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
-            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
-                <span className="text-gray-400 mr-2">+91</span>
+            <div className="flex items-center justify-start gap-2 border bg-black rounded mb-2 w-1/2 p-2 overflow-hidden">
+            <span className="text-gray-400">+91</span>
                 <input
                   type="tel"
                   name="phone4"
@@ -427,7 +428,7 @@ function QuadApp({eventName}) {
                     }
                   }}
                   placeholder="Phone"
-                  className="bg-black text-white outline-none flex-1"
+                  className="bg-black text-white outline-none w-full"
                   required
                 />
               </div>
@@ -476,6 +477,7 @@ function QuadApp({eventName}) {
           {isLoading?<Loader width={"15px"} height={"15px"}/>:"Register Team"}
         </button>
       </form>
+      
     </div>
   );
 }
@@ -594,7 +596,7 @@ function DualApp({eventName}) {
                 onChange={(e) => {
                   const val = e.target.value;
                   if (/[^A-Za-z ]/g.test(val)) {
-                  toast.error("Only alphabets and spaces are allowed!");
+                  toast.error("Only alphabets are allowed!");
                   }
                   const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                   handleChange({ target: { name: "name1", value: val1 } });
@@ -604,8 +606,8 @@ function DualApp({eventName}) {
                 className="w-1/2 p-2 border bg-black rounded mb-2"
                 required
               />
-              <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
-                <span className="text-gray-400 mr-2">+91</span>
+              <div className="flex items-center justify-start gap-2 border bg-black rounded mb-2 w-1/2 p-2 overflow-hidden">
+              <span className="text-gray-400">+91</span>
                 <input
                   type="tel"
                   name="phone1"
@@ -621,7 +623,7 @@ function DualApp({eventName}) {
                     }
                   }}
                   placeholder="Phone"
-                  className="bg-black text-white outline-none flex-1"
+                  className="bg-black text-white outline-none w-full"
                   required
                 />
               </div>
@@ -694,7 +696,7 @@ function DualApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                toast.error("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name2", value: val1 } });
@@ -704,8 +706,8 @@ function DualApp({eventName}) {
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
-            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
-                <span className="text-gray-400 mr-2">+91</span>
+            <div className="flex items-center justify-start gap-2 border bg-black rounded mb-2 w-1/2 p-2 overflow-hidden">
+            <span className="text-gray-400">+91</span>
                 <input
                   type="tel"
                   name="phone2"
@@ -721,7 +723,7 @@ function DualApp({eventName}) {
                     }
                   }}
                   placeholder="Phone"
-                  className="bg-black text-white outline-none flex-1"
+                  className="bg-black text-white outline-none w-full"
                   required
                 />
               </div>
@@ -896,7 +898,7 @@ function TrioApp({eventName}) {
                 onChange={(e) => {
                   const val = e.target.value;
                   if (/[^A-Za-z ]/g.test(val)) {
-                  toast.error("Only alphabets and spaces are allowed!");
+                  toast.error("Only alphabets are allowed!");
                   }
                   const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                   handleChange({ target: { name: "name1", value: val1 } });
@@ -923,7 +925,7 @@ function TrioApp({eventName}) {
                     }
                   }}
                   placeholder="Phone"
-                  className="bg-black text-white outline-none flex-1"
+                  className="bg-black text-white outline-none w-full"
                   required
                 />
               </div>
@@ -997,7 +999,7 @@ function TrioApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                toast.error("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name2", value: val1 } });
@@ -1007,8 +1009,8 @@ function TrioApp({eventName}) {
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
-            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
-                <span className="text-gray-400 mr-2">+91</span>
+            <div className="flex items-center justify-start gap-2 border bg-black rounded mb-2 w-1/2 p-2 overflow-hidden">
+            <span className="text-gray-400">+91</span>
                 <input
                   type="tel"
                   name="phone2"
@@ -1024,7 +1026,7 @@ function TrioApp({eventName}) {
                     }
                   }}
                   placeholder="Phone"
-                  className="bg-black text-white outline-none flex-1"
+                  className="bg-black text-white outline-none w-full"
                   required
                 />
               </div>
@@ -1075,7 +1077,7 @@ function TrioApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                toast.error("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name3", value: val1 } });
@@ -1085,8 +1087,8 @@ function TrioApp({eventName}) {
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
-            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
-                <span className="text-gray-400 mr-2">+91</span>
+            <div className="flex items-center justify-start gap-2 border bg-black rounded mb-2 w-1/2 p-2 overflow-hidden">
+            <span className="text-gray-400">+91</span>
                 <input
                   type="tel"
                   name="phone3"
@@ -1102,7 +1104,7 @@ function TrioApp({eventName}) {
                     }
                   }}
                   placeholder="Phone"
-                  className="bg-black text-white outline-none flex-1"
+                  className="bg-black text-white outline-none w-full"
                   required
                 />
               </div>
@@ -1258,7 +1260,7 @@ function SoloApp({eventName}) {
                 onChange={(e) => {
                   const val = e.target.value;
                   if (/[^A-Za-z ]/g.test(val)) {
-                  toast.error("Only alphabets and spaces are allowed!");
+                  toast.error("Only alphabets are allowed!");
                   }
                   const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                   handleChange({ target: { name: "name1", value: val1 } });
@@ -1267,8 +1269,8 @@ function SoloApp({eventName}) {
                 className="w-1/2 p-2 border bg-black rounded mb-2"
                 required
               />
-              <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
-                <span className="text-gray-400 mr-2">+91</span>
+              <div className="flex items-center justify-start gap-2 border bg-black rounded mb-2 w-1/2 p-2 overflow-hidden">
+              <span className="text-gray-400">+91</span>
                 <input
                   type="tel"
                   name="phone1"
@@ -1284,7 +1286,7 @@ function SoloApp({eventName}) {
                     }
                   }}
                   placeholder="Phone"
-                  className="bg-black text-white outline-none flex-1"
+                  className="bg-black text-white outline-none w-full"
                   required
                 />
               </div>
@@ -1508,7 +1510,7 @@ function FootballApp({eventName}) {
                 onChange={(e) => {
                   const val = e.target.value;
                   if (/[^A-Za-z ]/g.test(val)) {
-                  toast.error("Only alphabets and spaces are allowed!");
+                  toast.error("Only alphabets are allowed!");
                   }
                   const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                   handleChange({ target: { name: "name1", value: val1 } });
@@ -1518,8 +1520,8 @@ function FootballApp({eventName}) {
                 className="w-1/2 p-2 border bg-black rounded mb-2"
                 required
               />
-              <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
-                <span className="text-gray-400 mr-2">+91</span>
+              <div className="flex items-center justify-start gap-2 border bg-black rounded mb-2 w-1/2 p-2 overflow-hidden">
+              <span className="text-gray-400">+91</span>
                 <input
                   type="tel"
                   name="phone1"
@@ -1535,7 +1537,7 @@ function FootballApp({eventName}) {
                     }
                   }}
                   placeholder="Phone"
-                  className="bg-black text-white outline-none flex-1"
+                  className="bg-black text-white outline-none w-full"
                   required
                 />
               </div>
@@ -1608,7 +1610,7 @@ function FootballApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                toast.error("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name2", value: val1 } });
@@ -1618,8 +1620,8 @@ function FootballApp({eventName}) {
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
-            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
-                <span className="text-gray-400 mr-2">+91</span>
+            <div className="flex items-center justify-start gap-2 border bg-black rounded mb-2 w-1/2 p-2 overflow-hidden">
+            <span className="text-gray-400">+91</span>
                 <input
                   type="tel"
                   name="phone2"
@@ -1635,7 +1637,7 @@ function FootballApp({eventName}) {
                     }
                   }}
                   placeholder="Phone"
-                  className="bg-black text-white outline-none flex-1"
+                  className="bg-black text-white outline-none w-full"
                   required
                 />
               </div>
@@ -1685,7 +1687,7 @@ function FootballApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                toast.error("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name3", value: val1 } });
@@ -1695,8 +1697,8 @@ function FootballApp({eventName}) {
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
-            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
-                <span className="text-gray-400 mr-2">+91</span>
+            <div className="flex items-center justify-start gap-2 border bg-black rounded mb-2 w-1/2 p-2 overflow-hidden">
+            <span className="text-gray-400">+91</span>
                 <input
                   type="tel"
                   name="phone3"
@@ -1712,7 +1714,7 @@ function FootballApp({eventName}) {
                     }
                   }}
                   placeholder="Phone"
-                  className="bg-black text-white outline-none flex-1"
+                  className="bg-black text-white outline-none w-full"
                   required
                 />
               </div>
@@ -1763,7 +1765,7 @@ function FootballApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                toast.error("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name4", value: val1 } });
@@ -1773,8 +1775,8 @@ function FootballApp({eventName}) {
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
-            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
-                <span className="text-gray-400 mr-2">+91</span>
+            <div className="flex items-center justify-start gap-2 border bg-black rounded mb-2 w-1/2 p-2 overflow-hidden">
+            <span className="text-gray-400">+91</span>
                 <input
                   type="tel"
                   name="phone4"
@@ -1790,7 +1792,7 @@ function FootballApp({eventName}) {
                     }
                   }}
                   placeholder="Phone"
-                  className="bg-black text-white outline-none flex-1"
+                  className="bg-black text-white outline-none w-full"
                   required
                 />
               </div>
@@ -1841,7 +1843,7 @@ function FootballApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                toast.error("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name5", value: val1 } });
@@ -1851,8 +1853,8 @@ function FootballApp({eventName}) {
               className="w-1/2 p-2 border bg-black rounded mb-2"
               required
             />
-            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
-                <span className="text-gray-400 mr-2">+91</span>
+            <div className="flex items-center justify-start gap-2 border bg-black rounded mb-2 w-1/2 p-2 overflow-hidden">
+            <span className="text-gray-400">+91</span>
                 <input
                   type="tel"
                   name="phone5"
@@ -1868,7 +1870,7 @@ function FootballApp({eventName}) {
                     }
                   }}
                   placeholder="Phone"
-                  className="bg-black text-white outline-none flex-1"
+                  className="bg-black text-white outline-none w-full"
                   required
                 />
               </div>
@@ -1918,7 +1920,7 @@ function FootballApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                toast.error("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name6", value: val1 } });
@@ -1927,8 +1929,8 @@ function FootballApp({eventName}) {
               placeholder="Name"
               className="w-1/2 p-2 border bg-black rounded mb-2"
             />
-            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
-                <span className="text-gray-400 mr-2">+91</span>
+            <div className="flex items-center justify-start gap-2 border bg-black rounded mb-2 w-1/2 p-2 overflow-hidden">
+            <span className="text-gray-400">+91</span>
                 <input
                   type="tel"
                   name="phone6"
@@ -1944,7 +1946,7 @@ function FootballApp({eventName}) {
                     }
                   }}
                   placeholder="Phone"
-                  className="bg-black text-white outline-none flex-1"
+                  className="bg-black text-white outline-none w-full"
                   
                 />
               </div>
@@ -1995,7 +1997,7 @@ function FootballApp({eventName}) {
               onChange={(e) => {
                 const val = e.target.value;
                 if (/[^A-Za-z ]/g.test(val)) {
-                toast.error("Only alphabets and spaces are allowed!");
+                toast.error("Only alphabets are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
                 handleChange({ target: { name: "name7", value: val1 } });
@@ -2004,8 +2006,8 @@ function FootballApp({eventName}) {
               placeholder="Name"
               className="w-1/2 p-2 border bg-black rounded mb-2"
             />
-            <div className="flex items-center border bg-black rounded mb-2 w-1/2 p-2">
-                <span className="text-gray-400 mr-2">+91</span>
+            <div className="flex items-center justify-start gap-2 border bg-black rounded mb-2 w-1/2 p-2 overflow-hidden">
+            <span className="text-gray-400">+91</span>
                 <input
                   type="tel"
                   name="phone7"
@@ -2021,7 +2023,7 @@ function FootballApp({eventName}) {
                     }
                   }}
                   placeholder="Phone"
-                  className="bg-black text-white outline-none flex-1"
+                  className="bg-black text-white outline-none w-full"
                   
                 />
               </div>
