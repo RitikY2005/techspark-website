@@ -74,17 +74,17 @@
          "Each team MUST contain exactly 3 players.",
          "ALL riddles MUST be answered correctly before moving to the tasks.",
          "At a time 1 team can perform only 1 task.",
-         "Collected sticks should NOT be damaged and they need to be submitted together."
+         "Collected cards should NOT be damaged and they need to be submitted together."
         ]
       }, 
       {
         title: "Debate",
-        description: "Get ready for a war of words and a battle of wits! Our debate event is the ultimate platform for you to showcase your skills, challenge your peers, test your arguments, and emerge victorious. This year's event promises to be bigger and better than ever, with exciting topics, esteemed judges, and prizes to be won. Gather your team, prepare your arguments, and take on the best to emerge as the champion of logic and rhetoric.",
+        description: "Get ready for a war of words and a battle of wits! Our debate event is the ultimate platform for you to showcase your skills, challenge your peers, test your arguments, and emerge victorious. Participants will showcase their critical thinking, persuasive skills, and mastery of rhetoric in an intense yet enriching battle of wits. Gather your team, prepare your arguments, and take on the best to emerge as the champion of logic and rhetoric.",
         status: "STAY TUNED",
         registrationForm:SoloApp,
         eventRules:[
           "No-interruptions during a speaker’s turn, unless it’s during the cross-fire round.",
-          "The time limit must be strictly followed. Speakers will be penalized for exceeding the allotted time.",
+          "Speakers can not exceed the alloted time.",
           "The question will be repeated for a maximum of 3 times.",
           "No participant is allowed to reprimand the host or organizers regarding the topic given on the spot. Any form of disrespect, offensive language, or personal attacks will result in disqualification.",
           "All arguments must be supported by credible sources. (Facts, statistics, and expert quotes are encouraged, but opinions should be minimized.)"
@@ -92,7 +92,7 @@
       },
       {
         title: "Trivia",
-        description: "Unleash the power of words and ideas. This engaging event brings together sharp minds to discuss, argue, and explore diverse perspectives on pressing topics. Participants will showcase their critical thinking, persuasive skills, and mastery of rhetoric in an intense yet enriching battle of wits.",
+        description: "Unleash the power of words and ideas. This engaging event brings together sharp minds to discuss, argue, and explore diverse perspectives on pressing topics. This year's event promises to be bigger and better than ever, with exciting topics, esteemed judges, and prizes to be won.",
         status: "STAY TUNED",
         registrationForm:DualApp,
         eventRules:[
