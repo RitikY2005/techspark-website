@@ -216,8 +216,15 @@ function Events() {
                                     <p className="text-sm text-left sm:text-base text-white leading-relaxed mb-4 flex-grow">
                                       {subEvent.description}
                                     </p>
+                                    <span className="text-sm text-left sm:text-base text-white leading-relaxed mb-4 flex-grow text-white-500 font-bold">
+                                      {subEvent.eventDate}
+                                    </span>
 
-                                    <div className="flex items-center mt-10 gap-4">
+                                    <span className="text-sm text-left sm:text-base text-white leading-relaxed mb-4 flex-grow text-white-500 font-bold">
+                                      {subEvent.location}
+                                    </span>
+
+                                    <div className="flex items-center mt-3 gap-4">
                                       <motion.button
                                         className="w-full sm:w-auto px-6 py-3 text-sm bg-black text-cyber-blue font-bold rounded-lg border border-cyber-blue/30 hover:border-white hover:shadow-[0,0,15px,rgba(0,243,255,0.3)] transition-all duration-300"
                                         whileHover={{ scale: 1.02 }}
