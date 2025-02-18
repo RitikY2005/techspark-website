@@ -1,9 +1,39 @@
 import { motion } from "framer-motion";
-// import { Link } from "react-router-dom";center
+import { Link } from "react-router-dom";
 import CyberLayout from "../components/CyberLayout";
 import Countdown from 'react-countdown';
+import { useEffect } from "react";
+import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
+
 
 function Home() {
+
+  // useEffect(() => {
+  //   toast(
+  //     <div className="flex justify-between items-center w-full max-w-[90vw] sm:max-w-[400px]">
+  //       <div>
+  //         <strong className="text-cyber-blue text-lg sm:text-xl">Registrations Open!</strong>
+  //       </div>
+  //       <button
+  //         className="bg-cyber-blue text-gunmetal font-bold px-4 sm:px-6 py-1 sm:py-2 rounded-md 
+  //                    hover:-translate-y-1 transition-transform duration-200 shadow-lg
+  //                    border border-cyber-blue/30 hover:border-white
+  //                    hover:shadow-[0_0_15px_rgba(0,243,255,0.3)] -translate-x-2 text-sm sm:text-base"
+  //         onClick={() => window.location.href = "/events"} 
+  //       >
+  //         Register
+  //       </button>
+  //     </div>,
+  //     {
+  //       position: "bottom-right",
+  //       autoClose: false,
+  //       closeOnClick: true,
+  //       className: "bg-gunmetal text-white px-4 py-3 rounded-lg w-[350px] max-w-[90vw] sm:max-w-[400px] shadow-md",
+  //     }
+  //   );
+  // }, []); 
+
    // Countdown renderer function
    const renderer = ({ days, hours, minutes, seconds }) => (
     <motion.div
@@ -127,6 +157,7 @@ function Home() {
             24th and 25th February 2025
           </motion.p>
 
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mt-6">
           <a href="https://forms.gle/W1pTfRFMHhBQsU4w7" target="_blank" rel="noopener noreferrer">
           <motion.button
               className="w-full sm:w-auto mt-4 sm:mt-8 px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg 
@@ -140,6 +171,22 @@ function Home() {
             RSVP for Alumni Meet
           </motion.button>
           </a>
+
+          <Link to="/events">
+            <motion.button
+            
+              className="w-full sm:w-auto mt-4 sm:mt-8 px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg 
+                        bg-cyber-blue text-gunmetal font-extrabold rounded-full 
+                        hover:-translate-y-1 transition-transform duration-200 shadow-lg
+                        border border-cyber-blue/30 hover:border-white
+                        hover:shadow-[0_0_15px_rgba(0,243,255,0.3)] text-[#cdcfdb]"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Register Now
+            </motion.button>
+          </Link>
+          </div>
 
              {/* Countdown Timer Section */}
              <div className="text-center mt-12 sm:mt-16">
