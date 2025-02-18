@@ -1,31 +1,31 @@
 const participantsNum={
-  "Techspark Hackathon":{
-    min:3,
-    max:4
+  "Techspark's Hackathon":{
+    min:2,
+    max:3
   },
-  "Code - a - Replica":{
+  "Mirror Match":{
     min:2,
     max:2
   },
-  "Escape Room":{
-    min:3,
+  "Hackattack":{
+    min:2,
     max:3
   },
-  "Treasure Hunt":{
-    min:3,
+  "Jack of all Treasures":{
+    min:2,
     max:3
   },
-  "Debate":{
+  "Convice-a-thon":{
     min:1,
     max:1
   },
-  "Trivia":{
+  "Quizpocalypse":{
     min:2,
     max:2
   },
   "Battle Grounds Mobile India (BGMI)":{
-    min:4,
-    max:4
+    min:5,
+    max:5
   },
   "Ultimate Goal Gala (FC24)":{
     min:1,

@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 
 
 
-function QuadApp({eventName}) {
+function PentApp({eventName}) {
   const [isLoading,setIsLoading]=useState(false);
   const [userInput, setUserInput] = useState({
     name1: "",
@@ -21,6 +21,9 @@ function QuadApp({eventName}) {
     name4: "",
     phone4: "",
     IdImage4: "",
+    name5: "",
+    phone5: "",
+    IdImage5: "",
     email: "",
   });
 
@@ -29,6 +32,7 @@ function QuadApp({eventName}) {
     IdImage2: null,
     IdImage3: null,
     IdImage4: null,
+    IdImage5: null
   });
 
   const handleChange = (e) => {
@@ -110,6 +114,9 @@ function QuadApp({eventName}) {
       name4: "",
       phone4: "",
       IdImage4: "",
+      name5: "",
+      phone5: "",
+      IdImage5: "",
       email: "",
     });
 
@@ -118,6 +125,7 @@ function QuadApp({eventName}) {
     IdImage2: null,
     IdImage3: null,
     IdImage4: null,
+    IdImage5: null
     });
     setIsLoading(false);
   };
@@ -131,8 +139,13 @@ function QuadApp({eventName}) {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Captain Details */}
         <div className="p-2 sm:p-4 bg-black text-cyber-blue rounded-lg shadow-md">
-        <p className="text-sm font-normal mb-2 text-cyber-pink"> (Upload Image in .png / .jpg / .jpeg format only)</p>
-          <h3 className="text-lg font-medium mb-2">Captain (Player 1) </h3>
+        <p className="text-sm font-normal mb-2 text-cyber-pink"> 
+          <ul style={{listStyleType:"circle"}}>
+            <li>Upload Image in .png / .jpg / .jpeg format only</li>
+            <li>Provide WhatsApp contact number</li>
+          </ul> 
+        </p>
+          <h3 className="text-lg font-medium mb-2">Player 1</h3>
           <div className="w-full">
             <div className="flex items-center justify-center gap-2">
               <input
@@ -390,7 +403,7 @@ function QuadApp({eventName}) {
           )}
         </div>
 
-        {/* Player 4 (Optional) */}
+        {/* Player 4  */}
         <div className="p-4 bg-black text-cyber-blue rounded-lg shadow-md">
           <h3 className="text-lg font-medium mb-2">Player 4 </h3>
           <div className="w-full flex justify-center items-center gap-2">
@@ -467,6 +480,86 @@ function QuadApp({eventName}) {
             />
           )}
         </div>
+
+        {/* Player 5*/}
+        <div className="p-4 bg-black text-cyber-blue rounded-lg shadow-md">
+          <h3 className="text-lg font-medium mb-2">Player 5</h3>
+          <div className="w-full flex justify-center items-center gap-2">
+            <input
+              type="text"
+              name="name5"
+              value={userInput.name5}
+              onChange={(e) => {
+                const val = e.target.value;
+                if (/[^A-Za-z ]/g.test(val)) {
+                toast.error("Only alphabets are allowed!");
+                }
+                const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
+                handleChange({ target: { name: "name3", value: val1 } });
+              }}
+
+              placeholder="Name"
+              className="w-1/2 p-2 border bg-black rounded mb-2"
+              required
+            />
+            <div className="flex items-center justify-start gap-2 border bg-black rounded mb-2 w-1/2 p-2 overflow-hidden">
+              <span className="text-gray-400">+91</span>
+                <input
+                  type="tel"
+                  name="phone5"
+                  value={userInput.phone5}
+                  onChange={(e) => {
+                    const val = e.target.value.replace(/\D/g, "").slice(0, 10);
+                    handleChange({ target: { name: "phone3", value: val } });
+                  }}
+                  onBlur={(e) => {
+                    if (e.target.value.length !== 10) {
+                      toast.error("Phone number must be exactly 10 digits!");
+                      handleChange({ target: { name: "phone3", value: "" } }); // Clear input
+                    }
+                  }}
+                  placeholder="Phone"
+                  className="bg-black text-white outline-none w-full"
+                  required
+                />
+              </div>
+
+          </div>
+          {/* <input
+            type="file"
+            name="IdImage3"
+            id="file_image"
+            onChange={handleImageChange}
+            className="w-full p-2 border rounded hidden"
+          /> */}
+
+          <div class="flex items-center space-x-2">
+            <label
+              for="file_upload3"
+              class="flex justify-center items-center cursor-pointer w-full py-1 bg-grey text-black border-grey border rounded mb-2 rounded-md   focus:outline-none whitespace-nowrap max-w-full"
+            >
+              <span class="material-icons mr-2">cloud_upload</span>
+              Upload your ID image
+            </label>
+            <input
+              id="file_upload3"
+              name="IdImage5"
+              type="file"
+              class="hidden"
+              onChange={handleImageChange}
+              accept="image/jpeg, image/png,image/jpg"
+              disabled={isLoading?true:false}
+            />
+          </div>
+          {imagePreviews.IdImage5 && (
+            <img
+              src={imagePreviews.IdImage5}
+              alt="ID Preview"
+              className="mt-2 w-32 h-32 object-cover rounded"
+            />
+          )}
+        </div>
+
 
         {/* Submit Button */}
         <button
@@ -585,7 +678,12 @@ function DualApp({eventName}) {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Player 1 */}
         <div className="p-4 rounded-lg shadow-md">
-        <p className="text-sm font-normal mb-2 text-cyber-pink"> (Upload Image in .png / .jpg / .jpeg format only)</p>
+        <p className="text-sm font-normal mb-2 text-cyber-pink"> 
+        <ul style={{listStyleType:"circle"}}>
+            <li>Upload Image in .png / .jpg / .jpeg format only</li>
+            <li>Provide WhatsApp contact number</li>
+          </ul> 
+        </p>
           <h3 className="text-lg font-medium mb-2">Player 1</h3>
           <div className="w-full">
             <div className="flex items-center justify-center gap-2">
@@ -794,7 +892,6 @@ function TrioApp({eventName}) {
     IdImage1: null,
     IdImage2: null,
     IdImage3: null,
-    IdImage4: null,
   });
 
   const handleChange = (e) => {
@@ -887,8 +984,13 @@ function TrioApp({eventName}) {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Player 1 Details */}
         <div className="p-4 bg-black rounded-lg shadow-md">
-        <p className="text-sm font-normal mb-2 text-cyber-pink"> (Upload Image in .png / .jpg / .jpeg format only)</p>
-          <h3 className="text-lg font-medium mb-2">Player 1</h3>
+        <p className="text-sm font-normal mb-2 text-cyber-pink"> 
+        <ul style={{listStyleType:"circle"}}>
+            <li>Upload Image in .png / .jpg / .jpeg format only</li>
+            <li>Provide WhatsApp contact number</li>
+          </ul> 
+        </p>
+          <h3 className="text-lg font-medium mb-2">Player 1 </h3>
           <div className="w-full">
             <div className="flex items-center justify-center gap-2">
               <input
@@ -1068,7 +1170,7 @@ function TrioApp({eventName}) {
 
         {/* Player 3 */}
         <div className="p-4 bg-black text-cyber-blue rounded-lg shadow-md">
-          <h3 className="text-lg font-medium mb-2">Player 3</h3>
+          <h3 className="text-lg font-medium mb-2">Player 3 (Optional)</h3>
           <div className="w-full flex justify-center items-center gap-2">
             <input
               type="text"
@@ -1085,7 +1187,6 @@ function TrioApp({eventName}) {
 
               placeholder="Name"
               className="w-1/2 p-2 border bg-black rounded mb-2"
-              required
             />
             <div className="flex items-center justify-start gap-2 border bg-black rounded mb-2 w-1/2 p-2 overflow-hidden">
             <span className="text-gray-400">+91</span>
@@ -1105,7 +1206,6 @@ function TrioApp({eventName}) {
                   }}
                   placeholder="Phone"
                   className="bg-black text-white outline-none w-full"
-                  required
                 />
               </div>
 
@@ -1249,7 +1349,12 @@ function SoloApp({eventName}) {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Player Details */}
         <div className="p-4 bg-black rounded-lg shadow-md">
-        <p className="text-sm font-normal mb-2 text-cyber-pink"> (Upload Image in .png / .jpg / .jpeg format only)</p>
+        <p className="text-sm font-normal mb-2 text-cyber-pink">
+        <ul style={{listStyleType:"circle"}}>
+            <li>Upload Image in .png / .jpg / .jpeg format only</li>
+            <li>Provide WhatsApp contact number</li>
+          </ul>
+        </p>
           <h3 className="text-lg font-medium mb-2">Player</h3>
           <div className="w-full">
             <div className="flex items-center bg-black justify-center gap-2">
@@ -1393,6 +1498,9 @@ function FootballApp({eventName}) {
     IdImage2: null,
     IdImage3: null,
     IdImage4: null,
+    IdImage5: null,
+    IdImage6: null,
+    IdImage7: null
   });
 
   const handleChange = (e) => {
@@ -1499,7 +1607,12 @@ function FootballApp({eventName}) {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Captain Details */}
         <div className="p-4 bg-black rounded-lg shadow-md">
-        <p className="text-sm font-normal mb-2 text-cyber-pink"> (Upload Image in .png / .jpg / .jpeg format only)</p>
+        <p className="text-sm font-normal mb-2 text-cyber-pink"> 
+        <ul style={{listStyleType:"circle"}}>
+            <li>Upload Image in .png / .jpg / .jpeg format only</li>
+            <li>Provide WhatsApp contact number</li>
+          </ul>
+        </p>
           <h3 className="text-lg font-medium mb-2">Captain (Player 1)</h3>
           <div className="w-full">
             <div className="flex items-center bg-black justify-center gap-2">
@@ -2076,7 +2189,7 @@ function FootballApp({eventName}) {
   );
 }
 
-export { QuadApp, DualApp, TrioApp, SoloApp, FootballApp };
+export { PentApp, DualApp, TrioApp, SoloApp, FootballApp };
 
 /* <form className="space-y-6">
             <div className="flex flex-col gap-4">
