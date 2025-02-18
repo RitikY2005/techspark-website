@@ -5,6 +5,7 @@ const validateFormDetails = (details = {}, eventName = "") => {
   const memberPhones = [];
   const memberImages = [];
   const memberEmail = [];
+
   const requiredParticipantsNum = participantsNum[eventName];
 
   Object.entries(details).forEach(([key, value]) => {
@@ -19,13 +20,7 @@ const validateFormDetails = (details = {}, eventName = "") => {
     }
   });
 
-  console.log(
-    "data structured->",
-    memberNames,
-    memberPhones,
-    memberEmail,
-    memberImages
-  );
+
 
   if (requiredParticipantsNum == null) {
     return {
@@ -65,13 +60,7 @@ const validateFormDetails = (details = {}, eventName = "") => {
      memberNames.length !== memberPhones.length ||
      memberPhones.length !== memberImages.length
    ) {
-     console.log(
-       "lenght->>",
-       memberNames,
-       memberPhones,
-       memberEmail,
-       memberImages
-     );
+    
      return {
        success: false,
        message: "You have not filled all the required details!",

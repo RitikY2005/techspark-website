@@ -19,7 +19,7 @@ const events = [
         title: "Techspark's Hackathon",
         description:
           "Join us for a 27-hours hackathon where creativity meets technology to shape the future. Build groundbreaking projects from scratch, leveraging any programming language or AI tools of your choice, and showcase your talent across web, cloud, blockchain, and more. ",
-        status: "REGISTRATION LIVE!",
+        status: "REGISTRATION LIVE",
         registrationForm: TrioApp,
         eventDate: " 📅 24 Feb 2025, 11:30 AM Onwards",
         location: "📍 Mithibai College",
@@ -35,7 +35,7 @@ const events = [
         title: "Mirror Match",
         description:
           "Code - a - Replica is an engaging coding event designed to test participants coding skills and problem-solving abilities. In this event participants will be provided with the output of a piece of code. The challenge is to reverse-engineer or construct the exact code that produces the specific output.",
-        status: "REGISTRATION LIVE!",
+        status: "REGISTRATION LIVE",
         registrationForm: DualApp,
         eventDate: " 📅 25 Feb 2025, 10:00 AM - 12:00 PM",
         location: "📍 Mithibai College",
@@ -50,7 +50,7 @@ const events = [
         title: "Hackattack",
         description:
           "Your computer lab has been taken over by a rogue AI, and it’s on the verge of unleashing corrupted code across the internet. As computer science students, you are humanity’s last line of defense. Your mission: solve a series of intricate puzzles to uncover a five-digit code that will shut down the AI before it’s too late.",
-        status: "REGISTRATION LIVE!",
+        status: "REGISTRATION LIVE",
         registrationForm: TrioApp,
         eventDate: " 📅 24 Feb 2025, 11:30 AM - 1:30 PM",
         location: "📍 Mithibai College",
@@ -76,7 +76,7 @@ const events = [
         title: "Jack of all Treasures",
         description:
           "Jack-of-all-Treasures is a thrilling 3-stage challenge! The adventure begins with a Riddle Stage, where you'll need to solve a series of difficult riddles to unlock the next level. Successfully completing the riddles will lead you to the Task Stage, where you'll have to accomplish a set of challenging tasks. Solving all riddles and tasks, finally you'll reach the Treasure Hunt Stage, where you'll use cryptic clues to track down hidden cards scattered around the college. The team that finds minimum 13 cards first will emerge victorious, putting their wit, skill, and teamwork to the ultimate test!",
-        status: "REGISTRATION LIVE!",
+        status: "REGISTRATION LIVE",
         registrationForm: TrioApp,
         eventDate: " 📅 24 Feb 2025, 2:00 AM - 4:00 PM",
         location: "📍 Mithibai College",
@@ -88,10 +88,10 @@ const events = [
         ],
       },
       {
-        title: "Conivice-a-thon",
+        title: "Convince-a-thon",
         description:
           "Get ready for a war of words and a battle of wits! Our debate event is the ultimate platform for you to showcase your skills, challenge your peers, test your arguments, and emerge victorious. Participants will showcase their critical thinking, persuasive skills, and mastery of rhetoric in an intense yet enriching battle of wits. Gather your team, prepare your arguments, and take on the best to emerge as the champion of logic and rhetoric.",
-        status: "REGISTRATION LIVE!",
+        status: "REGISTRATION LIVE",
         registrationForm: SoloApp,
         eventDate: " 📅 25 Feb 2025, 10:00 AM - 1:00 PM",
         location: "📍 Mithibai College",
@@ -107,7 +107,7 @@ const events = [
         title: "QuizCraft",
         description:
           "Put your knowledge to the test in this electrifying pop culture trivia showdown! Dive into the world of movies, music, TV shows, memes, and more as you compete against sharp minds in a fast-paced battle of wits. Showcase your quick thinking, dominate the leaderboard, and claim ultimate bragging rights—along with exciting prizes! Get ready for the most thrilling quiz competition of the year!",
-        status: "REGISTRATION LIVE!",
+        status: "REGISTRATION LIVE",
         registrationForm: DualApp,
         eventDate: " 📅 24 Feb 2025, 2:30 AM - 3:30 PM",
         location: "📍 Mithibai College",
@@ -135,7 +135,7 @@ const events = [
         title: "Agents of TechSpark (Valorant)",
         description:
           "Agents of TechSpark is an epic Valorant tournament where teams will face off in an intense, high-stakes match. Set in the heart of innovation, this event combines fierce competition with cutting-edge technology, offering an unforgettable experience for players. Who of them will rise to become the ultimate Agent of TechSpark? Join us to find out!",
-        status: "REGISTRATION LIVE!",
+        status: "REGISTRATION LIVE",
         registrationForm: PentApp,
         eventDate: " 📅 24 Feb 2025, 9:00 AM - 1:00 PM",
         location: "📍 Gaming Cafe",
@@ -152,7 +152,7 @@ const events = [
         title: "Ultimate Goal Gala (FC24)",
         description:
           "Get ready for an intense, head-to-head football battle in the FC24 Tournament! This is your chance to showcase your skills, quick thinking, and competitive edge as you go toe-to-toe with other top players. Whether you're a strategic mastermind or a reflex-based powerhouse, this tournament will test your limits. Only the strongest will rise to the top, with the best of the best advancing to the final. It’s time to prove you're the ultimate FC24 champion!",
-        status: "REGISTRATION LIVE!",
+        status: "REGISTRATION LIVE",
         registrationForm: SoloApp,
         eventDate: " 📅 24 Feb 2025, 11:00 AM - 3:00 PM",
         location: "📍 Mithibai College",
@@ -179,7 +179,7 @@ const events = [
         title: "Netflicks and Chill (Football Tournament)",
         description:
           "Gear up for an electrifying football tournament where passion meets glory on the field! Experience the thrill as teams clash, showcasing skill, speed, and sportsmanship in a battle for supremacy. “The beautiful game” awaits—filled with unforgettable moments. “A game of two halves” where comebacks and last-minute thrillers keep you on the edge of your seat.",
-        status: "REGISTRATION LIVE!",
+        status: "REGISTRATION LIVE",
         registrationForm: FootballApp,
         eventDate: " 📅 25 Feb 2025, 9:00 AM - 12:00 PM",
         location: "📍 Mithibai College",
@@ -197,7 +197,7 @@ const events = [
         title: "Queen's Gambit (Chess Tournament)",
         description:
           "Join us for an exciting chess tournament celebrating strategy, skill, and sportsmanship! This event promises thrilling matches and a competitive yet friendly atmosphere. Showcase your strategic brilliance, challenge fellow chess enthusiasts, and make lasting memories in this grand celebration of intellect and competition.",
-        status: "REGISTRATION LIVE!",
+        status: "REGISTRATION LIVE",
         registrationForm: SoloApp,
         eventDate: " 📅 25 Feb 2025, 11:00 AM - 3:00 PM",
         location: "📍 Mithibai College",

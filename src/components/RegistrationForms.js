@@ -89,6 +89,32 @@ function PentApp({eventName}) {
        if(formSubmitStatus.success && formSubmitStatus.success===true){
           //  toast.error(formSubmitStatus.message);
            toast.success(formSubmitStatus.message);
+           setUserInput({
+            name1: "",
+            phone1: "",
+            IdImage1: "",
+            name2: "",
+            phone2: "",
+            IdImage2: "",
+            name3: "",
+            phone3: "",
+            IdImage3: "",
+            name4: "",
+            phone4: "",
+            IdImage4: "",
+            name5: "",
+            phone5: "",
+            IdImage5: "",
+            email: "",
+          });
+      
+          setImagePreviews({
+            IdImage1: null,
+          IdImage2: null,
+          IdImage3: null,
+          IdImage4: null,
+          IdImage5: null
+          });
            setIsLoading(false);
        } else{
           // toast.error(formSubmitStatus.message);
@@ -101,32 +127,7 @@ function PentApp({eventName}) {
     }
     
 
-    setUserInput({
-      name1: "",
-      phone1: "",
-      IdImage1: "",
-      name2: "",
-      phone2: "",
-      IdImage2: "",
-      name3: "",
-      phone3: "",
-      IdImage3: "",
-      name4: "",
-      phone4: "",
-      IdImage4: "",
-      name5: "",
-      phone5: "",
-      IdImage5: "",
-      email: "",
-    });
-
-    setImagePreviews({
-      IdImage1: null,
-    IdImage2: null,
-    IdImage3: null,
-    IdImage4: null,
-    IdImage5: null
-    });
+    
     setIsLoading(false);
   };
 
@@ -644,6 +645,20 @@ function DualApp({eventName}) {
 
        if(formSubmitStatus.success && formSubmitStatus.success===true){
            toast.success(formSubmitStatus.message);
+           setUserInput({
+            name1: "",
+            phone1: "",
+            IdImage1: "",
+            name2: "",
+            phone2: "",
+            IdImage2: "",
+            email:""
+          });
+      
+          setImagePreviews({
+            IdImage1: null,
+          IdImage2: null,
+          });
            setIsLoading(false);
        } else{
           toast.error(formSubmitStatus.message);
@@ -654,20 +669,7 @@ function DualApp({eventName}) {
     }
     
 
-    setUserInput({
-      name1: "",
-      phone1: "",
-      IdImage1: "",
-      name2: "",
-      phone2: "",
-      IdImage2: "",
-      email:""
-    });
-
-    setImagePreviews({
-      IdImage1: null,
-    IdImage2: null,
-    });
+    
     setIsLoading(false);
   };
 
@@ -945,6 +947,25 @@ function TrioApp({eventName}) {
 
        if(formSubmitStatus.success && formSubmitStatus.success===true){
            toast.success(formSubmitStatus.message);
+           setUserInput({
+            name1: "",
+          phone1: "",
+          IdImage1: "",
+          name2: "",
+          phone2: "",
+          IdImage2: "",
+          name3: "",
+          phone3: "",
+          IdImage3: "",
+          email: "",
+          });
+      
+          setImagePreviews({
+            IdImage1: null,
+            IdImage2: null,
+            IdImage3: null,
+            IdImage4: null,
+          });
            setIsLoading(false);
        } else{
           toast.error(formSubmitStatus.message);
@@ -955,25 +976,7 @@ function TrioApp({eventName}) {
     }
     
 
-    setUserInput({
-      name1: "",
-    phone1: "",
-    IdImage1: "",
-    name2: "",
-    phone2: "",
-    IdImage2: "",
-    name3: "",
-    phone3: "",
-    IdImage3: "",
-    email: "",
-    });
-
-    setImagePreviews({
-      IdImage1: null,
-      IdImage2: null,
-      IdImage3: null,
-      IdImage4: null,
-    });
+    
     setIsLoading(false);
   };
 
@@ -1319,6 +1322,16 @@ function SoloApp({eventName}) {
 
        if(formSubmitStatus.success && formSubmitStatus.success===true){
            toast.success(formSubmitStatus.message);
+           setUserInput({
+            name1: "",
+            phone1: "",
+            IdImage1: "",
+            email: "",
+          });
+      
+          setImagePreviews({
+            IdImage1: null,
+          });
            setIsLoading(false);
        } else{
           toast.error(formSubmitStatus.message);
@@ -1329,16 +1342,7 @@ function SoloApp({eventName}) {
     }
     
 
-    setUserInput({
-      name1: "",
-      phone1: "",
-      IdImage1: "",
-      email: "",
-    });
-
-    setImagePreviews({
-      IdImage1: null,
-    });
+    
     setIsLoading(false);
   };
 
@@ -1554,6 +1558,38 @@ function FootballApp({eventName}) {
 
        if(formSubmitStatus.success && formSubmitStatus.success===true){
            toast.success(formSubmitStatus.message);
+           setUserInput({
+            name1: "",
+            phone1: "",
+            IdImage1: "",
+            name2: "",
+            phone2: "",
+            IdImage2: "",
+            name3: "",
+            phone3: "",
+            IdImage3: "",
+            name4: "",
+            phone4: "",
+            IdImage4: "",
+            name5: "",
+            phone5: "",
+            IdImage5: "",
+            name6: "",
+            phone6: "",
+            IdImage6: "",
+            name7: "",
+            phone7: "",
+            IdImage7: "",
+            email: "",
+          });
+          
+      
+          setImagePreviews({
+            IdImage1: null,
+            IdImage2: null,
+            IdImage3: null,
+            IdImage4: null,
+          });
            setIsLoading(false);
        } else{
           toast.error(formSubmitStatus.message);
@@ -1564,38 +1600,7 @@ function FootballApp({eventName}) {
     }
     
 
-    setUserInput({
-      name1: "",
-      phone1: "",
-      IdImage1: "",
-      name2: "",
-      phone2: "",
-      IdImage2: "",
-      name3: "",
-      phone3: "",
-      IdImage3: "",
-      name4: "",
-      phone4: "",
-      IdImage4: "",
-      name5: "",
-      phone5: "",
-      IdImage5: "",
-      name6: "",
-      phone6: "",
-      IdImage6: "",
-      name7: "",
-      phone7: "",
-      IdImage7: "",
-      email: "",
-    });
-    
-
-    setImagePreviews({
-      IdImage1: null,
-      IdImage2: null,
-      IdImage3: null,
-      IdImage4: null,
-    });
+   
     
     setIsLoading(false);
   };

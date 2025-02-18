@@ -15,7 +15,7 @@ const participantsNum={
     min:2,
     max:3
   },
-  "Convice-a-thon":{
+  "Convince-a-thon":{
     min:1,
     max:1
   },
@@ -23,7 +23,7 @@ const participantsNum={
     min:2,
     max:2
   },
-  "Battle Grounds Mobile India (BGMI)":{
+  "Agents of TechSpark (Valorant)":{
     min:5,
     max:5
   },
