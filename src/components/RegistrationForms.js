@@ -496,7 +496,7 @@ function PentApp({eventName}) {
                 toast.error("Only alphabets are allowed!");
                 }
                 const val1 = val.replace(/[^A-Za-z ]/g, ""); // Remove invalid characters
-                handleChange({ target: { name: "name3", value: val1 } });
+                handleChange({ target: { name: "name5", value: val1 } });
               }}
 
               placeholder="Name"
@@ -511,12 +511,12 @@ function PentApp({eventName}) {
                   value={userInput.phone5}
                   onChange={(e) => {
                     const val = e.target.value.replace(/\D/g, "").slice(0, 10);
-                    handleChange({ target: { name: "phone3", value: val } });
+                    handleChange({ target: { name: "phone5", value: val } });
                   }}
                   onBlur={(e) => {
                     if (e.target.value.length !== 10) {
                       toast.error("Phone number must be exactly 10 digits!");
-                      handleChange({ target: { name: "phone3", value: "" } }); // Clear input
+                      handleChange({ target: { name: "phone5", value: "" } }); // Clear input
                     }
                   }}
                   placeholder="Phone"

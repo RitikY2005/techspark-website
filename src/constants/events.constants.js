@@ -78,7 +78,7 @@ const events = [
           "Jack-of-all-Treasures is a thrilling 3-stage challenge! The adventure begins with a Riddle Stage, where you'll need to solve a series of difficult riddles to unlock the next level. Successfully completing the riddles will lead you to the Task Stage, where you'll have to accomplish a set of challenging tasks. Solving all riddles and tasks, finally you'll reach the Treasure Hunt Stage, where you'll use cryptic clues to track down hidden cards scattered around the college. The team that finds minimum 13 cards first will emerge victorious, putting their wit, skill, and teamwork to the ultimate test!",
         status: "REGISTRATION LIVE",
         registrationForm: TrioApp,
-        eventDate: " 📅 24 Feb 2025, 2:00 AM - 4:00 PM",
+        eventDate: " 📅 24 Feb 2025, 2:00 PM - 4:00 PM",
         location: "📍 Mithibai College",
         eventRules: [
           "Each team MUST contain at least 2 and at most 3 players.",
@@ -109,7 +109,7 @@ const events = [
           "Put your knowledge to the test in this electrifying pop culture trivia showdown! Dive into the world of movies, music, TV shows, memes, and more as you compete against sharp minds in a fast-paced battle of wits. Showcase your quick thinking, dominate the leaderboard, and claim ultimate bragging rights—along with exciting prizes! Get ready for the most thrilling quiz competition of the year!",
         status: "REGISTRATION LIVE",
         registrationForm: DualApp,
-        eventDate: " 📅 24 Feb 2025, 2:30 AM - 3:30 PM",
+        eventDate: " 📅 24 Feb 2025, 2:30 PM - 3:30 PM",
         location: "📍 Mithibai College",
         eventRules: [
           "Each team must have 2 participants.",
