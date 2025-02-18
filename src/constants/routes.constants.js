@@ -1,9 +1,9 @@
 const routes=[
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
+    { path: '/events', label: 'Events' },
     { path: '/team', label: 'Team' },
-    { path: '/contact', label: 'Contact' },
-    // { path: '/events', label: 'Events' }
+    { path: '/contact', label: 'Contact' }
   ];
 
 

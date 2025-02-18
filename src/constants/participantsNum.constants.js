@@ -19,7 +19,7 @@ const participantsNum={
     min:1,
     max:1
   },
-  "Quizpocalypse":{
+  "QuizCraft":{
     min:2,
     max:2
   },
