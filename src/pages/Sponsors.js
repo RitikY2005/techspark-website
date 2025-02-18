@@ -11,7 +11,7 @@ const SponsorCard = ({ src, alt, title }) => (
         className="w-auto h-auto max-h-[100px] max-w-[180px] object-contain"
       />
     </div>
-    <h3 className="text-white font-NeueHaasMedium text-center text-sm md:text-base lg:text-lg mt-4">
+    <h3 className="text-black font-tech text-center text-sm md:text-base lg:text-lg mt-4">
       {title}
     </h3>
   </div>
@@ -21,9 +21,9 @@ function Sponsors() {
     
   return (
     <CyberLayout>
-    <div className="w-full min-h-screen bg-black/50  px-4 sm:px-6 lg:px-8 pb-16">
+    <div className="w-full px-4 sm:px-6 lg:px-8 pb-16">
       {/* Title Sponsor Section */}
-      <h1 className="font-NeueHaasBold text-red text-3xl md:text-4xl lg:text-5xl text-center pt-16 md:pt-28 mb-12">
+      <h1 className="font-tech text-black text-3xl md:text-4xl lg:text-5xl text-center pt-16 md:pt-28 mb-12">
         PRESENTED BY
       </h1>
       <div className="flex flex-col items-center justify-center max-w-4xl mx-auto">
@@ -34,12 +34,12 @@ function Sponsors() {
             className="w-full h-auto object-contain"
           />
         </div>
-        <h2 className="text-white font-NeueHaasMedium text-center text-sm md:text-base lg:text-2xl mt-8">
+        <h2 className="text-black font-tech text-center text-sm md:text-base lg:text-2xl mt-8">
           Learning Partner
         </h2>
       </div>
 
-      <h1 className="font-NeueHaasBold text-red text-3xl md:text-4xl lg:text-5xl text-center pt-16 md:pt-28 mb-12">
+      <h1 className="font-tech text-black text-3xl md:text-4xl lg:text-5xl text-center pt-16 md:pt-28 mb-12">
         ASSOCIATED BY
       </h1>
       <div className="flex flex-col items-center justify-center max-w-4xl mx-auto">
@@ -50,13 +50,13 @@ function Sponsors() {
             className="w-full h-auto object-contain"
           />
         </div>
-        <h2 className="text-white font-NeueHaasMedium text-center text-sm md:text-base lg:text-xl mt-8">
+        <h2 className="text-black font-tech text-center text-sm md:text-base lg:text-xl mt-8">
           Smartphone Partner
         </h2>
       </div>
 
       {/* Special Partner Section */}
-      <h1 className="font-NeueHaasBold text-red text-3xl md:text-4xl lg:text-5xl text-center pt-16 md:pt-28 mb-12">
+      <h1 className="font-tech text-black text-3xl md:text-4xl lg:text-5xl text-center pt-16 md:pt-28 mb-12">
         SPECIAL PARTNER
       </h1>
       <div className="flex flex-col items-center justify-center max-w-4xl mx-auto">
@@ -67,12 +67,12 @@ function Sponsors() {
             className="w-full h-auto object-contain"
           />
         </div>
-        <h2 className="text-white font-NeueHaasMedium text-center text-sm md:text-base lg:text-xl mt-8">
+        <h2 className="text-black font-tech text-center text-sm md:text-base lg:text-xl mt-8">
           Chocolate Partner
         </h2>
       </div>
 
-      <h1 className="font-NeueHaasBold text-red text-3xl md:text-4xl lg:text-5xl text-center pt-16 md:pt-28 mb-12">
+      <h1 className="font-tech text-black text-3xl md:text-4xl lg:text-5xl text-center pt-16 md:pt-28 mb-12">
         OUR PARTNERS
       </h1>
       <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto place-items-center"></div>
@@ -85,7 +85,7 @@ function Sponsors() {
               className="w-auto h-auto max-h-[60px] max-w-[130px] object-contain" // Reduced from 100px/180px
             />
           </div>
-          <h3 className="text-white font-NeueHaasMedium text-center text-sm md:text-base lg:text-lg mt-4">
+          <h3 className="text-black font-tech text-center text-sm md:text-base lg:text-lg mt-4">
             Conscious Skin Care Partner
           </h3>
         </div>
@@ -97,7 +97,7 @@ function Sponsors() {
               className="w-auto h-auto max-h-[60px] max-w-[130px] object-contain" // Reduced from 100px/180px
             />
           </div>
-          <h3 className="text-white font-NeueHaasMedium text-center text-sm md:text-base lg:text-lg mt-4">
+          <h3 className="text-black font-tech text-center text-sm md:text-base lg:text-lg mt-4">
             Accomodation Partner
           </h3>
         </div>
