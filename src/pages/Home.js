@@ -37,7 +37,7 @@ function Home() {
    // Countdown renderer function
    const renderer = ({ days, hours, minutes, seconds }) => (
     <motion.div
-      className="flex justify-center items-center space-x-6 text-2xl sm:text-3xl md:text-4xl text-gunmetal font-mangrove tracking-widest"
+      className="flex justify-center items-center space-x-6 text-2xl sm:text-3xl md:text-4xl text-gunmetal font-manrope tracking-widest"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.2 }}
@@ -191,7 +191,7 @@ function Home() {
              {/* Countdown Timer Section */}
              <div className="text-center mt-12 sm:mt-16">
             <motion.h2
-              className="text-xl sm:text-2xl md:text-4xl text-gunmetal mb-4 font-mangrove"
+              className="text-xl sm:text-2xl md:text-4xl text-gunmetal mb-4 font-manrope"
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
