@@ -42,7 +42,7 @@ const validateFormDetails = (details = {}, eventName = "") => {
   if(memberPhones.length<memberImages.length){
     return {
       success: false,
-      message: "Every participant should have an phone number",
+      message: "Every participant should have a phone number",
     };
   }
 
@@ -50,7 +50,7 @@ const validateFormDetails = (details = {}, eventName = "") => {
   if(memberImages.length<memberNames.length){
     return {
       success: false,
-      message: "Every participant should have an image",
+      message: "Every participants ID image should be uploaded",
     };
   }
 
@@ -116,7 +116,7 @@ const validateFormDetails = (details = {}, eventName = "") => {
   if (memberEmail[0] == "" || memberEmail.length == 0) {
     return {
       success: false,
-      message: "At least one email is required!",
+      message: "Email is required!",
     };
   }
 

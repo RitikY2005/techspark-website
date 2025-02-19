@@ -536,14 +536,14 @@ function PentApp({eventName}) {
 
           <div class="flex items-center space-x-2">
             <label
-              for="file_upload3"
+              for="file_upload5"
               class="flex justify-center items-center cursor-pointer w-full py-1 bg-grey text-black border-grey border rounded mb-2 rounded-md   focus:outline-none whitespace-nowrap max-w-full"
             >
               <span class="material-icons mr-2">cloud_upload</span>
               Upload your ID image
             </label>
             <input
-              id="file_upload3"
+              id="file_upload5"
               name="IdImage5"
               type="file"
               class="hidden"
