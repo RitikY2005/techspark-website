@@ -139,14 +139,14 @@ function Events() {
     <CyberLayout>
       <div className="h-auto overflow-auto px-3 sm:px-6 lg:px-8 py-16 sm:py-20">
         <div className="mx-auto">
-          <motion.h1
+          {/* <motion.h1
             className="text-3xl sm:text-5xl md:text-6xl text-center mb-8 sm:mb-12 font-bold text-gunmetal"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
             UPCOMING EVENTS
-          </motion.h1>
+          </motion.h1> */}
 
           <div className="flex justify-center mb-8">
             <motion.button
@@ -155,7 +155,7 @@ function Events() {
               whileTap={{ scale: 0.98 }}
               onClick={handleDownloadOrOpenPDF}
             >
-              Click to view event details
+              EVENT BROCHURE
             </motion.button>
           </div>
 

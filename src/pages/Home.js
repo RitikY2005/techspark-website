@@ -182,7 +182,7 @@ function Home() {
           </p>
             <div className="w-full max-w-[150px] md:max-w-[250px] px-0">
               <img
-                src={"/sponsors/CHANDAK.png"}
+                src={"/sponsors/chandakf.png"}
                 alt="Chandak"
                 className="w-full h-auto object-contain"
               />
