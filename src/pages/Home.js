@@ -37,7 +37,7 @@ function Home() {
    // Countdown renderer function
    const renderer = ({ days, hours, minutes, seconds }) => (
     <motion.div
-      className="flex justify-center items-center space-x-6 text-2xl sm:text-3xl md:text-4xl text-gunmetal font-manrope tracking-widest"
+      className="flex justify-center items-center space-x-6 text-2xl sm:text-3xl md:text-4xl text-gunmetal font-manrope tracking-widest "
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.2 }}
@@ -66,7 +66,7 @@ function Home() {
     <CyberLayout>
       {/* Hero Section */}
       {/* <div className="relative min-h-screen flex flex-col justify-center items- px-4 sm:px-8"> */}
-      <div className="relative min-h-[100vh] sm:min-h-screen flex flex-col  justify-center items-center">
+      <div className="relative min-h-[100vh] sm:min-h-screen flex flex-col  justify-center items-center pb-10">
         {/* Animated Background Elements */}
         <motion.div
           className="flex md:hidden absolute  justify-center items-center w-[250px] sm:w-[300px] md:w-[600px] h-[250px] sm:h-[300px] md:h-[600px] opacity-5 z-10"
@@ -128,6 +128,23 @@ function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
+
+        <div className="w-full px-4 sm:px-6">
+         {/* Title Sponsor Section */}
+          <div className="flex flex-col items-center justify-center max-w-[500px] mx-auto">
+            <div className="w-full max-w-[200px] md:max-w-[400px] px-0">
+              <img
+                src={"/sponsors/Logo LNV1.png"}
+                alt="Learnovation"
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          <p className="font-tech text-black text-s md:text-s lg:text-s text-center ">
+            PRESENTS:
+          </p>
+          </div>
+        </div>
+
           <motion.h1
             className="text-3xl sm:text-6xl md:text-7xl mb-4 sm:mb-6 text-gunmetal font-spark 
                        tracking-wider leading-tight"
@@ -156,6 +173,23 @@ function Home() {
           >
             24th and 25th February 2025
           </motion.p>
+
+          <div className="w-full px-4 sm:px-6">
+         {/* Powered By Section */}
+          <div className="flex flex-col items-center justify-center max-w-[500px] mx-auto">
+          <p className="font-tech text-black text-s md:text-s lg:text-s text-center ">
+            POWERED BY:
+          </p>
+            <div className="w-full max-w-[150px] md:max-w-[250px] px-0">
+              <img
+                src={"/sponsors/CHANDAK.png"}
+                alt="Chandak"
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          </div>
+        </div>
+
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mt-6">
           <a href="https://forms.gle/W1pTfRFMHhBQsU4w7" target="_blank" rel="noopener noreferrer">
@@ -306,7 +340,7 @@ function Home() {
           ].map((feature, index) => (
             <motion.div
               key={index}
-              className="text-center p-6 sm:p-8 rounded-xl bg-black/40 backdrop-blur-sm
+              className=" rounded-xl bg-black/40 backdrop-blur-sm
                          border border-cyber-blue/30 shadow-[0_0_15px_rgba(0,243,255,0.2)]
                          hover:shadow-[0_0_30px_rgba(0,243,255,0.4)]
                          transition-all duration-300"
@@ -315,6 +349,7 @@ function Home() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
+              <Link to="/events" className="p-6 sm:p-8 text-center w-full h-full block ">
               {/* <div className="text-3xl sm:text-4xl mb-4">{feature.icon}</div> */}
               <div className="flex items-center justify-center text-3xl sm:text-4xl mb-4">
                 {feature.icon}
@@ -324,7 +359,7 @@ function Home() {
               </h3>
               <p className="text-sm sm:text-base text-white">
                 {feature.description}
-              </p>
+              </p></Link>
             </motion.div>
           ))}
         </div>
