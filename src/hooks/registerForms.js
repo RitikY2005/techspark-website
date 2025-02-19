@@ -43,7 +43,8 @@ async function registerForms(finalData) {
     // Log the final data to be uploaded
     console.log("teamData to be uploaded:", JSON.stringify(teamData, null, 2));
 
-    const collectionName= teamData.registeredFor.replace(/[^a-zA-Z]/,"") || "noteamfound";
+    const collectionName = teamData.registeredFor.replace(/[^a-zA-Z]/g, "").toString().toLowerCase() || "noteamfound";
+
 
 
     // Save data to Firestore realtime database 
