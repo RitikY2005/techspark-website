@@ -120,6 +120,21 @@ function Events() {
     };
   }, [selectedRegistration, selectedRules]);
 
+  const handleDownloadOrOpenPDF = () => {
+    console.log("Button clicked!");
+    const pdfUrl = "/dummy.pdf";
+    if (window.innerWidth <= 768) {
+      const link = document.createElement("a");
+      link.href = pdfUrl;
+      link.download = "EventDetails.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      window.open(pdfUrl, "_blank");
+    }
+  };
+
   return (
     <CyberLayout>
       <div className="h-auto overflow-auto px-3 sm:px-6 lg:px-8 py-16 sm:py-20">
@@ -132,6 +147,17 @@ function Events() {
           >
             UPCOMING EVENTS
           </motion.h1>
+
+          <div className="flex justify-center mb-8">
+            <motion.button
+              className="relative z-10 px-6 py-3 text-sm bg-cyber-blue text-black font-bold rounded-lg border border-cyber-blue/30 hover:border-white hover:shadow-[0_0_15px_rgba(0,243,255,0.3)] transition-all duration-300"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={handleDownloadOrOpenPDF}
+            >
+              Click to view event details
+            </motion.button>
+          </div>
 
           <div className="space-y-8 sm:space-y-12">
             {events.map((event, index) => (
