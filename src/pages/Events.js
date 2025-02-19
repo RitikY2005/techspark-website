@@ -155,7 +155,7 @@ function Events() {
               whileTap={{ scale: 0.98 }}
               onClick={handleDownloadOrOpenPDF}
             >
-              EVENT BROCHURE
+              EVENTS BROCHURE
             </motion.button>
           </div>
 
@@ -225,7 +225,7 @@ function Events() {
                                     }}
                                   >
                                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3 sm:mb-4 gap-2">
-                                      <h3 className="text-lg sm:text-xl font-bold text-cyber-blue">
+                                      <h3 className="text-lg sm:text-xl font-bold text-center sm:text-left w-full sm:w-auto text-cyber-blue">
                                         {subEvent.title}
                                       </h3>
                                       <span

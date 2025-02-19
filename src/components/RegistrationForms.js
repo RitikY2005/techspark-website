@@ -1037,7 +1037,7 @@ function TrioApp({eventName}) {
 
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center space-x-2">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
               {/* Email */}
               <input
                 type="email"
@@ -1065,14 +1065,14 @@ function TrioApp({eventName}) {
 
               <div class="w-full sm:w-1/2 flex items-center space-x-2">
                 <label
-                  for="file_upload3"
-                  class="w-full flex justify-center items-center cursor-pointer px-4 py-2 bg-grey text-black border-grey border rounded mb-2 rounded-md focus:outline-none"
+                  for="file_upload1"
+                  class="flex justify-center items-center cursor-pointer w-full px-4 py-2 bg-grey text-black border-grey border rounded mb-2 rounded-md   focus:outline-none whitespace-nowrap max-w-full"
                 >
                   <span class="material-icons mr-2">cloud_upload</span>
                   Upload your ID image
                 </label>
                 <input
-                  id="file_upload3"
+                  id="file_upload1"
                   name="IdImage1"
                   type="file"
                   class="hidden"
@@ -1402,7 +1402,7 @@ function SoloApp({eventName}) {
 
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center space-x-2">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
               {/* Email */}
               <input
                 type="email"

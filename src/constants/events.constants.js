@@ -199,7 +199,7 @@ const events = [
           "Join us for an exciting chess tournament celebrating strategy, skill, and sportsmanship! This event promises thrilling matches and a competitive yet friendly atmosphere. Showcase your strategic brilliance, challenge fellow chess enthusiasts, and make lasting memories in this grand celebration of intellect and competition.",
         status: "REGISTRATION LIVE",
         registrationForm: SoloApp,
-        eventDate: " 📅 25 Feb 2025, 11:00 AM - 3:00 PM",
+        eventDate: " 📅 24 Feb 2025, 12:00 PM - 4:00 PM",
         location: "📍 Mithibai College",
         eventRules: [
           "Game Type: 5-minute blitz.",
