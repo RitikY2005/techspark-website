@@ -15,6 +15,8 @@ async function registerForms(finalData) {
     players: finalData.players,
   };
 
+
+
   try {
     // Upload player images and update their URLs
     const uploadedPlayers = await Promise.all(
@@ -41,8 +43,11 @@ async function registerForms(finalData) {
     // Log the final data to be uploaded
     console.log("teamData to be uploaded:", JSON.stringify(teamData, null, 2));
 
+    const collectionName= teamData.registeredFor.replace(/[^a-zA-Z]/,"") || "noteamfound";
+
+
     // Save data to Firestore realtime database 
-    const teamsRef= sRef(db,"teams2025");
+    const teamsRef= sRef(db,collectionName);
     const newTeamRef= push(teamsRef);
     await set(newTeamRef,teamData);
     
