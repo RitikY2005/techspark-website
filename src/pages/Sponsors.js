@@ -23,13 +23,13 @@ function Sponsors() {
     <CyberLayout>
     <div className="w-full px-4 sm:px-6 lg:px-8 pb-16">
       {/* Title Sponsor Section */}
-      <h1 className="font-tech text-black text-3xl md:text-4xl lg:text-5xl text-center pt-16 md:pt-28 mb-12">
+      <h1 className="font-tech text-black text-3xl md:text-4xl lg:text-5xl text-center pt-16 md:pt-8 ">
         PRESENTED BY
       </h1>
       <div className="flex flex-col items-center justify-center max-w-4xl mx-auto">
-        <div className="w-full max-w-[250px] md:max-w-[500px] px-4">
+        <div className="w-full max-w-[250px] md:max-w-[700px] px-4">
           <img
-            src={"/sponsors/Learnovation.webp"}
+            src={"/sponsors/Logo LNV.png"}
             alt="Learnovation"
             className="w-full h-auto object-contain"
           />
