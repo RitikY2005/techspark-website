@@ -30,14 +30,14 @@ function Events() {
 
   const RulesModal = ({ title, rules, onClose }) => (
     <motion.div
-      className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       onClick={onClose}
     >
       <motion.div
-        className="bg-black/90 rounded-xl border border-cyber-blue/30 p-8 max-w-2xl w-full shadow-[0_0_30px_rgba(0,243,255,0.2)]"
+        className="bg-black/90 max-h-[80%] overflow-y-auto overflow-x-hidden rounded-xl border border-cyber-blue/30 p-8 max-w-2xl w-full shadow-[0_0_30px_rgba(0,243,255,0.2)]"
         initial={{ scale: 0.9, y: 20 }}
         animate={{ scale: 1, y: 0 }}
         exit={{ scale: 0.9, y: 20 }}
