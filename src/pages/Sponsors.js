@@ -23,11 +23,11 @@ function Sponsors() {
     <CyberLayout>
     <div className="w-full px-4 sm:px-6 lg:px-8 pb-16">
       {/* Title Sponsor Section */}
-      <h1 className="font-tech text-black text-3xl md:text-4xl lg:text-5xl text-center pt-12 md:pt-16 ">
+      <h1 className="font-tech text-black text-2xl md:text-4xl lg:text-5xl text-center pt-12 md:pt-16 ">
         PRESENTED BY
       </h1>
       <div className="flex flex-col items-center justify-center max-w-4xl mx-auto  mt-6 md:mt-8">
-        <div className="w-full max-w-[500px] md:max-w-[700px] px-4">
+        <div className="w-full max-w-[500px] sm:max-w-[600px] md:max-w-[700px] px-4">
           <img
             src={"/sponsors/Logo LNV.png"}
             alt="Learnovation"
@@ -39,11 +39,11 @@ function Sponsors() {
         </h2> */}
       </div>
 
-      <h1 className="font-tech text-black text-3xl md:text-4xl lg:text-5xl text-center pt-12 md:pt-14 mb-10">
+      <h1 className="font-tech text-black text-2xl md:text-4xl lg:text-5xl text-center pt-12 md:pt-14 mb-10">
         POWERED BY
       </h1>
       <div className="flex flex-col items-center justify-center max-w-4xl mx-auto mt-6 md:mt-8">
-        <div className="w-full max-w-[400px] md:max-w-[400px] px-5">
+        <div className="w-full max-w-[300px] md:max-w-[400px] px-5">
           <img
             src={"/sponsors/chandakf.png"}
             alt="Chandak"
@@ -72,7 +72,7 @@ function Sponsors() {
         </h2>
       </div> */}
 
-      <h1 className="font-tech text-black text-3xl md:text-4xl lg:text-5xl text-center pt-12 md:pt-28 mb-4">
+      <h1 className="font-tech text-black text-2xl md:text-4xl lg:text-5xl text-center pt-12 md:pt-28 mb-4">
         OFFICIAL PARTNERS
       </h1>
 
