@@ -132,7 +132,7 @@ function Home() {
         <div className="w-full px-4 sm:px-6">
          {/* Title Sponsor Section */}
           <div className="flex flex-col items-center justify-center max-w-[500px] mx-auto">
-            <div className="w-full max-w-[200px] md:max-w-[400px] px-0">
+            <div className="w-full max-w-[300px] md:max-w-[400px] px-0">
               <img
                 src={"/sponsors/Logo LNV1.png"}
                 alt="Learnovation"
