@@ -122,11 +122,11 @@ function Events() {
 
   const handleDownloadOrOpenPDF = () => {
     console.log("Button clicked!");
-    const pdfUrl = "/dummy.pdf";
+    const pdfUrl = "/brochure.pdf";
     if (window.innerWidth <= 768) {
       const link = document.createElement("a");
       link.href = pdfUrl;
-      link.download = "EventDetails.pdf";
+      link.download = "brochure.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
